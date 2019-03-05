@@ -1,5 +1,7 @@
 <?php
+
 //Clear header
+
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wp_shortlink_wp_head');
 remove_action('wp_head', 'rsd_link');
@@ -20,7 +22,6 @@ function theme_setup()
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('custom-logo');
-
 }
 
 add_action('after_setup_theme', 'theme_setup');
@@ -39,6 +40,7 @@ add_action('wp_enqueue_scripts', 'theme_scripts');
 
 
 // Enqueue styles
+
 function theme_styles()
 {
     wp_enqueue_style('theme-app', get_theme_file_uri('dist/app.css'), null, null);
@@ -48,6 +50,7 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 
 
 // Contact list
+
 function theme_customize_register($wp_customize)
 {
     $wp_customize->add_section('contacts', [
@@ -78,13 +81,12 @@ function theme_customize_register($wp_customize)
         'label' => 'E-mail',
         'type' => 'text',
     ]);
-
 }
 
 add_action('customize_register', 'theme_customize_register');
 
-
 // DD
+
 function dd($args)
 {
     echo '<pre>';
