@@ -1,0 +1,263 @@
+
+
+
+
+
+//================ tur object section
+
+.section_title
+    display: flex
+    position: relative
+    justify-content: center
+    margin-bottom: 30px
+    &:after 
+        content: ''
+        position: absolute
+        bottom: 0px
+        left: calc(50% - 35px)
+        width: 70px
+        height: 2px
+        background-color: $primary
+    h2 
+        border-bottom: 1px solid #CECECE
+        display: inline-block
+        padding: 20px 0
+        padding-top: 0
+
+
+section.tur_objects_section 
+    .row.no-gutters 
+        margin-right: -15px
+        margin-left: -15px
+        .col-lg-6 a:hover 
+            text-decoration: none
+        .col-lg-6:nth-child(odd)
+            .tur_item_wrap
+                justify-content: flex-end
+                margin-right: 5px
+                background-position: right top
+                .tur_item_blur
+                    background-position: right top
+                &:after 
+                    right: 0
+        .col-lg-6:nth-child(even)
+            .tur_item_wrap
+                margin-left: 5px
+                background-position: left top
+                .tur_item_blur
+                    background-position: left top
+                &:after 
+                    left: 0
+        
+
+
+.tur_item_wrap
+    display: flex
+    position: relative
+    height: 360px
+    overflow: hidden
+    margin-bottom: 10px
+    background-repeat: no-repeat
+    &:after 
+        content: ''
+        position: absolute
+        height: 3px
+        background-color: $primary
+        width: 0
+        bottom: 0
+        transition: all 0.5s ease
+    &:hover:after 
+        width: 100%
+    .tur_item_blur
+        height: 100%
+        width: 230px
+        position: absolute 
+        top: 0
+        filter: blur(3px)
+        background-repeat: no-repeat
+    .tur_item_side
+        position: relative
+        width: 230px
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.4)
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        padding: 100px 0px 30px
+        svg 
+            fill: $primary
+            margin-bottom: 10px
+        h4 
+            color: #ffffff
+            font-family: $text
+            text-align: center
+            font-weight: bold
+        span 
+            margin-top: auto
+            font-family: $title 
+            color: $primary
+            text-decoration: underline
+
+
+//================ map section
+
+section.map_section
+    padding-bottom: 50px
+
+.orenge_line
+    position: relative
+    &:after 
+        content: ''
+        position: absolute
+        height: 100%
+        width: 190px
+        background-color: rgba(255, 214, 118, 0.5)
+        top: 0
+        left: -50px
+        z-index: 1
+
+.map_side_text
+    position: relative
+    z-index: 2
+    p 
+        color: #555 
+        margin-top: 45px
+
+
+.map_side_icon_wrap
+    margin-top: 50px
+
+.map_side_icon_title
+    border-bottom: 1px solid #CECECE
+    span 
+        color: #888 
+        margin-bottom: 10px
+        display: inline-block
+
+.map_side_icon_item_wrap
+    display: flex
+    margin: 40px 0 20px
+    flex-wrap: wrap
+    .map_side_icon_item
+        width: 50%
+        a 
+            display: flex
+            align-items: center
+            padding: 10px 0
+            font-family: $text
+            &:hover 
+                text-decoration: underline
+            svg 
+                margin-right: 10px
+
+.map_img 
+    height: 100%
+    // background: #fff url(../images/map.jpg) left top no-repeat
+    position: relative
+    img 
+        position: absolute
+        top: 0
+        left: 0
+    a 
+        position: absolute
+
+.map_icon
+    &:hover
+        text-decoration: none
+
+.map_icon_hover 
+    svg
+        fill: darken($primary, 10%)
+
+
+#bank-map 
+    top: 185px
+    left: 215px
+
+#tree-map 
+    top: 330px
+    left: 345px
+
+#river-map 
+    top: 624px
+    left: 610px
+
+#stone-map 
+    top: 280px
+    left: 286px
+
+#mayak-map 
+    top: 344px
+    left: 217px
+
+#tower-map 
+    top: 404px
+    left: 342px
+
+#boat-map 
+    top: 375px
+    left: 444px
+
+#sich-map 
+    top: 215px
+    left: 270px
+
+
+
+//================ youtube section
+
+
+.youtube_wrap.orenge_line
+    &:after 
+        right: -90px
+        left: auto
+        top: -30px
+    iframe 
+        width: 100%
+        height: 530px
+        position: relative
+        z-index: 2
+
+ 
+
+
+
+//================ footer   
+
+footer  
+    margin-top: 600px
+
+.footer_list 
+    li 
+        a 
+            display: inline-block
+            font-size: 14px
+            color: #D8D6D6
+            font-family: $text
+            padding: 10px 0
+            font-weight: bold
+            &:hover 
+                color: $primary
+
+.footer_time_work
+    display: flex
+    .footer_time_work_col
+        padding: 0 15px
+        &:first-child 
+            width: 30%
+            text-align: right
+
+.footer_time_work_col
+    span 
+        color: #9D9A9A
+        font-size: 10px
+    p, a
+        display: block
+        color: #D7D6D6
+        font-size: 14px
+        margin-bottom: 20px
+        font-weight: bold
+
+.footer_develop_section
+    background-color: #2F2523

@@ -1,0 +1,51 @@
+//================ last news section
+
+
+.last_news_item
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15)
+    background-color: #fff
+    margin-bottom: 30px
+
+.last_news_item_img
+    height: 200px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+
+.last_news_item_content_wrap
+    padding: 0 50px
+    
+.last_news_item_content
+    padding: 40px 0
+    position: relative
+    &:after 
+        content: ''
+        position: absolute
+        height: 4px
+        width: 55px
+        background-color: $primary
+        bottom: 0
+        left: 0
+        transition: all 0.2s ease
+    span 
+        display: inline-block
+        font-size: 14px
+        color: #888888
+        margin-bottom: 20px
+    h4 
+        font-family: $text
+        margin-bottom: 15px
+        font-weight: bold
+    p 
+        margin-bottom: 20px
+        color: #555555
+        line-height: 31px
+    a 
+        text-decoration: underline
+        &:hover 
+            color: $primary
+    &:hover 
+        &:after
+            width: 100%
+        
+

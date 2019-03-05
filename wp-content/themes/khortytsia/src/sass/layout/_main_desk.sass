@@ -1,0 +1,212 @@
+//================ main desk main page
+
+section.main_desk_section 
+    height: 100vh
+    background-image: url(../images/main_desk_bg.jpg)
+    background-repeat: no-repeat
+    background-size: cover 
+    display: flex
+    align-items: center
+    position: relative
+
+.desktop_gradient
+    background-image: linear-gradient(166.54deg, rgba(0, 0, 0, 0.6) 18.92%, rgba(255, 252, 252, 0) 99.53%)
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+
+.desktop_gradient2
+    background-image: linear-gradient(94.19deg, rgba(0, 0, 0, 0.3) 6.1%, rgba(0, 0, 0, 0) 98.59%)
+
+.main_desk_subtitle
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+    position: relative
+    &:after 
+        content: ''
+        position: absolute
+        bottom: -1px
+        left: 0
+        width: 70px
+        height: 2px
+        background-color: $primary
+    p 
+        font-size: 30px
+        letter-spacing: 0.15rem
+        color: $primary
+        padding: 20px 0
+
+.main_desk_title
+    padding-left: 70px
+    margin-top: 20px
+    h1 
+        font-size: 120px
+    p 
+        color: #fff 
+        line-height: 30px
+    a 
+        padding: 20px 0
+        color: $primary 
+        letter-spacing: normal
+        text-decoration: underline
+
+.main_desk_social
+    display: flex
+    flex-direction: column 
+    position: absolute
+    left: 50px 
+    bottom: 50px
+    a 
+        padding: 5px
+        svg 
+            fill: #fff
+        &:hover 
+            svg 
+                filter: drop-shadow( 0px 0px 5px #fff)
+
+
+
+    
+.scroll_down 
+    position: absolute
+    left: 18%
+    bottom: 0
+    transform: translateX(-50%)
+    display: block
+    &__text 
+        position: absolute
+        top: 50px
+        left: -64px
+        width: 100px
+        font-size: 10px
+        color: #fff
+        transform: rotate(-90deg)
+    &__icon 
+        position: relative
+        width: 2px
+        height: 130px
+        background: rgba(#fff, .15)
+        &::before 
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 2px
+            height: 30px
+            background: #fff
+            box-shadow: 0px 2px 35px 8px rgba(255, 255, 255, 0.2)
+            animation: scrollDown 1.5s linear forwards infinite
+        
+
+@keyframes scrollDown 
+    0% 
+        top: 0
+    25% 
+        top: 25%
+    50% 
+        top: 50%
+    75% 
+        top: 75%
+    100% 
+        top: 100%
+
+
+
+
+//================ main desk tur object page
+
+
+section.main_desk_turobj_section 
+    height: 100vh
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center right
+    display: flex
+    align-items: center
+    position: relative
+
+
+.main_desk_turobj_wrap
+    display: flex
+    justify-content: center
+    flex-direction: column
+    height: 100vh
+    margin-left: -15px
+    background: #000 url(../images/tur_obj_main_bg_side.jpg) no-repeat bottom center 
+    background-size: cover  
+    padding: 0 70px
+    position: relative
+    z-index: 2
+
+
+.main_desk_other_title
+    h1 
+        border-bottom: 1px solid #CECECE
+        padding-bottom: 20px
+        position: relative
+        &:after 
+            content: ''
+            width: 70px
+            height: 2px
+            background-color: $primary
+            position: absolute
+            bottom: -1px
+            left: 0
+        svg 
+            margin-right: 5px
+            fill: $primary
+
+.main_desk_other_text
+    padding-left: 60px
+    padding-top: 20px
+    p 
+        color: #DABFB5
+        line-height: 31px
+        margin-bottom: 20px
+
+
+.main_desk_breadcrumb
+    display: flex
+    flex-direction: row
+    align-items: center
+    .breadcrumb-item
+        display: inline-flex
+        align-items: center
+        a 
+            font-family: $text
+            font-size: 10px
+            color: #fff
+        &.active 
+            color: #DABFB5
+            font-size: 10px
+    .breadcrumb-item + .breadcrumb-item::before
+        margin: 0 10px
+        width: 0
+        height: 0
+        border-top: 3px solid transparent
+        border-left: 6px solid $primary
+        border-bottom: 3px solid transparent
+
+
+
+//================ main desk other page
+
+section.main_desk_other_section
+    height: 80vh
+    align-items: flex-start
+    padding-top: 200px
+
+.main_desk_other_wrap
+    .main_desk_other_title
+        h1 
+            display: inline-block
+
+
+
+
+
+section.main_desk_other_filter_section + section.mt_section
+    margin-top: -150px
+
+

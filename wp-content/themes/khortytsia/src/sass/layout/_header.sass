@@ -1,0 +1,185 @@
+header
+    position: fixed
+    width: 100%
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+    z-index: 9
+    transition: all 0.2s ease
+    &.header_fixed 
+        background-color: rgba(56, 64, 73, 0.6)
+        border: none
+        .nav-link
+            padding: 20px 0
+
+
+.nav_list
+    .dropdown-toggle
+        position: relative
+        &:after 
+            content: ''
+            display: inline-block
+            position: absolute
+            border-left: 4px solid transparent
+            border-right: 4px solid transparent
+            border-top: 5px solid #fff
+            margin: 0
+            top: calc(50% - 1px)
+            right: -20px
+    .dropdown-menu
+        margin-top: 0
+        transition: all 0.2s ease
+        .dropdown-item 
+            display: flex
+            align-items: center
+            font-family: $text
+            &:before 
+                content: ''
+                height: 4px
+                width: 4px
+                background-color: #fff
+                border-radius: 50%
+                margin-right: 15px
+            &:hover 
+                &:before 
+                    background-color: $primary 
+
+
+.nav_list 
+    .nav-item
+        margin: 0 30px
+        &:first-child 
+            margin-left: 0
+        .nav-link
+            border-bottom: 2px solid transparent 
+            color: #fff
+            font-family: $text
+            &:hover 
+                border-color: $primary
+                color: $primary
+                &:after 
+                    border-top: 5px solid $primary
+
+
+
+.header_item
+    margin-left: 30px
+
+
+.header_tel
+    display: flex
+    flex-direction: column
+    a 
+        padding: 5px 0
+        line-height: 1
+        font-weight: bold 
+        color: #fff
+        display: flex
+        align-items: center
+        font-family: $text
+        svg 
+            margin-right: 10px
+            fill: $primary
+        &:hover 
+            color: $primary
+            svg 
+                fill: #fff
+                fill-rule: nonzero
+
+
+.header_search
+    position: relative
+    button#open_serch
+        height: 55px
+        width: 61px
+        border: none 
+        background: transparent url(../images/icons/search.svg) no-repeat center center
+        &:focus, &:hover 
+            outline: none
+        &.close_serch 
+            background: transparent url(../images/icons/close-search.svg) no-repeat center center
+
+.serch_line
+    display: flex
+    align-items: center
+    position: absolute
+    width: 0
+    right: 100%
+    top: 0
+    overflow: hidden
+    transition: all 0.2s ease
+    input 
+        font-size: 16px
+        padding: 15px 25px
+        padding-right: 70px
+        background-color: #ECECEC
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+        border-radius: 5px
+        border: none
+        width: 100%
+        &:focus
+            outline: none
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+    button 
+        height: 54px
+        padding: 0 15px
+        background-color: #C9CBCC
+        border-radius: 0px 5px 5px 0px
+        border: none
+        margin-left: -61px
+        &:focus
+            outline: none
+        svg 
+            fill: #fff
+
+.serch_line_open
+    width: 50vw
+
+
+.header_lang
+    position: relative
+    padding: 10px
+    align-self: stretch
+    align-items: center
+    display: flex
+    cursor: pointer
+    p 
+        font-weight: bold
+        color: #fff
+    .header_lang_drop
+        display: flex
+        flex-direction: column
+        height: 100%
+        position: absolute
+        background-color: #fff
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15)
+        top: -199px
+        left: 50%
+        margin-right: -50%
+        transform: translateX(-50%)
+        transition: all 0.4s ease
+        a 
+            padding: 3px 20px
+            color: #333 
+            font-family: $text 
+            font-weight: bold
+            &:hover 
+                color: $primary
+    &:hover 
+        .header_lang_drop
+            top: 0
+
+        
+header.header_fixed
+    .header_lang .header_lang_drop
+        height: auto
+    .dropdown-menu
+        left: -10px
+        padding: 10px
+        background-color: rgba(56, 64, 73, 0.6)
+
+
+
+
+
+
+
+
