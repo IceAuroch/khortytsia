@@ -99,3 +99,4 @@ function dd($args)
 // Post types
 
 require_once('post-types/tourist.php');
+require_once('post-types/partners.php');
