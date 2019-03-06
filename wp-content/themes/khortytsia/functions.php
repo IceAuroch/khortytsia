@@ -95,3 +95,7 @@ function dd($args)
 
     die();
 }
+
+// Post types
+
+require_once('post-types/tourist.php');
