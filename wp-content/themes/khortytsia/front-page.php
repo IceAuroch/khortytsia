@@ -3,7 +3,11 @@
 get_header();
 
 $sections = [
-    ''
+    'main',
+    'tur-object',
+    'map',
+    'youtube',
+    'last-news'
 ];
 
 foreach ($sections as $section) {

@@ -5,9 +5,20 @@
     background-size: cover 
     background-position: center center
     background-repeat: no-repeat
+    position: relative
     a 
         display: block
         height: 100%
+    &:after 
+        position: absolute
+        content: ''
+        bottom: 0
+        left: 0
+        height: 3px
+        background-color: $primary
+        width: 0
+        transition: all 0.2s ease
+
 
 .partner_title
     margin-bottom: 30px
@@ -15,3 +26,34 @@
     h4 
         font-family: $text 
         font-weight: bold
+
+.page_partners_item
+    &:hover
+        a 
+            color: $primary
+        .partners_img:after 
+            width: 100%
+        .partner_title h4 
+            color: $primary
+
+
+.one_partner_content
+    background-color: #fff
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15)
+    .slider_title
+        margin-top: 20px
+
+.one_partner_map
+    position: relative
+    margin-top: 50px
+
+.one_partners_text
+    padding: 60px
+
+.slider_main_wrap
+    position: relative
+
+
+
+
+

@@ -38,18 +38,8 @@
                                     <a class="dropdown-item" href="partners.html">Партнери</a>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Туроб’єкти
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="tur-objects.html">Скіфський стан</a>
-                                    <a class="dropdown-item" href="tur-objects.html">Скіфський стан</a>
-                                    <a class="dropdown-item" href="tur-objects.html">Скіфський стан</a>
-                                    <a class="dropdown-item" href="tur-objects.html">Скіфський стан</a>
-                                    <a class="dropdown-item" href="tur-objects.html">Скіфський стан</a>
-                                    <a class="dropdown-item" href="tur-objects.html">Скіфський стан</a>
-                                </div>
+                            <li class="nav-item">
+                                <a class="nav-link turobj_link" href="#">Туроб’єкти</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Відвідування</a>
@@ -107,7 +97,7 @@
                             </a>
                         </div>
                         <div class="header_item">
-                            <a class="btn btn-primary" href="#">Вибрати екскурсію</a>
+                            <a class="btn btn-secondary" href="#">Вибрати екскурсію</a>
                         </div>
                     </div>
                 </nav>
@@ -115,3 +105,108 @@
         </div>
     </div>
 </header>
+
+<section class="dropdown_turobj_main_wrap">
+    <div class="dropdown_turobj_wrap">
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col-lg-3">
+                    <a href="#">
+                        <div class="dropdown_turobj">
+                            <div class="dropdown_turobj__img">
+                                <img src="images/tur-ojects/tur1.jpg" alt="">
+                            </div>
+                            <div class="dropdown_turobj__title">
+                                <p>Запорізька Січ</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="#">
+                        <div class="dropdown_turobj">
+                            <div class="dropdown_turobj__img">
+                                <img src="images/tur-ojects/tur2.jpg" alt="">
+                            </div>
+                            <div class="dropdown_turobj__title">
+                                <p>Святилище</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="#">
+                        <div class="dropdown_turobj">
+                            <div class="dropdown_turobj__img">
+                                <img src="images/tur-ojects/tur3.jpg" alt="">
+                            </div>
+                            <div class="dropdown_turobj__title">
+                                <p>Скіфський стан</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="#">
+                        <div class="dropdown_turobj">
+                            <div class="dropdown_turobj__img">
+                                <img src="images/tur-ojects/tur4.jpg" alt="">
+                            </div>
+                            <div class="dropdown_turobj__title">
+                                <p>Дендропарк</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="#">
+                        <div class="dropdown_turobj">
+                            <div class="dropdown_turobj__img">
+                                <img src="images/tur-ojects/tur5.jpg" alt="">
+                            </div>
+                            <div class="dropdown_turobj__title">
+                                <p>Музей</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="#">
+                        <div class="dropdown_turobj">
+                            <div class="dropdown_turobj__img">
+                                <img src="images/tur-ojects/tur6.jpg" alt="">
+                            </div>
+                            <div class="dropdown_turobj__title">
+                                <p>Козацькі човни</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="#">
+                        <div class="dropdown_turobj">
+                            <div class="dropdown_turobj__img">
+                                <img src="images/tur-ojects/tur7.jpg" alt="">
+                            </div>
+                            <div class="dropdown_turobj__title">
+                                <p>Кам’янська Січ</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3">
+                    <a href="#">
+                        <div class="dropdown_turobj">
+                            <div class="dropdown_turobj__img">
+                                <img src="images/tur-ojects/tur8.jpg" alt="">
+                            </div>
+                            <div class="dropdown_turobj__title">
+                                <p>Протовче</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

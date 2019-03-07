@@ -1,15 +1,10 @@
-
-
-$(document).ready(function(){
-    $(window).scroll(function() {
+$(document).ready(function () {
+    $(window).scroll(function () {
         var height = $(window).scrollTop();
 
-        /*Если сделали скролл на 10px задаём новый класс для header*/
-        if(height > 0){
+        if (height > 0) {
             $('header').addClass('header_fixed');
-        } 
-        else{
-        /*Если меньше 10px удаляем класс для header*/
+        } else {
             $('header').removeClass('header_fixed');
         }
 
@@ -18,24 +13,24 @@ $(document).ready(function(){
 
 
     $('.map_icon').hover(
-        function(){
+        function () {
             var mapImgIcon = $(this).attr('data-selection');
             $(this).addClass('map_icon_hover');
             $(`#${mapImgIcon}`).addClass('map_icon_hover');
         },
-        function(){
+        function () {
             var mapImgIcon = $(this).attr('data-selection');
             $(this).removeClass('map_icon_hover');
             $(`#${mapImgIcon}`).removeClass('map_icon_hover');
-    });
+        });
 
 
 
-    $('.map_scrol').click(function() {
+    $('.map_scrol').click(function () {
         $(this).addClass('map_scrol_close');
     });
 
-    $('#open_serch').click(function() {
+    $('#open_serch').click(function () {
         $(this).toggleClass('close_serch');
 
         $('.serch_line').toggleClass('serch_line_open');
@@ -43,5 +38,41 @@ $(document).ready(function(){
         $('.serch_line input').focus();
 
     });
+
+
+    $(".turobj_link").on('click', function (event) {
+        event.preventDefault();
+
+        $(this).toggleClass('turobj_link__open');
+        $('.dropdown_turobj_main_wrap')
+            .toggleClass('dropdown_turobj_main_wrap__open');
+
+        $('header').toggleClass('header_drop_open');
+
+    });
+
+    $(window).scroll(function () {
+        $('.turobj_link').removeClass('turobj_link__open');
+        $('.dropdown_turobj_main_wrap').removeClass('dropdown_turobj_main_wrap__open');
+
+        $('header').removeClass('header_drop_open');
+    });
+
+
+
+    $(document).mouseup(function (e) {
+        var container = $(".dropdown_turobj_wrap");
+        if (!$(e.target).hasClass('turobj_link')) {
+            if (!container.has(e.target).length) {
+                $('.turobj_link').removeClass('turobj_link__open');
+                $('.dropdown_turobj_main_wrap')
+                    .removeClass('dropdown_turobj_main_wrap__open');
+    
+                $('header').removeClass('header_drop_open');
+            }
+        }
+    });
+
+
 
 });
