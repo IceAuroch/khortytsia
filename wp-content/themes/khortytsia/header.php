@@ -114,7 +114,7 @@
                     <a href="#">
                         <div class="dropdown_turobj">
                             <div class="dropdown_turobj__img">
-                                <img src="images/tur-ojects/tur1.jpg" alt="">
+                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur1.jpg'); ?>" alt="">
                             </div>
                             <div class="dropdown_turobj__title">
                                 <p>Запорізька Січ</p>
@@ -126,7 +126,7 @@
                     <a href="#">
                         <div class="dropdown_turobj">
                             <div class="dropdown_turobj__img">
-                                <img src="images/tur-ojects/tur2.jpg" alt="">
+                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur2.jpg'); ?>" alt="">
                             </div>
                             <div class="dropdown_turobj__title">
                                 <p>Святилище</p>
@@ -138,7 +138,7 @@
                     <a href="#">
                         <div class="dropdown_turobj">
                             <div class="dropdown_turobj__img">
-                                <img src="images/tur-ojects/tur3.jpg" alt="">
+                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur3.jpg'); ?>" alt="">
                             </div>
                             <div class="dropdown_turobj__title">
                                 <p>Скіфський стан</p>
@@ -150,7 +150,7 @@
                     <a href="#">
                         <div class="dropdown_turobj">
                             <div class="dropdown_turobj__img">
-                                <img src="images/tur-ojects/tur4.jpg" alt="">
+                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur4.jpg'); ?>" alt="">
                             </div>
                             <div class="dropdown_turobj__title">
                                 <p>Дендропарк</p>
@@ -162,7 +162,7 @@
                     <a href="#">
                         <div class="dropdown_turobj">
                             <div class="dropdown_turobj__img">
-                                <img src="images/tur-ojects/tur5.jpg" alt="">
+                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur5.jpg'); ?>" alt="">
                             </div>
                             <div class="dropdown_turobj__title">
                                 <p>Музей</p>
@@ -174,7 +174,7 @@
                     <a href="#">
                         <div class="dropdown_turobj">
                             <div class="dropdown_turobj__img">
-                                <img src="images/tur-ojects/tur6.jpg" alt="">
+                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur6.jpg'); ?>" alt="">
                             </div>
                             <div class="dropdown_turobj__title">
                                 <p>Козацькі човни</p>
@@ -186,7 +186,7 @@
                     <a href="#">
                         <div class="dropdown_turobj">
                             <div class="dropdown_turobj__img">
-                                <img src="images/tur-ojects/tur7.jpg" alt="">
+                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur7.jpg'); ?>" alt="">
                             </div>
                             <div class="dropdown_turobj__title">
                                 <p>Кам’янська Січ</p>
@@ -198,7 +198,7 @@
                     <a href="#">
                         <div class="dropdown_turobj">
                             <div class="dropdown_turobj__img">
-                                <img src="images/tur-ojects/tur8.jpg" alt="">
+                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur8.jpg'); ?>" alt="">
                             </div>
                             <div class="dropdown_turobj__title">
                                 <p>Протовче</p>
