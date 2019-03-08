@@ -198,7 +198,7 @@ msgstr "Ви не можете встановити, тому що <a href=\"%1$
 msgid "You cannot install because <a href=\"%1$s\">WordPress %2$s</a> requires PHP version %3$s or higher. You are running version %4$s."
 msgstr "Ви не можете встановити, тому що <a href=\"%1$s\">WordPress %2$s</a> вимагає PHP версії %3$s або вище. Ваша версія - %4$s."
 
-#: wp-admin/includes/dashboard.php:1709
+#: wp-admin/includes/dashboard.php:1710
 msgid "Set up your homepage"
 msgstr "Налаштуйте головну сторінку сайту"
 
@@ -3629,7 +3629,7 @@ msgstr "<a href=\"https://codex.wordpress.org/Revision_Management\">Управл
 msgid "You can also embed media from many popular websites including Twitter, YouTube, Flickr and others by pasting the media URL on its own line into the content of your post/page. Please refer to the Codex to <a href=\"https://codex.wordpress.org/Embeds\">learn more about embeds</a>."
 msgstr "Ви можете також вставляти медіа з багатьох популярних сайтів, включаючи Twitter, YouTube, Flickr та інші, вставивши посилання окремим рядком у вміст вашого запису чи сторінки. Будь ласка, використовуйте Кодекс, щоби <a href=\"https://codex.wordpress.org/Embeds\">дізнатися більше про вставки</a>."
 
-#: wp-admin/includes/dashboard.php:1737
+#: wp-admin/includes/dashboard.php:1738
 msgid "https://codex.wordpress.org/First_Steps_With_WordPress"
 msgstr "https://codex.wordpress.org/First_Steps_With_WordPress"
 
@@ -4606,11 +4606,11 @@ msgstr "Редагувати видимість"
 msgid "Edit status"
 msgstr "Редагувати статус"
 
-#: wp-admin/includes/dashboard.php:1729
+#: wp-admin/includes/dashboard.php:1730
 msgid "Manage menus"
 msgstr "Керувати меню"
 
-#: wp-admin/includes/dashboard.php:1727
+#: wp-admin/includes/dashboard.php:1728
 msgid "Manage widgets"
 msgstr "Керувати віджетами"
 
@@ -5717,7 +5717,7 @@ msgstr "Повертання зображення не підтримуєтьс�
 msgid "If you are looking to use the link manager, please install the <a href=\"%s\">Link Manager</a> plugin."
 msgstr "Якщо ви шукаєте сторінку керування посиланнями, встановіть плагін <a href=\"%s\">Link Manager</a>."
 
-#: wp-admin/includes/dashboard.php:1722
+#: wp-admin/includes/dashboard.php:1723
 msgid "Manage <a href=\"%1$s\">widgets</a> or <a href=\"%2$s\">menus</a>"
 msgstr "Керування <a href=\"%1$s\">віджетами</a> та <a href=\"%2$s\">меню</a>"
 
@@ -5793,15 +5793,15 @@ msgstr "Також можна вибрати колір фону, натисну
 msgid "You can choose whether or not your site will be crawled by robots, ping services, and spiders. If you want those services to ignore your site, click the checkbox next to &#8220;Discourage search engines from indexing this site&#8221; and click the Save Changes button at the bottom of the screen. Note that your privacy is not complete; your site is still visible on the web."
 msgstr "Ви можете вибрати, чи повинен ваш сайт індексуватися роботами, сервісами повідомлень і веб-павуками. Якщо ви хочете, щоб ці служби ігнорували ваш сайт, поставте галочку &laquo;Попросити пошукові системи не індексувати сайт&raquo; та натисніть кнопку &laquo;Зберегти зміни&raquo; в нижній частині екрана. Зверніть увагу, що для повної приватності цього недостатньо; ваш сайт все одно видно іншим відвідувачам."
 
-#: wp-admin/includes/dashboard.php:1737
+#: wp-admin/includes/dashboard.php:1738
 msgid "Learn more about getting started"
 msgstr "Дізнайтеся більше про початок роботи з WordPress"
 
-#: wp-admin/includes/dashboard.php:1735
+#: wp-admin/includes/dashboard.php:1736
 msgid "Turn comments on or off"
 msgstr "Увімкнути або вимкнути коментарі"
 
-#: wp-admin/includes/dashboard.php:1715
+#: wp-admin/includes/dashboard.php:1716
 msgid "More Actions"
 msgstr "Інші дії"
 
@@ -5897,47 +5897,47 @@ msgstr "Ваше ім'я користувача на WordPress.org:"
 msgid "If you have marked plugins as favorites on WordPress.org, you can browse them here."
 msgstr "Якщо ви додали плагіни на WordPress.org в список улюблених, ви можете їх переглянути тут."
 
-#: wp-admin/includes/dashboard.php:1711
+#: wp-admin/includes/dashboard.php:1712
 msgid "View your site"
 msgstr "Переглянути свій сайт"
 
-#: wp-admin/includes/dashboard.php:1708
+#: wp-admin/includes/dashboard.php:1709
 msgid "Add an About page"
 msgstr "Додайте сторінку \"Про мене\""
 
-#: wp-admin/includes/dashboard.php:1707
+#: wp-admin/includes/dashboard.php:1708
 msgid "Write your first blog post"
 msgstr "Напишіть свій перший запис"
 
-#: wp-admin/includes/dashboard.php:1705
+#: wp-admin/includes/dashboard.php:1706
 msgid "Add a blog post"
 msgstr "Додати запис"
 
-#: wp-admin/includes/dashboard.php:1701 wp-admin/includes/dashboard.php:1704
+#: wp-admin/includes/dashboard.php:1702 wp-admin/includes/dashboard.php:1705
 msgid "Add additional pages"
 msgstr "Додати інші сторінки"
 
-#: wp-admin/includes/dashboard.php:1700 wp-admin/includes/dashboard.php:1703
+#: wp-admin/includes/dashboard.php:1701 wp-admin/includes/dashboard.php:1704
 msgid "Edit your front page"
 msgstr "Редагувати головну сторінку"
 
-#: wp-admin/includes/user.php:1082 wp-admin/includes/dashboard.php:1697
+#: wp-admin/includes/user.php:1082 wp-admin/includes/dashboard.php:1698
 msgid "Next Steps"
 msgstr "Наступні кроки"
 
-#: wp-admin/includes/dashboard.php:1693
+#: wp-admin/includes/dashboard.php:1694
 msgid "or, <a href=\"%s\">change your theme completely</a>"
 msgstr "або, <a href=\"%s\">повністю змінити тему</a>"
 
-#: wp-admin/includes/dashboard.php:1687
+#: wp-admin/includes/dashboard.php:1688
 msgid "Get Started"
 msgstr "Початок роботи"
 
-#: wp-admin/includes/dashboard.php:1683
+#: wp-admin/includes/dashboard.php:1684
 msgid "We&#8217;ve assembled some links to get you started:"
 msgstr "Ми зібрали деякі посилання для легкого початку роботи з WordPress:"
 
-#: wp-admin/includes/dashboard.php:1682
+#: wp-admin/includes/dashboard.php:1683
 msgid "Welcome to WordPress!"
 msgstr "Ласкаво просимо до WordPress!"
 
@@ -6990,7 +6990,7 @@ msgstr "Перейти до \"Майстерні\" &rarr; \"Домашня ст�
 msgid "WordPress is created by a worldwide team of passionate individuals."
 msgstr "WordPress створено міжнародною командою пристрасних особистостей."
 
-#: wp-admin/includes/dashboard.php:1688 wp-admin/includes/dashboard.php:1690
+#: wp-admin/includes/dashboard.php:1689 wp-admin/includes/dashboard.php:1691
 msgid "Customize Your Site"
 msgstr "Налаштувати свій сайт"
 
