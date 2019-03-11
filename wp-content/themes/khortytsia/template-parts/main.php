@@ -21,17 +21,17 @@
 
 
     <div class="main_desk_social">
-        <a href="#">
+        <a href="<?php echo get_theme_mod('facebook'); ?>">
             <svg width="20" height="20">
                 <use xlink:href="#fb-icon"></use>
             </svg>
         </a>
-        <a href="#">
+        <a href="<?php echo get_theme_mod('instagram'); ?>">
             <svg width="19" height="20">
                 <use xlink:href="#insta-icon"></use>
             </svg>
         </a>
-        <a href="#">
+        <a href="<?php echo get_theme_mod('youtube'); ?>">
             <svg width="20" height="20">
                 <use xlink:href="#yt-icon"></use>
             </svg>

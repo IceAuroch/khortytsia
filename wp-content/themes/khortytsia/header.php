@@ -19,7 +19,7 @@
             <div class="col">
                 <nav class="navbar navbar-expand-xl">
                     <a class="navbar-brand header_logo" href="<?php echo site_url(); ?>">
-                        <img src="images/logo.png" alt="">
+                        <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="">
                     </a>
                     <div class="header_item header_lang for_mobile_flex">
                         <p>UA</p>
@@ -60,7 +60,7 @@
                                         'post_type' => 'tourist',
                                 ]);
                                 if($turobj->have_posts()):
-                                    ?>
+                                ?>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <?php while($turobj->have_posts()): $turobj->the_post(); ?>
@@ -81,15 +81,15 @@
                                     Блог
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="news.html">Новини</a>
-                                    <a class="dropdown-item" href="articles.html">Статті</a>
+                                    <a class="dropdown-item" href="<?php echo the_permalink(); ?>">Новини</a>
+                                    <a class="dropdown-item" href="<?php echo the_permalink(); ?>">Статті</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="galery.html">Галерея</a>
+                                <a class="nav-link" href="<?php echo the_permalink(); ?>">Галерея</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contacts.html">Контакти</a>
+                                <a class="nav-link" href="<?php echo the_permalink(); ?>">Контакти</a>
                             </li>
                         </ul>
                         <div class="header_item">

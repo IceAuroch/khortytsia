@@ -54,7 +54,7 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 function theme_customize_register($wp_customize)
 {
     $wp_customize->add_section('contacts', [
-        'title' => 'Social links',
+        'title' => 'Социальные ссылки',
         'priority' => 30,
     ]);
     $wp_customize->add_setting('facebook');
@@ -79,6 +79,12 @@ function theme_customize_register($wp_customize)
     $wp_customize->add_control('email', [
         'section' => 'contacts',
         'label' => 'E-mail',
+        'type' => 'text',
+    ]);
+    $wp_customize->add_setting('email2');
+    $wp_customize->add_control('email2', [
+        'section' => 'contacts',
+        'label' => 'E-mail бухгалтерии',
         'type' => 'text',
     ]);
 }

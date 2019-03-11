@@ -1,16 +1,16 @@
 <footer class="footer_section">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-10 offset-lg-1">
+            <div class="col-xl-10 offset-xl-1">
                 <div class="row">
-                    <div class="col-lg-2">
+                    <div class="col-md-4 col-xl-2">
                         <div class="footer_logo">
                             <a href="<?php echo site_url(); ?>">
                                 <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-md-4 col-xl-2">
                         <ul class="footer_list">
                             <li><a href="#">Про Хортицю</a></li>
                             <li><a href="#">Туристичні об’єкти</a></li>
@@ -20,18 +20,25 @@
                             <li><a href="#">Контакти</a></li>
                         </ul>
                     </div>
-                    <div class="col-lg-2">
+
+                    <?php $turobj = new WP_Query([
+                        'post_type' => 'tourist',
+                    ]);
+                    if($turobj->have_posts()):
+                    ?>
+
+                    <div class="col-md-4 col-xl-2">
                         <ul class="footer_list">
-                            <li><a href="#">Запорізька Січ</a></li>
-                            <li><a href="#">Скіфський стан</a></li>
-                            <li><a href="#">Музей</a></li>
-                            <li><a href="#">Святилище</a></li>
-                            <li><a href="#">Дендропарк</a></li>
-                            <li><a href="#">Козацькі човни</a></li>
-                            <li><a href="#">Кам’янска Січ</a></li>
-                            <li><a href="#">Протовче</a></li>
+                            <?php while($turobj->have_posts()): $turobj->the_post(); ?>
+                            <li><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></li>
+                            <?php endwhile; ?>
                         </ul>
                     </div>
+
+                    <?php endif;
+                    wp_reset_postdata();
+                    ?>
+
                     <div class="col">
                         <div class="footer_time_work">
                             <div class="footer_time_work_col">
@@ -55,7 +62,7 @@
                                 <span>Email:</span>
                             </div>
                             <div class="footer_time_work_col">
-                                <a href="mailto:">zapovidnik@ukr.net</a>
+                                <a href="mailto:<?php echo get_theme_mod('email'); ?>">zapovidnik@ukr.net</a>
                             </div>
                         </div>
                     </div>
@@ -68,28 +75,29 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="footer_dev_wrap">
-                        <div class="footer_dev_item">
-                            <p>2019 © Усі права захищені</p>
-                        </div>
-                        <div class="footer_dev_item">
-                            <a href="#">
+                        <div class="footer_dev_item order-lg-2">
+                            <a href="<?php echo get_theme_mod('facebook'); ?>">
                                 <svg width="20" height="20">
                                     <use xlink:href="#fb-icon"></use>
                                 </svg>
                             </a>
-                            <a href="#">
+                            <a href="<?php echo get_theme_mod('instagram'); ?>">
                                 <svg width="19" height="20">
                                     <use xlink:href="#insta-icon"></use>
                                 </svg>
                             </a>
-                            <a href="#">
+                            <a href="<?php echo get_theme_mod('youtube'); ?>">
                                 <svg width="20" height="20">
                                     <use xlink:href="#yt-icon"></use>
                                 </svg>
                             </a>
                         </div>
-                        <div class="footer_dev_item">
-                            <p>Веб-розробка <a href="#">ImpressionBureau</a> 2019</p>
+                        <div class="footer_dev_item order-lg-1">
+                            <p><?php echo date('Y'); ?> © Усі права захищені</p>
+                        </div>
+
+                        <div class="footer_dev_item order-lg-3">
+                            <p>Веб-розробка <a href="https://impressionbureau.pro">ImpressionBureau</a><?php echo date('Y'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -98,18 +106,8 @@
     </div>
 </footer>
 
-
-
-
-
-
-
-
-
-
-<?php wp_footer(); ?>
+<?php get_footer(); ?>
 
 </body>
-
 
 </html>
