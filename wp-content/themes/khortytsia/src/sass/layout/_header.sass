@@ -12,9 +12,15 @@ header
         .nav-link
             padding: 20px 0
     
+.header_logo
+    height: 60px
+    width: auto 
+    img 
+        height: 100%
+        width: auto
 
 
-.navbar-expand-lg .nav_list
+.navbar-expand-xl .nav_list
     .dropdown-toggle
         padding-right: 20px
         margin-right: 10px
@@ -29,7 +35,6 @@ header
             top: calc(50% - 1px)
             right: 0px
     .dropdown-menu
-        left: 30px
         margin-top: 0
         transition: all 0.2s ease
         .dropdown-item 
@@ -190,7 +195,7 @@ header
             font-weight: bold
             &:hover 
                 color: $primary
-    &:hover 
+    &:hover, &:focus, &:active
         .header_lang_drop
             top: 0
 
@@ -265,7 +270,7 @@ header.header_fixed + section.dropdown_turobj_main_wrap
             p 
                 color: $primary
 
-.navbar-expand-lg .nav_list .turobj_link
+.navbar-expand-xl .nav_list .turobj_link
     padding-right: 20px
     margin-right: 10px
     &:after 

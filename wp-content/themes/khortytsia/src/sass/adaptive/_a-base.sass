@@ -1,0 +1,216 @@
+/*==============   before adaptive  ==============*/
+.header_menu_main_btn_wrap
+	display: none
+	vertical-align: middle
+	margin-left: 30px
+
+button.menu_main_btn
+	width: 60px
+	height: 60px
+	position: relative
+	right: -15px
+	top: 0
+	background-color: #fff
+	border-radius: 0
+
+.menu_btn
+	display: inline-block
+	position: absolute
+	width: 30px
+	height: 2px
+	background-color: #000
+	top: 28px
+	left: 15px
+	
+.menu_btn_top
+	top: 20px
+	width: 25px
+
+.menu_btn_middle
+	transition-delay: 0.3s
+
+.menu_btn_end
+	top: 37px
+	width: 25px
+
+
+.dropdown-toggle::after
+	display: none
+
+button.menu_main_btn[aria-expanded=true]
+	.menu_btn_top
+		animation-name: btn_top
+		animation-duration: 0.5s
+		animation-timing-function: liner
+		animation-fill-mode: forwards
+	.menu_btn_end
+		animation-name: btn_end
+		animation-duration: 0.5s
+		animation-timing-function: liner
+		animation-fill-mode: forwards
+	.menu_btn_middle
+		opacity: 0
+
+button.menu_main_btn[aria-expanded=false]
+	.menu_btn_top
+		animation-name: btn_top_back
+		animation-duration: 0.5s
+		animation-timing-function: liner
+		animation-fill-mode: forwards
+	.menu_btn_end
+		animation-name: btn_end_back
+		animation-duration: 0.5s
+		animation-timing-function: liner
+		animation-fill-mode: forwards
+
+
+
+@keyframes btn_top 
+	0% 
+		top: 20px
+		transform: rotate(0deg)
+
+	45% 
+		top: 28px
+		transform: rotate(0deg)
+
+	55%
+		top: 28px
+		transform: rotate(0deg)
+
+	100% 
+		top: 28px
+		transform: rotate(45deg)
+
+@keyframes btn_top_back
+	0% 
+		top: 28px
+		transform: rotate(45deg)
+
+	45% 
+		top: 28px
+		transform: rotate(0deg)
+
+	55%
+		top: 28px
+		transform: rotate(0deg)
+
+	100% 
+		top: 20px
+		transform: rotate(0deg)
+
+
+
+
+@keyframes btn_end 
+	0% 
+		top: 37px
+		transform: rotate(0deg)
+
+	45% 
+		top: 28px
+		transform: rotate(0deg)
+
+	55%
+		top: 28px
+		transform: rotate(0deg)
+
+	100% 
+		top: 28px
+		transform: rotate(-45deg)
+
+
+@keyframes btn_end_back
+	0% 
+		top: 28px
+		transform: rotate(-45deg)
+
+	45% 
+		top: 28px
+		transform: rotate(0deg)
+
+	55%
+		top: 28px
+		transform: rotate(0deg)
+
+	100% 
+		top: 37px
+		transform: rotate(0deg)
+
+
+.for_mobile
+	display: none
+
+.for_mobile_flex
+	display: none
+
+
+
+
+    
+@media (min-width: 315px) and (max-width: 395px)
+
+	body 
+		overflow-x: hidden
+
+	h1 
+		font-size: 30px
+	h2 
+		font-size: 24px
+
+	section 
+		margin-bottom: 50px
+
+
+    
+@media (min-width: 396px) and (max-width: 575px)
+
+
+	body 
+		overflow-x: hidden
+
+	h1 
+		font-size: 30px
+	h2 
+		font-size: 30px
+
+	section 
+		margin-bottom: 50px
+
+
+@media (min-width: 576px) and (max-width: 767px)
+
+	body 
+		overflow-x: hidden
+
+	h1 
+		font-size: 48px
+	h2 
+		font-size: 30px
+
+	section 
+		margin-bottom: 50px
+
+
+@media (min-width: 768px) and (max-width: 991px)
+
+	body 
+		overflow-x: hidden
+	h2 
+		font-size: 2rem
+
+	section 
+		margin-bottom: 50px
+
+@media (min-width: 992px) and (max-width: 1199px)
+
+	body 
+		overflow-x: hidden
+	h2 
+		font-size: 2rem
+
+
+@media (min-width: 1200px) and (max-width: 1550px)
+
+	body 
+		overflow-x: hidden

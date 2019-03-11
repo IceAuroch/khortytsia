@@ -77,7 +77,7 @@
                         <div class="header_item header_lang">
                             <p>UA</p>
                             <div class="header_lang_drop">
-                                <a href="#">UA</a>
+                                <a href="#"><?php pll_the_languages(); ?></a>
                                 <a href="#">UA</a>
                                 <a href="#">UA</a>
                             </div>

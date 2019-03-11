@@ -25,6 +25,7 @@
     "jquery": "^3.3.1",
     "mapbox-gl": "^0.53.1",
     "masonry-layout": "^4.2.2",
-    "popper.js": "^1.14.7"
+    "popper.js": "^1.14.7",
+    "scrollreveal": "^4.0.5"
   }
 }

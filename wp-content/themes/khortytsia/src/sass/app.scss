@@ -14,15 +14,6 @@
 @import "layout/header";
 
 
-
-
-
-
-
-
-
-
-
 @import "layout/main_desk";
 
 @import "layout/main-page";
@@ -45,28 +36,20 @@
 
 
 
-
-
-
-
-
-
-
-
-
 @import "layout/footer";
 
 
 
+@import "adaptive/a-base";
 
+@import "adaptive/a-header";
 
+@import "adaptive/a-footer";
 
+@import "adaptive/a-main-page";
 
+@import "adaptive/a-main-desks";
 
-
-
-
-
-@import "layout/footer";
+@import "adaptive/a-other-page";
 
 

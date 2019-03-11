@@ -1,8 +1,4 @@
 
-
-
-
-
 //================ tur object section
 
 .section_title
@@ -107,7 +103,7 @@ section.map_section
 
 .orenge_line
     position: relative
-    &:after 
+    &:before 
         content: ''
         position: absolute
         height: 100%
@@ -115,7 +111,6 @@ section.map_section
         background-color: rgba(255, 214, 118, 0.5)
         top: 0
         left: -50px
-        z-index: 1
 
 .map_side_text
     position: relative
@@ -209,7 +204,7 @@ section.map_section
 
 
 .youtube_wrap.orenge_line
-    &:after 
+    &:before 
         right: -90px
         left: auto
         top: -30px
@@ -219,45 +214,3 @@ section.map_section
         position: relative
         z-index: 2
 
- 
-
-
-
-//================ footer   
-
-footer  
-    margin-top: 600px
-
-.footer_list 
-    li 
-        a 
-            display: inline-block
-            font-size: 14px
-            color: #D8D6D6
-            font-family: $text
-            padding: 10px 0
-            font-weight: bold
-            &:hover 
-                color: $primary
-
-.footer_time_work
-    display: flex
-    .footer_time_work_col
-        padding: 0 15px
-        &:first-child 
-            width: 30%
-            text-align: right
-
-.footer_time_work_col
-    span 
-        color: #9D9A9A
-        font-size: 10px
-    p, a
-        display: block
-        color: #D7D6D6
-        font-size: 14px
-        margin-bottom: 20px
-        font-weight: bold
-
-.footer_develop_section
-    background-color: #2F2523

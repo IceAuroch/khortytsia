@@ -56,6 +56,19 @@ $(document).ready(function () {
         $('.dropdown_turobj_main_wrap').removeClass('dropdown_turobj_main_wrap__open');
 
         $('header').removeClass('header_drop_open');
+
+        $('#open_serch').removeClass('close_serch');
+
+        $('.serch_line').removeClass('serch_line_open');
+
+
+        $('.dropdown').removeClass('show');
+
+        $('.dropdown-toggle').attr('aria-expanded', 'false');
+
+        $('.dropdown-menu').removeClass('show');
+
+        
     });
 
 

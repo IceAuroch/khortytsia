@@ -8,3 +8,6 @@ require('./modules/slider');
 
 require('./modules/map');
 
+
+require('./modules/animation');
+
