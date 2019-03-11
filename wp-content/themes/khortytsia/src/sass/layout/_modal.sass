@@ -1,0 +1,76 @@
+
+
+.form_modal_content
+    background-image: url(../images/modal_bg.jpg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    border-radius: 10px
+    padding: 80px 100px
+    position: relative
+
+
+.form_modal_subtitle
+    display: flex
+    align-items: center
+    &:before 
+        content: ''
+        height: 1px
+        background-color: $primary
+        width: 40px
+        margin-right: 10px
+    p 
+        color: #fff
+
+.form_modal_title
+    margin: 10px 0
+    h2 
+        color: #fff 
+        font-size: 36px
+
+
+.form_modal_item
+    display: flex
+    flex-direction: column
+    input 
+        width: 100%
+        padding: 13px 20px
+        font-size: 14px
+        background-color: #E8E8E8
+        border-radius: 5px
+        border: none
+        transition: all 0.2s ease
+        color: #888
+        &:focus 
+            outline: none
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            background-color: #fff
+            color: #333
+    label 
+        margin-bottom: 5px 
+        margin-top: 10px
+        font-size: 12px
+        line-height: 1
+        display: inline-block
+        color: transparent 
+
+.form_modal_item input:focus + label 
+    color: $primary
+
+.form_modal_item_btn
+    margin-top: 20px
+
+
+.form_modal_close
+    position: absolute
+    top: 5px
+    right: 10px
+    span 
+        top: 0
+        right: 0
+        font-weight: 100
+        font-size: 40px
+        color: rgba(218, 191, 181, 0.5)
+    &:hover 
+        span
+            color: #DABFB5

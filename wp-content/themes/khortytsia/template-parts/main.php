@@ -4,7 +4,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 offset-lg-2">
+            <div class="col-md offset-md-2 col-xl-5 offset-xl-2">
                 <div class="main_desk_subtitle">
                     <p>Національний заповідник</p>
                 </div>

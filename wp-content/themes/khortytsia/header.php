@@ -15,14 +15,24 @@
 
 <header>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col">
-                <nav class="navbar navbar-expand-lg">
+                <nav class="navbar navbar-expand-xl">
                     <a class="navbar-brand header_logo" href="<?php echo site_url(); ?>">
-                        <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="">
+                        <img src="images/logo.png" alt="">
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <div class="header_item header_lang for_mobile_flex">
+                        <p>UA</p>
+                        <div class="header_lang_drop">
+                            <a href="#">UA</a>
+                            <a href="#">RU</a>
+                            <a href="#">ENG</a>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler menu_main_btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="menu_btn menu_btn_top"></span>
+                        <span class="menu_btn menu_btn_middle"></span>
+                        <span class="menu_btn menu_btn_end"></span>
                     </button>
 
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -35,11 +45,33 @@
                                     <a class="dropdown-item" href="#">Про нас</a>
                                     <a class="dropdown-item" href="#">Історія</a>
                                     <a class="dropdown-item" href="#">Природа</a>
-                                    <a class="dropdown-item" href="partners.html">Партнери</a>
+                                    <a class="dropdown-item" href="#">Партнери</a>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item none_mobile">
                                 <a class="nav-link turobj_link" href="#">Туроб’єкти</a>
+                            </li>
+                            <li class="nav-item dropdown for_mobile">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Туроб’єкти
+                                </a>
+
+                                <?php $turobj = new WP_Query([
+                                        'post_type' => 'tourist',
+                                ]);
+                                if($turobj->have_posts()):
+                                    ?>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <?php while($turobj->have_posts()): $turobj->the_post(); ?>
+                                    <a class="dropdown-item" href="<?= the_permalink(); ?>"><?= the_title(); ?></a>
+                                    <?php endwhile; ?>
+                                </div>
+
+                                <?php endif;
+                                wp_reset_postdata();
+                                ?>
+
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Відвідування</a>
@@ -74,12 +106,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="header_item header_lang">
+                        <div class="header_item header_lang none_mobile">
                             <p>UA</p>
                             <div class="header_lang_drop">
                                 <a href="#"><?php pll_the_languages(); ?></a>
-                                <a href="#">UA</a>
-                                <a href="#">UA</a>
+                                <a href="#">RU</a>
+                                <a href="#">ENG</a>
                             </div>
                         </div>
                         <div class="header_item header_tel">
@@ -106,107 +138,35 @@
     </div>
 </header>
 
+<?php $turobj = new WP_Query([
+    'post_type' => 'tourist',
+]);
+if($turobj->have_posts()):
+?>
 <section class="dropdown_turobj_main_wrap">
     <div class="dropdown_turobj_wrap">
         <div class="container-fluid">
             <div class="row no-gutters">
+
+                <?php while($turobj->have_posts()): $turobj->the_post(); ?>
                 <div class="col-lg-3">
-                    <a href="#">
+                    <a href="<?php echo the_permalink(); ?>">
                         <div class="dropdown_turobj">
                             <div class="dropdown_turobj__img">
-                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur1.jpg'); ?>" alt="">
+                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
                             </div>
                             <div class="dropdown_turobj__title">
-                                <p>Запорізька Січ</p>
+                                <p><?php echo the_title(); ?></p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3">
-                    <a href="#">
-                        <div class="dropdown_turobj">
-                            <div class="dropdown_turobj__img">
-                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur2.jpg'); ?>" alt="">
-                            </div>
-                            <div class="dropdown_turobj__title">
-                                <p>Святилище</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3">
-                    <a href="#">
-                        <div class="dropdown_turobj">
-                            <div class="dropdown_turobj__img">
-                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur3.jpg'); ?>" alt="">
-                            </div>
-                            <div class="dropdown_turobj__title">
-                                <p>Скіфський стан</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3">
-                    <a href="#">
-                        <div class="dropdown_turobj">
-                            <div class="dropdown_turobj__img">
-                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur4.jpg'); ?>" alt="">
-                            </div>
-                            <div class="dropdown_turobj__title">
-                                <p>Дендропарк</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3">
-                    <a href="#">
-                        <div class="dropdown_turobj">
-                            <div class="dropdown_turobj__img">
-                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur5.jpg'); ?>" alt="">
-                            </div>
-                            <div class="dropdown_turobj__title">
-                                <p>Музей</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3">
-                    <a href="#">
-                        <div class="dropdown_turobj">
-                            <div class="dropdown_turobj__img">
-                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur6.jpg'); ?>" alt="">
-                            </div>
-                            <div class="dropdown_turobj__title">
-                                <p>Козацькі човни</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3">
-                    <a href="#">
-                        <div class="dropdown_turobj">
-                            <div class="dropdown_turobj__img">
-                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur7.jpg'); ?>" alt="">
-                            </div>
-                            <div class="dropdown_turobj__title">
-                                <p>Кам’янська Січ</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3">
-                    <a href="#">
-                        <div class="dropdown_turobj">
-                            <div class="dropdown_turobj__img">
-                                <img src="<?php echo get_theme_file_uri('images/tur-ojects/tur8.jpg'); ?>" alt="">
-                            </div>
-                            <div class="dropdown_turobj__title">
-                                <p>Протовче</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                <?php endwhile; ?>
+
             </div>
         </div>
     </div>
 </section>
+<?php endif;
+wp_reset_postdata();
+?>
