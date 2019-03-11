@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<?php  get_template_part('template-parts/symbols'); ?>
+<?php get_template_part('template-parts/symbols'); ?>
 
 <header>
     <div class="container-fluid">
@@ -29,7 +29,9 @@
                             <a href="#">ENG</a>
                         </div>
                     </div>
-                    <button class="navbar-toggler menu_main_btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler menu_main_btn" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
                         <span class="menu_btn menu_btn_top"></span>
                         <span class="menu_btn menu_btn_middle"></span>
                         <span class="menu_btn menu_btn_end"></span>
@@ -38,7 +40,8 @@
                     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav nav_list">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Про Хортицю
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -52,21 +55,23 @@
                                 <a class="nav-link turobj_link" href="#">Туроб’єкти</a>
                             </li>
                             <li class="nav-item dropdown for_mobile">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Туроб’єкти
                                 </a>
 
                                 <?php $turobj = new WP_Query([
-                                        'post_type' => 'tourist',
+                                    'post_type' => 'tourist',
                                 ]);
-                                if($turobj->have_posts()):
-                                ?>
+                                if ($turobj->have_posts()):
+                                    ?>
 
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <?php while($turobj->have_posts()): $turobj->the_post(); ?>
-                                    <a class="dropdown-item" href="<?= the_permalink(); ?>"><?= the_title(); ?></a>
-                                    <?php endwhile; ?>
-                                </div>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <?php while ($turobj->have_posts()): $turobj->the_post(); ?>
+                                            <a class="dropdown-item"
+                                               href="<?= the_permalink(); ?>"><?= the_title(); ?></a>
+                                        <?php endwhile; ?>
+                                    </div>
 
                                 <?php endif;
                                 wp_reset_postdata();
@@ -77,7 +82,8 @@
                                 <a class="nav-link" href="#">Відвідування</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Блог
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -141,32 +147,34 @@
 <?php $turobj = new WP_Query([
     'post_type' => 'tourist',
 ]);
-if($turobj->have_posts()):
+if ($turobj->have_posts()):
 ?>
+
 <section class="dropdown_turobj_main_wrap">
     <div class="dropdown_turobj_wrap">
         <div class="container-fluid">
             <div class="row no-gutters">
 
-                <?php while($turobj->have_posts()): $turobj->the_post(); ?>
-                <div class="col-lg-3">
-                    <a href="<?php echo the_permalink(); ?>">
-                        <div class="dropdown_turobj">
-                            <div class="dropdown_turobj__img">
-                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                <?php while ($turobj->have_posts()): $turobj->the_post(); ?>
+                    <div class="col-lg-3">
+                        <a href="<?php echo the_permalink(); ?>">
+                            <div class="dropdown_turobj">
+                                <div class="dropdown_turobj__img">
+                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                                </div>
+                                <div class="dropdown_turobj__title">
+                                    <p><?php echo the_title(); ?></p>
+                                </div>
                             </div>
-                            <div class="dropdown_turobj__title">
-                                <p><?php echo the_title(); ?></p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
                 <?php endwhile; ?>
 
             </div>
         </div>
     </div>
 </section>
+
 <?php endif;
 wp_reset_postdata();
 ?>
