@@ -1,7 +1,5 @@
 <section class="main_desk_section">
 
-
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-md offset-md-2 col-xl-5 offset-xl-2">
@@ -18,7 +16,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="main_desk_social">
         <a href="<?php echo get_theme_mod('facebook'); ?>">
