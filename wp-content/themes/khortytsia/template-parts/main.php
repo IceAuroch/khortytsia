@@ -35,7 +35,7 @@
         </a>
     </div>
 
-    <a href="#services" class="scroll_down">
+    <a href="#tur_objects_section" class="scroll_down">
         <div class="scroll_down__text">
             Дізнатися більше
         </div>

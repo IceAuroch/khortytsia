@@ -22,14 +22,14 @@ get_header();
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>">Головна</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Контакти</li>
+                                    <li class="breadcrumb-item active" aria-current="page"><?php echo the_title(); ?></li>
                                 </ol>
                             </nav>
                         </div>
 
                         <div class="main_desk_other_title">
                             <h1>
-                                Контакти
+                                <?php echo the_title(); ?>
                             </h1>
 
                         </div>
