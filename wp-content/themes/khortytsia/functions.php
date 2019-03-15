@@ -87,6 +87,18 @@ function theme_customize_register($wp_customize)
         'label' => 'E-mail бухгалтерии',
         'type' => 'text',
     ]);
+    $wp_customize->add_setting('phone1');
+    $wp_customize->add_control('phone1', [
+        'section' => 'contacts',
+        'label' => 'Телефон',
+        'type' => 'text',
+    ]);
+    $wp_customize->add_setting('phone2');
+    $wp_customize->add_control('phone2', [
+        'section' => 'contacts',
+        'label' => 'Телефон',
+        'type' => 'text',
+    ]);
 }
 
 add_action('customize_register', 'theme_customize_register');

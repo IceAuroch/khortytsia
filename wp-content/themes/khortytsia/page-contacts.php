@@ -45,8 +45,8 @@ get_header();
                                     <span>Замовлення екскурсій :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <a href="#">(096) 254-12-09,</a>
-                                    <a href="#">(095) 914-77-06</a>
+                                    <a href="#"><?php echo get_theme_mod('phone1'); ?>,</a>
+                                    <a href="#"><?php echo get_theme_mod('phone2'); ?></a>
                                 </div>
                             </div>
                             <div class="contact_row">
@@ -54,7 +54,7 @@ get_header();
                                     <span>Приймальня :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <a href="#">(061) 707-34-86 (тел./факс)</a>
+                                    <a href="#"><?= get_post_meta($post->ID, 'reception_phone', true); ?> (тел./факс)</a>
                                 </div>
                             </div>
                             <div class="contact_row">
@@ -71,7 +71,7 @@ get_header();
                                     <span>Служба режиму :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <a href="#">(061) 286-54-51</a>
+                                    <a href="#"><?= get_post_meta($post->ID, 'museum_watch', true); ?></a>
                                 </div>
                             </div>
                             <div class="contact_row">
@@ -79,7 +79,7 @@ get_header();
                                     <span>Вахта музею :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <a href="#">(061) 283-25-69</a>
+                                    <a href="#"><?= get_post_meta($post->ID, 'museum_watch', true); ?></a>
                                 </div>
                             </div>
                             <div class="contact_row">
@@ -87,8 +87,9 @@ get_header();
                                     <span>E-mail :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <a href="#">zapovidnik@ukr.net (скринька для загальних питань),</a>
-                                    <a href="#"> buh.hortica@ukr.net (бухгалтерія)</a>
+                                    <a href="mailto:<?php echo get_theme_mod('email'); ?>">
+                                        <?php echo get_theme_mod('email'); ?> (скринька для загальних питань),</a>
+                                    <a href="mailto:<?php echo get_theme_mod('email2'); ?>"> <?php echo get_theme_mod('email2'); ?> (бухгалтерія)</a>
                                 </div>
                             </div>
                         </div>
@@ -98,7 +99,7 @@ get_header();
                                     <span>Режим роботи :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <p>Листопад-березень: з 9:30 до 16:00 (каса працює до 15:00) Квітень-жовтень: з с 9:30 до 16:30 (птн,сб,нд з 9:30 до 18:30)</p>
+                                    <p><?= get_post_meta($post->ID, 'operation_mode', true); ?></p>
                                 </div>
                             </div>
                             <div class="contact_row">
@@ -106,7 +107,7 @@ get_header();
                                     <span>Вихiдний :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <p>Понедiлок</p>
+                                    <p><?= get_post_meta($post->ID, 'holiday', true); ?></p>
                                 </div>
                             </div>
                             <div class="contact_row">
@@ -114,7 +115,7 @@ get_header();
                                     <span>Юридична дреса :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <p>Національний заповідник "Хортиця" м. Запоріжжя, вул. Старого редуту 9, 69017.</p>
+                                    <p><?= get_post_meta($post->ID, 'legal_address', true); ?></p>
                                 </div>
                             </div>
                             <div class="contact_row">
@@ -122,7 +123,8 @@ get_header();
                                     <span>GPS координати :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <p>шир. - 47.86023062 , довг. - 35.07139945</p>
+                                    <p>шир. - <?= get_post_meta($post->ID, 'latitude', true); ?> ,
+                                        довг. - <?= get_post_meta($post->ID, 'longitude', true); ?></p>
                                 </div>
                             </div>
                         </div>

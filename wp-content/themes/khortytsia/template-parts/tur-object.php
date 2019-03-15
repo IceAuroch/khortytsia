@@ -13,15 +13,20 @@
             'orderby' => 'id',
             'order' => 'asc'
         ]);
+        $count = 0;
         if($turobj->have_posts()):
         ?>
 
         <div class="row no-gutters">
-            <?php while($turobj->have_posts()): $turobj->the_post(); ?>
+
+            <?php while($turobj->have_posts()): $turobj->the_post();  $count++; ?>
+
             <div class="col-lg-6">
                 <a href="<?php echo the_permalink(); ?>">
-                    <div class="tur_item_wrap from_left" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
-                        <div class="tur_item_blur" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+                    <div class="tur_item_wrap from_<?= $count%2==0?'right':'left'; ?>"
+                         style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+                        <div class="tur_item_blur"
+                             style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
                         <div class="tur_item_side">
                             <svg width="30" height="30">
                                 <use xlink:href="<?php echo get_field('tur_icon', $post_id->ID); ?>"></use>
@@ -32,6 +37,7 @@
                     </div>
                 </a>
             </div>
+
             <?php endwhile; ?>
 
         </div>

@@ -45,10 +45,10 @@
                                     Про Хортицю
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Про нас</a>
-                                    <a class="dropdown-item" href="#">Історія</a>
-                                    <a class="dropdown-item" href="#">Природа</a>
-                                    <a class="dropdown-item" href="#">Партнери</a>
+                                    <a class="dropdown-item" href="<?= the_permalink(288); ?>">Про нас</a>
+                                    <a class="dropdown-item" href="<?= the_permalink(290); ?>">Історія</a>
+                                    <a class="dropdown-item" href="<?= the_permalink(292); ?>">Природа</a>
+                                    <a class="dropdown-item" href="<?= the_permalink(282); ?>">Партнери</a>
                                 </div>
                             </li>
                             <li class="nav-item none_mobile">
@@ -90,14 +90,14 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="<?php echo the_permalink(284); ?>">Новини</a>
-                                    <a class="dropdown-item" href="<?php echo the_permalink(); ?>">Статті</a>
+                                    <a class="dropdown-item" href="<?php echo the_permalink(286); ?>">Статті</a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo the_permalink(); ?>">Галерея</a>
+                                <a class="nav-link" href="<?php echo the_permalink(270); ?>">Галерея</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo the_permalink(); ?>">Контакти</a>
+                                <a class="nav-link" href="<?php echo the_permalink(280); ?>">Контакти</a>
                             </li>
                         </ul>
                         <div class="header_item">
@@ -123,17 +123,17 @@
                             </div>
                         </div>
                         <div class="header_item header_tel">
-                            <a href="#">
+                            <a href="">
                                 <svg width="17" height="17">
                                     <use xlink:href="#tel-icon"></use>
                                 </svg>
-                                096 254 12 09
+                                <?php echo get_theme_mod('phone1'); ?>
                             </a>
-                            <a href="#">
+                            <a href="">
                                 <svg width="17" height="17">
                                     <use xlink:href="#tel-icon"></use>
                                 </svg>
-                                096 254 12 09
+                                <?php echo get_theme_mod('phone2'); ?>
                             </a>
                         </div>
                         <div class="header_item">
