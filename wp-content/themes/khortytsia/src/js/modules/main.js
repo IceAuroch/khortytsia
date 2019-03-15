@@ -17,12 +17,25 @@ $(document).ready(function () {
             var mapImgIcon = $(this).attr('data-selection');
             $(this).addClass('map_icon_hover');
             $(`#${mapImgIcon}`).addClass('map_icon_hover');
+
+            var imgText = $(this).data('imgtext');
+        
+            $('.descrip_map').text(imgText);
+
+            $('.descrip_map').addClass('descrip_map_visible');
         },
         function () {
             var mapImgIcon = $(this).attr('data-selection');
             $(this).removeClass('map_icon_hover');
             $(`#${mapImgIcon}`).removeClass('map_icon_hover');
+
+            $('.descrip_map').removeClass('descrip_map_visible');
         });
+
+        $(".map_img a ").on('click', function (event) {
+            event.preventDefault();
+        });
+    
 
 
 
@@ -86,6 +99,18 @@ $(document).ready(function () {
         }
     });
 
+
+    $(".scroll_down").on("click", function (event) {
+
+        event.preventDefault();
+
+        var id  = $("#tur_objects_section"),
+
+        top = $(id).offset().top;
+        
+        $('body,html').animate({scrollTop: top}, 500);
+    });
+    
 
 
 });

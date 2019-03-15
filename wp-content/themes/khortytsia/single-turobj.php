@@ -1,5 +1,8 @@
 <?php
-
+/*
+Template Name: Tourist
+Template Post Type: tourist
+*/
 get_header();
 
 ?>
@@ -17,7 +20,7 @@ get_header();
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>">Головна</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Скіфський стан</li>
+                                <li class="breadcrumb-item active" aria-current="page"><?php echo the_title(); ?></li>
                             </ol>
                         </nav>
                     </div>
@@ -25,9 +28,9 @@ get_header();
                     <div class="main_desk_other_title">
                         <h1>
                             <svg width="30" height="30">
-                                <use xlink:href="#tower-icon"></use>
+                                <use xlink:href="<?php echo get_field('tur_icon', $post_id->ID); ?>"></use>
                             </svg>
-                            Скіфський стан
+                            <?php echo the_title(); ?>
                         </h1>
                         <div class="main_desk_other_text">
                             <p>Найбільший острів на Дніпрі, розташований у районі міста Запоріжжя, нижче Дніпровської ГЕС. Унікальний природний та історичний комплекс. Хортиця є одним із Семи чудес України.</p>

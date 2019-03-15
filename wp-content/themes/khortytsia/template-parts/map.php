@@ -11,72 +11,34 @@
                     <div class="map_side_icon_title">
                         <span>Умовні позначки</span>
                     </div>
+                    <?php $turobj = new WP_Query([
+                        'post_type' => 'tourist',
+                        'orderby' => 'id',
+                        'order' => 'asc'
+                    ]);
+                    if($turobj->have_posts()):
+                    ?>
                     <div class="map_side_icon_item_wrap">
+
+                        <?php while($turobj->have_posts()): $turobj->the_post(); ?>
+
                         <div class="map_side_icon_item">
-                            <a id="bank" href="#" class="map_icon" data-selection="bank-map">
+                            <a id="bank" href="<?php echo the_permalink(); ?>" class="map_icon" data-selection="bank-map">
                                 <svg width="30" height="30">
-                                    <use xlink:href="#bank-icon"></use>
+                                    <use xlink:href="<?php echo get_field('tur_icon', $post_id->ID); ?>"></use>
                                 </svg>
-                                Музей
+                               <?php echo the_title(); ?>
                             </a>
                         </div>
-                        <div class="map_side_icon_item">
-                            <a id="tree" href="#" class="map_icon" data-selection="tree-map">
-                                <svg width="30" height="30">
-                                    <use xlink:href="#tree-icon"></use>
-                                </svg>
-                                Дендропарк
-                            </a>
-                        </div>
-                        <div class="map_side_icon_item">
-                            <a id="sich" href="#" class="map_icon" data-selection="sich-map">
-                                <svg width="30" height="30">
-                                    <use xlink:href="#sich-icon"></use>
-                                </svg>
-                                Січ
-                            </a>
-                        </div>
-                        <div class="map_side_icon_item">
-                            <a id="boat" href="#" class="map_icon" data-selection="boat-map">
-                                <svg width="30" height="30">
-                                    <use xlink:href="#boat-icon"></use>
-                                </svg>
-                                Козацькі човни
-                            </a>
-                        </div>
-                        <div class="map_side_icon_item">
-                            <a id="tower" href="#" class="map_icon" data-selection="tower-map">
-                                <svg width="30" height="30">
-                                    <use xlink:href="#tower-icon"></use>
-                                </svg>
-                                Скіфський стан
-                            </a>
-                        </div>
-                        <div class="map_side_icon_item">
-                            <a id="mayak" href="#" class="map_icon" data-selection="mayak-map">
-                                <svg width="30" height="30">
-                                    <use xlink:href="#mayak-icon"></use>
-                                </svg>
-                                Кам’янська Січ
-                            </a>
-                        </div>
-                        <div class="map_side_icon_item">
-                            <a id="stone" href="#" class="map_icon" data-selection="stone-map">
-                                <svg width="29" height="29">
-                                    <use xlink:href="#stone-icon"></use>
-                                </svg>
-                                Святилище
-                            </a>
-                        </div>
-                        <div class="map_side_icon_item">
-                            <a id="river" href="#" class="map_icon" data-selection="river-map">
-                                <svg width="30" height="30">
-                                    <use xlink:href="#river-icon"></use>
-                                </svg>
-                                Протовче
-                            </a>
-                        </div>
+
+                        <?php endwhile; ?>
+
                     </div>
+
+                    <?php endif;
+                    wp_reset_postdata();
+                    ?>
+
                 </div>
             </div>
             <div class="col-lg-6">

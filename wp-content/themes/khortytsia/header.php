@@ -62,6 +62,8 @@
 
                                 <?php $turobj = new WP_Query([
                                     'post_type' => 'tourist',
+                                    'orderby' => 'id',
+                                    'order' => 'asc'
                                 ]);
                                 if ($turobj->have_posts()):
                                     ?>

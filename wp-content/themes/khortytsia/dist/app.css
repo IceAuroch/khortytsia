@@ -10345,6 +10345,7 @@ section.mt_section {
 .btn {
   border: none;
   text-decoration: none;
+  font-weight: bold;
 }
 .btn:hover {
   box-shadow: 0px 5px 15px rgba(67, 53, 49, 0.5);

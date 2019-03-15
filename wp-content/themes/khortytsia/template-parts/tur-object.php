@@ -1,4 +1,4 @@
-<section class="tur_objects_section">
+<section id="tur_objects_section" class="tur_objects_section">
     <div class="container-fluid">
         <div class="row">
             <div class="col">
@@ -10,6 +10,8 @@
 
         <?php $turobj = new WP_Query([
             'post_type' => 'tourist',
+            'orderby' => 'id',
+            'order' => 'asc'
         ]);
         if($turobj->have_posts()):
         ?>
@@ -22,7 +24,7 @@
                         <div class="tur_item_blur" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
                         <div class="tur_item_side">
                             <svg width="30" height="30">
-                                <use xlink:href="#sich-icon"></use>
+                                <use xlink:href="<?php echo get_field('tur_icon', $post_id->ID); ?>"></use>
                             </svg>
                             <h4><?php echo the_title(); ?></h4>
                             <span>Більше інформації</span>
