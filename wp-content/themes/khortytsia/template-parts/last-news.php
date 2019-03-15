@@ -12,7 +12,9 @@ if ($news->have_posts()): ?>
                 <div class="col-lg-10 offset-lg-1">
                     <div class="btn_title">
                         <h2>Останні новини</h2>
-                        <a href="<?= the_permalink(284); ?>" class="btn btn-primary d-flex align-items-center">Всі новини</a>
+                        <a href="<?= the_permalink(284); ?>" class="btn btn-primary d-flex align-items-center">
+                            <?php __('Всі новини'); ?>
+                        </a>
                     </div>
                 </div>
             </div>

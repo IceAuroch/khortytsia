@@ -22,7 +22,7 @@
                         <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="">
                     </a>
                     <div class="header_item header_lang for_mobile_flex">
-                        <p>UA</p>
+                        <p><?= pll_current_language('slug');?></p>
                         <div class="header_lang_drop">
                             <a href="#">UA</a>
                             <a href="#">RU</a>
@@ -115,7 +115,7 @@
                             </div>
                         </div>
                         <div class="header_item header_lang none_mobile">
-                            <p>UA</p>
+                            <p><?= pll_current_language();?></p>
                             <div class="header_lang_drop">
                                 <a href="#"><?php pll_the_languages(); ?></a>
                             </div>
