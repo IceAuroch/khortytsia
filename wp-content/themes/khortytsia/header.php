@@ -118,8 +118,6 @@
                             <p>UA</p>
                             <div class="header_lang_drop">
                                 <a href="#"><?php pll_the_languages(); ?></a>
-                                <a href="#">RU</a>
-                                <a href="#">ENG</a>
                             </div>
                         </div>
                         <div class="header_item header_tel">

@@ -41,24 +41,32 @@ get_header();
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
+<?php
+$articles = new WP_Query([
+    'post_type' => 'post',
+    'category_name' => 'статті'
+]);
+if ($articles->have_posts()): ?>
                 <div class="row">
-
+    <?php while ($articles->have_posts()) : $articles->the_post(); ?>
                     <div class="col-lg-4">
                         <div class="last_news_item from_bottom_interval">
-                            <div class="last_news_item_img" style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+                            <div class="last_news_item_img" style="background-image: url(<?= get_the_post_thumbnail_url(); ?>);"></div>
                             <div class="last_news_item_content_wrap">
                                 <div class="last_news_item_content">
-                                    <span>20.01.2019</span>
-                                    <h4><?php echo the_title(); ?></h4>
-                                    <p>Національний заповідник «Хортиця» відкрив осередок дозвілля та просвітництва «Культурна чайна» — клуб спілкування для людей похилого віку. Клубна система проведення дозвілля була дуже поширена у минулому. </p>
-                                    <a href="<?php echo the_permalink(); ?>">Читати повністю</a>
+                                    <span><?= get_the_date('j.m.Y'); ?></span>
+                                    <h4><?= the_title(); ?></h4>
+                                    <p><?= wp_trim_words(get_the_content(), 30, '...'); ?></p>
+                                    <a href="<?= the_permalink(); ?>">Читати повністю</a>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-
+    <?php endwhile; ?>
                 </div>
+<?php endif;
+wp_reset_postdata(); ?>
             </div>
         </div>
         <div class="row ">

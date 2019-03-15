@@ -12,7 +12,7 @@ if ($news->have_posts()): ?>
                 <div class="col-lg-10 offset-lg-1">
                     <div class="btn_title">
                         <h2>Останні новини</h2>
-                        <a href="#" class="btn btn-primary d-flex align-items-center">Всі новини</a>
+                        <a href="<?= the_permalink(284); ?>" class="btn btn-primary d-flex align-items-center">Всі новини</a>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@ if ($news->have_posts()): ?>
                                          style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
                                     <div class="last_news_item_content_wrap">
                                         <div class="last_news_item_content">
-                                            <span>20.01.2019</span>
+                                            <span><?php echo get_the_date('j.m.Y'); ?></span>
                                             <h4><?php echo the_title(); ?></h4>
                                             <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
                                             <a href="<?php echo the_permalink(); ?>">Читати повністю</a>
