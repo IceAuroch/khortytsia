@@ -4,12 +4,12 @@
         <div class="row">
             <div class="col-md offset-md-2 col-xl-5 offset-xl-2">
                 <div class="main_desk_subtitle">
-                    <p>Національний заповідник</p>
+                    <p><?php bloginfo('description'); ?></p>
                 </div>
 
                 <div class="main_desk_title">
-                    <h1>Хортиця</h1>
-                    <p>Найбільший острів на Дніпрі, розташований у районі міста Запоріжжя, нижче Дніпровської ГЕС. Унікальний природний та історичний комплекс. Хортиця є одним із Семи чудес України.</p>
+                    <h1><?php bloginfo('name'); ?></h1>
+                    <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
                     <a class="link_orange" href="#">Детальніше</a>
                 </div>
 

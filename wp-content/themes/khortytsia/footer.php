@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="footer_dev_item order-lg-3">
-                            <p>Веб-розробка <a href="https://impressionbureau.pro">ImpressionBureau</a><?php echo date('Y'); ?></p>
+                            <p>Веб-розробка <a href="https://impressionbureau.pro">ImpressionBureau</a>2019</p>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
     </div>
 </footer>
 
-<?php get_footer(); ?>
+<?php wp_footer(); ?>
 
 </body>
 

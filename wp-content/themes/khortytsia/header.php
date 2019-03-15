@@ -89,7 +89,7 @@
                                     Блог
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="<?php echo the_permalink(); ?>">Новини</a>
+                                    <a class="dropdown-item" href="<?php echo the_permalink(284); ?>">Новини</a>
                                     <a class="dropdown-item" href="<?php echo the_permalink(); ?>">Статті</a>
                                 </div>
                             </li>

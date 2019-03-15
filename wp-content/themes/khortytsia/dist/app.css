@@ -11335,6 +11335,7 @@ section.map_section {
   background-position: center center;
   width: 100%;
   height: 530px;
+  text-align: center;
 }
 .slider_main_item img {
   height: auto;

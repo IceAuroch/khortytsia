@@ -270,4 +270,5 @@ get_header();
     </div>
 
 <?php
+require('template-parts/last-news.php');
 get_footer();
