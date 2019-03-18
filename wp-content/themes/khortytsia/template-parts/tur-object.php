@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title">
-                    <h2>Туристичні об’єкти</h2>
+                    <h2><?php echo __ ('Туристичні об’єкти'); ?></h2>
                 </div>
             </div>
         </div>
@@ -29,10 +29,10 @@
                              style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
                         <div class="tur_item_side">
                             <svg width="30" height="30">
-                                <use xlink:href="<?php echo get_field('tur_icon', $post_id->ID); ?>"></use>
+                                <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
                             </svg>
-                            <h4><?php echo the_title(); ?></h4>
-                            <span>Більше інформації</span>
+                            <h4><?= the_title(); ?></h4>
+                            <span><?php echo __ ('Більше інформації'); ?></span>
                         </div>
                     </div>
                 </a>

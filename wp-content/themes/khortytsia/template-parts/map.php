@@ -9,7 +9,7 @@
                 </div>
                 <div class="map_side_icon_wrap">
                     <div class="map_side_icon_title">
-                        <span>Умовні позначки</span>
+                        <span><?= __('Умовні позначки'); ?></span>
                     </div>
                     <?php $turobj = new WP_Query([
                         'post_type' => 'tourist',
@@ -23,11 +23,11 @@
                         <?php while($turobj->have_posts()): $turobj->the_post(); ?>
 
                         <div class="map_side_icon_item">
-                            <a id="bank" href="<?php echo the_permalink(); ?>" class="map_icon" data-selection="bank-map">
+                            <a id="bank" href="<?= the_permalink(); ?>" class="map_icon" data-selection="bank-map">
                                 <svg width="30" height="30">
-                                    <use xlink:href="<?php echo get_field('tur_icon', $post_id->ID); ?>"></use>
+                                    <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
                                 </svg>
-                               <?php echo the_title(); ?>
+                               <?= the_title(); ?>
                             </a>
                         </div>
 

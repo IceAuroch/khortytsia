@@ -21,17 +21,15 @@ get_header();
                         <div class="main_desk_breadcrumb">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>">Головна</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page"><?php echo the_title(); ?></li>
+                                    <li class="breadcrumb-item"><a href="<?= pll_home_url(); ?>">Головна</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><?= the_title(); ?></li>
                                 </ol>
                             </nav>
                         </div>
-
                         <div class="main_desk_other_title">
                             <h1>
-                                <?php echo the_title(); ?>
+                                <?= the_title(); ?>
                             </h1>
-
                         </div>
                     </div>
                 </div>
@@ -45,8 +43,8 @@ get_header();
                                     <span>Замовлення екскурсій :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <a href="#"><?php echo get_theme_mod('phone1'); ?>,</a>
-                                    <a href="#"><?php echo get_theme_mod('phone2'); ?></a>
+                                    <a href="tel: <?= get_theme_mod('phone1'); ?>"><?= get_theme_mod('phone1'); ?>,</a>
+                                    <a href="tel: <?= get_theme_mod('phone2'); ?>"><?= get_theme_mod('phone2'); ?></a>
                                 </div>
                             </div>
                             <div class="contact_row">
@@ -87,9 +85,9 @@ get_header();
                                     <span>E-mail :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <a href="mailto:<?php echo get_theme_mod('email'); ?>">
-                                        <?php echo get_theme_mod('email'); ?> (скринька для загальних питань),</a>
-                                    <a href="mailto:<?php echo get_theme_mod('email2'); ?>"> <?php echo get_theme_mod('email2'); ?> (бухгалтерія)</a>
+                                    <a href="mailto:<?= get_theme_mod('email'); ?>">
+                                        <?= get_theme_mod('email'); ?> (скринька для загальних питань),</a>
+                                    <a href="mailto:<?= get_theme_mod('email2'); ?>"> <?= get_theme_mod('email2'); ?> (бухгалтерія)</a>
                                 </div>
                             </div>
                         </div>

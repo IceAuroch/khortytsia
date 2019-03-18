@@ -7,12 +7,9 @@ get_header();
 ?>
 
 <section class="main_desk_section main_desk_other_section main_desk_other_filter_section"
-         style="background-image: url(images/news_main_desk_bg.jpg)">
-
+         style="background-image: url(<?= get_the_post_thumbnail_url(); ?>)">
     <div class="desktop_gradient"></div>
-
     <div class="desktop_gradient desktop_gradient2"></div>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-5 offset-lg-1">
@@ -169,10 +166,7 @@ get_header();
         </div>
     </div>
 
-
-
 </section>
-
 
 
     <!-- galery section -->

@@ -18,17 +18,17 @@ get_header();
                         <div class="main_desk_breadcrumb">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>">Головна</a></li>
+                                    <li class="breadcrumb-item"><a href="<?= pll_home_url(); ?>">Головна</a></li>
                                     <li class="breadcrumb-item"><a href="#">Блог</a></li>
                                     <li class="breadcrumb-item"><a href="<?= the_permalink(284); ?>">Новини</a></li>
                                     <li class="breadcrumb-item active"
-                                        aria-current="page"><?php echo the_title(); ?></li>
+                                        aria-current="page"><?= the_title(); ?></li>
                                 </ol>
                             </nav>
                         </div>
                         <div class="main_desk_other_title">
                             <h1>
-                                <?php echo the_title(); ?>
+                                <?= the_title(); ?>
                             </h1>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ get_header();
                                 <div class="slider_main">
                                     <?php foreach ($images as $image): ?>
                                         <div class="slider_main_item">
-                                            <img src="<?php echo $image['url']; ?>" alt="">
+                                            <img src="<?= $image['url']; ?>" alt="">
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
@@ -75,9 +75,9 @@ get_header();
 
                         <div class="last_news_item_content_wrap ">
                             <div class="last_news_item_content">
-                                <span><?php echo get_the_date('j.m.Y'); ?></span>
-                                <h4><?php echo the_title(); ?></h4>
-                                <p><?php echo the_content(); ?></p>
+                                <span><?= get_the_date('j.m.Y'); ?></span>
+                                <h4><?= the_title(); ?></h4>
+                                <p><?= the_content(); ?></p>
                             </div>
                         </div>
                         <div class="last_news_item_ander_content">

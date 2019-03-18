@@ -18,15 +18,15 @@ get_header();
                     <div class="main_desk_breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>">Головна</a></li>
+                                <li class="breadcrumb-item"><a href="<?= pll_home_url(); ?>">Головна</a></li>
                                 <li class="breadcrumb-item"><a href="#">Блог</a></li>
-                                <li class="breadcrumb-item active" aria-current="page"><?php echo the_title(); ?></li>
+                                <li class="breadcrumb-item active" aria-current="page"><?= the_title(); ?></li>
                             </ol>
                         </nav>
                     </div>
                     <div class="main_desk_other_title">
                         <h1>
-                            <?php echo the_title(); ?>
+                            <?= the_title(); ?>
                         </h1>
                     </div>
                 </div>

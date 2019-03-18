@@ -18,8 +18,8 @@
         <div class="row align-items-center">
             <div class="col">
                 <nav class="navbar navbar-expand-xl">
-                    <a class="navbar-brand header_logo" href="<?php echo site_url(); ?>">
-                        <img src="<?php echo get_theme_file_uri('images/logo.png'); ?>" alt="">
+                    <a class="navbar-brand header_logo" href="<?= pll_home_url(); ?>">
+                        <img src="<?= get_theme_file_uri('images/logo.png'); ?>" alt="">
                     </a>
                     <div class="header_item header_lang for_mobile_flex">
                         <p><?= pll_current_language('slug');?></p>
@@ -42,22 +42,22 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Про Хортицю
+                                    <?= __('Про Хортицю'); ?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="<?= the_permalink(288); ?>">Про нас</a>
-                                    <a class="dropdown-item" href="<?= the_permalink(290); ?>">Історія</a>
-                                    <a class="dropdown-item" href="<?= the_permalink(292); ?>">Природа</a>
-                                    <a class="dropdown-item" href="<?= the_permalink(282); ?>">Партнери</a>
+                                    <a class="dropdown-item" href="<?= the_permalink(288); ?>"><?= __('Про нас'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink(290); ?>"><?= __('Історія'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink(292); ?>"><?= __('Природа'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink(282); ?>"><?= __('Партнери'); ?></a>
                                 </div>
                             </li>
                             <li class="nav-item none_mobile">
-                                <a class="nav-link turobj_link" href="#">Туроб’єкти</a>
+                                <a class="nav-link turobj_link" href="#"><?= __('Туроб’єкти'); ?></a>
                             </li>
                             <li class="nav-item dropdown for_mobile">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Туроб’єкти
+                                    <?= __('Туроб’єкти'); ?>
                                 </a>
 
                                 <?php $turobj = new WP_Query([
@@ -81,23 +81,23 @@
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Відвідування</a>
+                                <a class="nav-link" href="#"><?= __('Відвідування'); ?></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Блог
+                                    <?= __('Блог'); ?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="<?php echo the_permalink(284); ?>">Новини</a>
-                                    <a class="dropdown-item" href="<?php echo the_permalink(286); ?>">Статті</a>
+                                    <a class="dropdown-item" href="<?= the_permalink(284); ?>"><?= __('Новини'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink(286); ?>"><?= __('Статті'); ?></a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo the_permalink(270); ?>">Галерея</a>
+                                <a class="nav-link" href="<?= the_permalink(270); ?>"><?= __('Галерея'); ?></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo the_permalink(280); ?>">Контакти</a>
+                                <a class="nav-link" href="<?= the_permalink(280); ?>"><?= __('Контакти'); ?></a>
                             </li>
                         </ul>
                         <div class="header_item">
@@ -105,7 +105,7 @@
                                 <button id="open_serch" type="button">
                                 </button>
                                 <div class="serch_line">
-                                    <input type="text" placeholder="Пошук...">
+                                    <input type="text" placeholder="<?= __('Пошук'); ?>...">
                                     <button type="button">
                                         <svg width="31" height="31">
                                             <use xlink:href="#search-icon"></use>
@@ -121,21 +121,21 @@
                             </div>
                         </div>
                         <div class="header_item header_tel">
-                            <a href="">
+                            <a href="tel: <?= get_theme_mod('phone1'); ?>">
                                 <svg width="17" height="17">
                                     <use xlink:href="#tel-icon"></use>
                                 </svg>
-                                <?php echo get_theme_mod('phone1'); ?>
+                                <?= get_theme_mod('phone1'); ?>
                             </a>
-                            <a href="">
+                            <a href="tel: <?= get_theme_mod('phone2'); ?>">
                                 <svg width="17" height="17">
                                     <use xlink:href="#tel-icon"></use>
                                 </svg>
-                                <?php echo get_theme_mod('phone2'); ?>
+                                <?= get_theme_mod('phone2'); ?>
                             </a>
                         </div>
                         <div class="header_item">
-                            <a class="btn btn-secondary" href="#">Вибрати екскурсію</a>
+                            <a class="btn btn-secondary" href="#"><?= __('Вибрати екскурсію'); ?></a>
                         </div>
                     </div>
                 </nav>

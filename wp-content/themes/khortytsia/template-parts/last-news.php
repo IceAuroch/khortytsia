@@ -11,8 +11,10 @@ if ($news->have_posts()): ?>
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="btn_title">
-                        <h2>Останні новини</h2>
-                        <a href="<?= the_permalink(284); ?>" class="btn btn-primary d-flex align-items-center">Всі новини</a>
+                        <h2><?= __('Останні новини'); ?></h2>
+                        <a href="<?= the_permalink(284); ?>" class="btn btn-primary d-flex align-items-center">
+                           <?= __('Всі новини'); ?>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -31,7 +33,7 @@ if ($news->have_posts()): ?>
                                             <span><?= get_the_date('j.m.Y'); ?></span>
                                             <h4><?= the_title(); ?></h4>
                                             <p><?= wp_trim_words(get_the_content(), 30, '...'); ?></p>
-                                            <a href="<?= the_permalink(); ?>">Читати повністю</a>
+                                            <a href="<?= the_permalink(); ?>"><?= __('Читати повністю'); ?></a>
                                         </div>
                                     </div>
                                 </div>

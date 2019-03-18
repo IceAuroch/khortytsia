@@ -10,7 +10,7 @@
                 <div class="main_desk_title">
                     <h1><?php bloginfo('name'); ?></h1>
                     <p><?php echo wp_trim_words(get_the_content(), 30, '...'); ?></p>
-                    <a class="link_orange" href="#">Детальніше</a>
+                    <a class="link_orange" href="#"><?= __('Детальніше'); ?></a>
                 </div>
 
             </div>
@@ -37,7 +37,7 @@
 
     <a href="#tur_objects_section" class="scroll_down">
         <div class="scroll_down__text">
-            Дізнатися більше
+            <?= __('Дізнатися більше'); ?>
         </div>
         <div class="scroll_down__icon"></div>
     </a>
