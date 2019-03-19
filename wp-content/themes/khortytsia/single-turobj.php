@@ -130,9 +130,9 @@ get_header();
                         <?php while ($turobj->have_posts()): $turobj->the_post(); ?>
 
                             <div class="map_side_icon_item from_bottom">
-                                <a href="<?php echo the_permalink(); ?>" data-selection="bank-map">
+                                <a href="<?= the_permalink(); ?>" data-selection="<?= get_field('tur_selector', $post_id->ID); ?>">
                                     <svg width="30" height="30">
-                                        <use xlink:href="<?php echo get_field('tur_icon', $post_id->ID); ?>"></use>
+                                        <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
                                     </svg>
                                     <?= the_title(); ?>
                                 </a>

@@ -17,7 +17,7 @@ get_header();
                     <div class="main_desk_breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="<?= site_url(); ?>">Головна</a></li>
+                                <li class="breadcrumb-item"><a href="<?= site_url(); ?>"><?= __('Головна'); ?></a></li>
                                 <li class="breadcrumb-item active" aria-current="page"><?= the_title(); ?></li>
                             </ol>
                         </nav>
@@ -30,7 +30,6 @@ get_header();
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="row">
@@ -153,7 +152,6 @@ get_header();
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col text-center" >
                 <a href="#" class="btn btn-outline-info">
@@ -165,9 +163,7 @@ get_header();
             </div>
         </div>
     </div>
-
 </section>
-
 
     <!-- galery section -->
 
@@ -177,21 +173,11 @@ get_header();
             <div class="col-lg-10 offset-lg-1">
                 <a href="#" data-toggle="modal" data-target="#slider_modal">
                     <div class="galery_masonry">
+
                         <div class="galery_masonry_item from_bottom_interval" data-indexImg="1">
                             <img src="<?= get_theme_file_uri('images/galery/galery1.jpg'); ?>" alt="">
                         </div>
-                        <div class="galery_masonry_item from_bottom_interval" data-indexImg="2">
-                            <img src="<?= get_theme_file_uri('images/galery/galery2.jpg'); ?>" alt="">
-                        </div>
-                        <div class="galery_masonry_item from_bottom_interval" data-indexImg="3">
-                            <img src="<?= get_theme_file_uri('images/galery/galery3.jpg'); ?>" alt="">
-                        </div>
-                        <div class="galery_masonry_item from_bottom_interval" data-indexImg="4">
-                            <img src="<?= get_theme_file_uri('images/galery/galery1.jpg'); ?>" alt="">
-                        </div>
-                        <div class="galery_masonry_item from_bottom_interval">
-                            <img src="<?= get_theme_file_uri('images/galery/galery3.jpg'); ?>" alt="">
-                        </div>
+
                     </div>
                 </a>
             </div>
@@ -212,27 +198,25 @@ get_header();
                 <span data-dismiss="modal">+</span>
             </div>
             <div class="modal_slider_main">
+
                 <div class="slider_modal_item" >
                     <div class="slider_modal_item__img" style="background-image: url(<?= get_theme_file_uri('images/galery/galery1.jpg'); ?>)"></div>
                     <div class="slider_modal_item__text">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, non. Assumenda aliquid ab itaque eos quam atque esse architecto consequuntur?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, non. Assumenda aliquid ab itaque eos quam atque esse architecto consequuntur?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, non. Assumenda aliquid ab itaque eos quam atque esse architecto consequuntur?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, non. Assumenda aliquid ab itaque eos quam atque esse architecto consequuntur?</p>
+                        <p>tur?</p>
                     </div>
                 </div>
+
                 <div class="slider_modal_item">
                     <div class="slider_modal_item__img" style="background-image: url(<?= get_theme_file_uri('images/galery/galery2.jpg'); ?>)">
                         <iframe src="https://www.youtube.com/embed/nTZORhJo1Ag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div class="slider_modal_item__text">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, non. Assumenda aliquid ab itaque eos quam atque esse architecto consequuntur?</p>
+                        <p>Lorem ipsum dolor sit?</p>
                     </div>
                 </div>
-                <div class="slider_modal_item" >
-                    <div class="slider_modal_item__img" style="background-image: url(<?= get_theme_file_uri('images/galery/galery3.jpg'); ?>)"></div>
-                    <div class="slider_modal_item__text">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, non. Assumenda aliquid ab itaque eos quam atque esse architecto consequuntur?</p>
-                    </div>
-                </div>
+
             </div>
+
             <div class="slider_arows_wrap">
                 <div class="slider_btn slider_btn_prev">
                     <svg width="7.5" height="12" >
@@ -249,7 +233,7 @@ get_header();
             <div class="slider_modal_counter_line">
                 <div class="slider_title">
                     <div class="slider_title_item">
-                        <p>Опис</p>
+                        <p><?= __('Опис'); ?></p>
                     </div>
                     <div class="slider_title_item">
                         <p><span id="sliderCounterActive">1</span> / <span class="slider_counter_all">15</span></p>
