@@ -53,7 +53,7 @@
                                 <span><?= __('Режим роботи'); ?>:</span>
                             </div>
                             <div class="footer_time_work_col">
-                                <p><?= get_post_meta(280, 'operation_mode', true); ?></p>
+                                <p><?= get_post_meta(280, 'operation_modes', true); ?></p>
                             </div>
                         </div>
                         <div class="footer_time_work">

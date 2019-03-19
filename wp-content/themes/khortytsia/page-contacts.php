@@ -97,7 +97,7 @@ get_header();
                                     <span><?= __('Режим роботи'); ?> :</span>
                                 </div>
                                 <div class="contact_row__item">
-                                    <p><?= get_post_meta($post->ID, 'operation_mode', true); ?></p>
+                                    <p><?= get_post_meta($post->ID, 'operation_modes', true); ?></p>
                                 </div>
                             </div>
                             <div class="contact_row">
