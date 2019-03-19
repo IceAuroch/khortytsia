@@ -27,7 +27,7 @@ if ($news->have_posts()): ?>
                             <div class="col-lg-4">
                                 <div class="last_news_item">
                                     <div class="last_news_item_img"
-                                         style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+                                         style="background-image: url(<?= get_the_post_thumbnail_url(); ?>);"></div>
                                     <div class="last_news_item_content_wrap">
                                         <div class="last_news_item_content">
                                             <span><?= get_the_date('j.m.Y'); ?></span>

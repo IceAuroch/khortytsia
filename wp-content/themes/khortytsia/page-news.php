@@ -58,21 +58,24 @@ get_header();
                                         <span><?= get_the_date('j.m.Y'); ?></span>
                                         <h4><?= the_title(); ?></h4>
                                         <p><?= wp_trim_words(get_the_content(), 30, '...'); ?></p>
-                                        <a href="<?= the_permalink(); ?>">Читати повністю</a>
+                                        <a href="<?= the_permalink(); ?>"><?= __('Читати повністю'); ?></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <?php endwhile; ?>
+
                     </div>
+
                     <?php endif;
                     wp_reset_postdata(); ?>
+
                 </div>
             </div>
             <div class="row ">
                 <div class="col text-center">
-                    <a href="#" class="btn btn-primary">Більше новин</a>
+                    <a href="#" class="btn btn-primary"><?= __('Більше новин'); ?></a>
                 </div>
             </div>
         </div>

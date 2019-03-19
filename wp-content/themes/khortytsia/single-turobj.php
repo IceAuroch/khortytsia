@@ -7,12 +7,9 @@ get_header();
 
 ?>
     <section class="main_desk_section main_desk_turobj_section"
-             style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>)">
-
+             style="background-image: url(<?= get_the_post_thumbnail_url(); ?>)">
         <div class="desktop_gradient"></div>
-
         <div class="desktop_gradient desktop_gradient2"></div>
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6 col-xl-4 from_right">
@@ -20,36 +17,31 @@ get_header();
                         <div class="main_desk_breadcrumb">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>">Головна</a></li>
+                                    <li class="breadcrumb-item"><a href="<?= pll_home_url(); ?>"><?= __('Головна'); ?></a></li>
                                     <li class="breadcrumb-item active"
-                                        aria-current="page"><?php echo the_title(); ?></li>
+                                        aria-current="page"><?= the_title(); ?></li>
                                 </ol>
                             </nav>
                         </div>
-
                         <div class="main_desk_other_title">
                             <h1>
                                 <svg width="30" height="30">
-                                    <use xlink:href="<?php echo get_field('tur_icon', $post_id->ID); ?>"></use>
+                                    <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
                                 </svg>
-                                <?php echo the_title(); ?>
+                                <?= the_title(); ?>
                             </h1>
                             <div class="main_desk_other_text">
                                 <p><?= get_post_meta($post->ID, 'tur_annotation', true); ?></p>
-                                <a href="#" class="btn btn-secondary">Замовити екскурсію</a>
+                                <a href="#" class="btn btn-secondary"><?= __('Замовити екскурсію'); ?></a>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </section>
 
-
-    <!--================ slider -->
+    <!-- slider -->
 
     <section class="slider_section">
         <div class="container-fluid">
@@ -111,7 +103,7 @@ get_header();
                         <h2><?= the_title(); ?></h2>
                         <p><?= the_content(); ?></p>
                         <div class="map_side_text_btn">
-                            <a href="#" class="btn btn-secondary">Відвідування</a>
+                            <a href="#" class="btn btn-secondary"><?= __('Відвідування'); ?></a>
                         </div>
                     </div>
                 </div>
@@ -124,7 +116,7 @@ get_header();
             <div class="row">
                 <div class="col-lg-10 offset-lg-1 ">
                     <div class="section_title ">
-                        <h2>Інші туроб’єкти Хортиці</h2>
+                        <h2><?= __('Інші туроб’єкти Хортиці'); ?></h2>
                     </div>
                     <?php $turobj = new WP_Query([
                         'post_type' => 'tourist',
@@ -155,8 +147,10 @@ get_header();
 
     <section class="map_section_page">
         <div id="map"></div>
-        <div class="map_scrol"><h4>Нажмите для увеличения</h4></div>
+        <div class="map_scrol"><h4><?= __('Нажмите для увеличения'); ?></h4></div>
     </section>
 <?php
+require('template-parts/order-excursion.php');
 require('template-parts/last-news.php');
+
 get_footer();

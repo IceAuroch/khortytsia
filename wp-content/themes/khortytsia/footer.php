@@ -11,14 +11,18 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-xl-2">
-                        <ul class="footer_list">
-                            <li><a href="#">Про Хортицю</a></li>
-                            <li><a href="#">Туристичні об’єкти</a></li>
-                            <li><a href="#">Відвідування</a></li>
-                            <li><a href="#">Блог</a></li>
-                            <li><a href="#">Галерея</a></li>
-                            <li><a href="#">Контакти</a></li>
-                        </ul>
+
+                        <?php $args = array(
+                            'menu'           => 'Footer',
+                            'container'      => false,
+                            'echo'           => true,
+                            'items_wrap'     => '<ul class="footer_list">%3$s</ul>',
+                            'add_li_class'   => ''
+                        );
+
+                        wp_nav_menu($args);
+                        ?>
+
                     </div>
 
                     <?php $turobj = new WP_Query([
@@ -49,7 +53,7 @@
                                 <span><?= __('Режим роботи'); ?>:</span>
                             </div>
                             <div class="footer_time_work_col">
-                                <p>Листопад-березень: з 9:30 до 16:00 (каса працює до 15:00) <br> Квітень-жовтень: з с 9:30 до 16:30 (птн,сб,нд з 9:30 до 18:30)</p>
+                                <p><?= get_post_meta(280, 'operation_mode', true); ?></p>
                             </div>
                         </div>
                         <div class="footer_time_work">

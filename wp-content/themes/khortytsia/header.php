@@ -117,7 +117,7 @@
                         <div class="header_item header_lang none_mobile">
                             <p><?= pll_current_language();?></p>
                             <div class="header_lang_drop">
-                                <a href="#"><?php pll_the_languages(); ?></a>
+                                <a href="#"><?php pll_the_languages(['display_names_as'=>'slug']); ?></a>
                             </div>
                         </div>
                         <div class="header_item header_tel">
@@ -157,13 +157,13 @@ if ($turobj->have_posts()):
 
                 <?php while ($turobj->have_posts()): $turobj->the_post(); ?>
                     <div class="col-lg-3">
-                        <a href="<?php echo the_permalink(); ?>">
+                        <a href="<?= the_permalink(); ?>">
                             <div class="dropdown_turobj">
                                 <div class="dropdown_turobj__img">
-                                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="">
+                                    <img src="<?= get_the_post_thumbnail_url(); ?>" alt="">
                                 </div>
                                 <div class="dropdown_turobj__title">
-                                    <p><?php echo the_title(); ?></p>
+                                    <p><?= the_title(); ?></p>
                                 </div>
                             </div>
                         </a>

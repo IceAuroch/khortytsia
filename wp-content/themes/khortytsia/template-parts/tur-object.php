@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title">
-                    <h2><?php echo __ ('Туристичні об’єкти'); ?></h2>
+                    <h2><?= __('Туристичні об’єкти'); ?></h2>
                 </div>
             </div>
         </div>
@@ -22,17 +22,17 @@
             <?php while($turobj->have_posts()): $turobj->the_post();  $count++; ?>
 
             <div class="col-lg-6">
-                <a href="<?php echo the_permalink(); ?>">
+                <a href="<?= the_permalink(); ?>">
                     <div class="tur_item_wrap from_<?= $count%2==0?'right':'left'; ?>"
-                         style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);">
+                         style="background-image: url(<?= get_the_post_thumbnail_url(); ?>);">
                         <div class="tur_item_blur"
-                             style="background-image: url(<?php echo get_the_post_thumbnail_url(); ?>);"></div>
+                             style="background-image: url(<?= get_the_post_thumbnail_url(); ?>);"></div>
                         <div class="tur_item_side">
                             <svg width="30" height="30">
                                 <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
                             </svg>
                             <h4><?= the_title(); ?></h4>
-                            <span><?php echo __ ('Більше інформації'); ?></span>
+                            <span><?= __('Більше інформації'); ?></span>
                         </div>
                     </div>
                 </a>

@@ -4,10 +4,11 @@ Template Name: Single post
 Template Post Type: page
 */
 get_header();
+$post_type = wp_get_post_categories($post->ID);
 ?>
 
     <section class="main_desk_section main_desk_other_section"
-             style="background-image: url(<?php echo get_the_post_thumbnail_url('284'); ?>)">
+             style="background-image: url(<?= get_the_post_thumbnail_url('284'); ?>)">
 
         <div class="desktop_gradient"></div>
         <div class="desktop_gradient desktop_gradient2"></div>
@@ -18,9 +19,14 @@ get_header();
                         <div class="main_desk_breadcrumb">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="<?= pll_home_url(); ?>">Головна</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Блог</a></li>
-                                    <li class="breadcrumb-item"><a href="<?= the_permalink(284); ?>">Новини</a></li>
+                                    <li class="breadcrumb-item"><a
+                                                href="<?= pll_home_url(); ?>"><?= __('Головна'); ?></a></li>
+                                    <li class="breadcrumb-item"><a href="#"><?= __('Блог'); ?></a></li>
+                                    <?php if ($post_type[0] === 23): ?>
+                                        <li class="breadcrumb-item"><a href="<?= the_permalink(284); ?>"><?= get_cat_name(23); ?></a></li>
+                                    <?php elseif ($post_type[0] === 27): ?>
+                                        <li class="breadcrumb-item"><a href="<?= the_permalink(286); ?>"><?= get_cat_name(27); ?></a></li>
+                                    <?php endif; ?>
                                     <li class="breadcrumb-item active"
                                         aria-current="page"><?= the_title(); ?></li>
                                 </ol>
@@ -81,7 +87,7 @@ get_header();
                             </div>
                         </div>
                         <div class="last_news_item_ander_content">
-                            <p>Поділитися в соц.мережах:</p>
+                            <p><?= __('Поділитися в соц.мережах'); ?>:</p>
                             <a href="#">
                                 <svg width="20" height="20">
                                     <use xlink:href="#fb-icon"></use>
