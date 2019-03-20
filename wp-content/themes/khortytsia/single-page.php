@@ -53,7 +53,7 @@ if (have_posts()) :
                     </div>
                     <div class="last_news_item_ander_content">
                         <p><?= __('Поділитися в соц.мережах'); ?>:</p>
-                        <a href="#">
+                        <a href="https://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&amp;t=<?php the_title(); ?>">
                             <svg width="20" height="20">
                                 <use xlink:href="#fb-icon"></use>
                             </svg>

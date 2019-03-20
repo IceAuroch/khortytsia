@@ -11,7 +11,38 @@
 </head>
 <body>
 
-<?php get_template_part('template-parts/symbols'); ?>
+<?php get_template_part('template-parts/symbols');
+if (pll_current_language('slug') == 'en') {
+    $id_about = '361';
+    $id_histor = '363';
+    $id_natur = '365';
+    $id_partn = '367';
+    $id_news = '371';
+    $id_artic = '375';
+    $id_galler = '272';
+    $id_contact = '373';
+}
+elseif (pll_current_language('slug') == 'ua') {
+    $id_about = '288';
+    $id_histor = '290';
+    $id_natur = '292';
+    $id_partn = '282';
+    $id_news = '284';
+    $id_artic = '286';
+    $id_galler = '270';
+    $id_contact = '280';
+}
+elseif (pll_current_language('slug') == 'ru') {
+    $id_about = '357';
+    $id_histor = '377';
+    $id_natur = '359';
+    $id_partn = '61';
+    $id_news = '274';
+    $id_artic = '276';
+    $id_galler = '268';
+    $id_contact = '252';
+}
+    ?>
 
 <header>
     <div class="container-fluid">
@@ -45,10 +76,10 @@
                                     <?= __('Про Хортицю'); ?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="<?= the_permalink(288); ?>"><?= __('Про нас'); ?></a>
-                                    <a class="dropdown-item" href="<?= the_permalink(290); ?>"><?= __('Історія'); ?></a>
-                                    <a class="dropdown-item" href="<?= the_permalink(292); ?>"><?= __('Природа'); ?></a>
-                                    <a class="dropdown-item" href="<?= the_permalink(282); ?>"><?= __('Партнери'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink($id_about ); ?>"><?= __('Про нас'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink($id_histor); ?>"><?= __('Історія'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink($id_natur); ?>"><?= __('Природа'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink($id_partn); ?>"><?= __('Партнери'); ?></a>
                                 </div>
                             </li>
                             <li class="nav-item none_mobile">
@@ -89,15 +120,15 @@
                                     <?= __('Блог'); ?>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="<?= the_permalink(284); ?>"><?= __('Новини'); ?></a>
-                                    <a class="dropdown-item" href="<?= the_permalink(286); ?>"><?= __('Статті'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink($id_news); ?>"><?= __('Новини'); ?></a>
+                                    <a class="dropdown-item" href="<?= the_permalink($id_artic); ?>"><?= __('Статті'); ?></a>
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= the_permalink(270); ?>"><?= __('Галерея'); ?></a>
+                                <a class="nav-link" href="<?= the_permalink($id_galler); ?>"><?= __('Галерея'); ?></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= the_permalink(280); ?>"><?= __('Контакти'); ?></a>
+                                <a class="nav-link" href="<?= the_permalink($id_contact); ?>"><?= __('Контакти'); ?></a>
                             </li>
                         </ul>
                         <div class="header_item">
