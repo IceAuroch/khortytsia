@@ -8,25 +8,30 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-
                         <div class="col-xl-6 offset-xl-6">
                             <div class="form_modal_subtitle">
-                                <p>Хочете побачити все своїми очами?</p>
+                                <p><?= __('Хочете побачити все своїми очами?'); ?></p>
                             </div>
                             <div class="form_modal_title">
-                                <h2>Замовте екскурсію</h2>
+                                <h2><?= __('Замовте екскурсію'); ?></h2>
                             </div>
                             <div class="form_modal_wrap">
 
-                                <?= do_shortcode('[contact-form-7 id="417" title="Заказ эксурсии"]'); ?>
+                                <?php
+                                if (pll_current_language('slug') == 'en')
+                                    echo  do_shortcode('[contact-form-7 id="509" title="Заказ экскурсии анг"]');
+                                elseif ((pll_current_language('slug') == 'ru'))
+                                    echo do_shortcode('[contact-form-7 id="510" title="Заказ экскурсии ру"]');
+
+                                else
+                                    echo do_shortcode('[contact-form-7 id="417" title="Заказ эксурсии"]');
+                                ?>
 
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

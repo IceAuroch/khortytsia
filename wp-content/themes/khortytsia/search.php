@@ -36,6 +36,7 @@ get_header();
     </div>
 </section>
 
+
     <h2><?= __('Поиск по'); ?>: "<?php echo $_GET['s'];?>"</h2>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

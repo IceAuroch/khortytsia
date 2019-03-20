@@ -30,38 +30,28 @@ get_header();
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="row">
 
                     <div class="col-6 col-md-3">
-                        <div class="main_desk_filter from_bottom_interval">
+                        <form class="main_desk_filter from_bottom_interval">
                             <h5>Туроб’єкти</h5>
-                            <ul class="filter_list">
-                                <li>
-                                    <input id="filter1" type="checkbox">
-                                    <label for="filter1">
-                                        Запорізька Січ
-                                    </label>
-                                </li>
-                                <li>
-                                    <input id="filter2" type="checkbox">
-                                    <label for="filter2">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter3" type="checkbox">
-                                    <label for="filter3">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter4" type="checkbox">
-                                    <label for="filter4">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter5" type="checkbox">
-                                    <label for="filter5">Запорізька Січ</label>
-                                </li>
-                            </ul>
-                        </div>
+                            <?php if (have_rows('gallery_name')) : ?>
+                                <ul class="filter_list">
+                                    <?php while (have_rows('gallery_name')) : the_row(); ?>
+                                        <li>
+                                            <input id="filter-<?= slugify(get_sub_field('name_of_gallery')) ?>" name="filter[]" type="checkbox"
+                                                   value="<?php the_sub_field('name_of_gallery') ?>">
+                                            <label for="filter-<?= slugify(get_sub_field('name_of_gallery')) ?>">
+                                                <?php the_sub_field('name_of_gallery') ?>
+                                            </label>
+                                        </li>
+                                    <?php endwhile; ?>
+                                </ul>
+                            <?php endif; ?>
+                        </form>
                     </div>
 
                 </div>
@@ -87,6 +77,7 @@ get_header();
 
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
+
                 <a href="#" data-toggle="modal" data-target="#slider_modal">
                     <div class="galery_masonry">
 
@@ -96,6 +87,8 @@ get_header();
 
                     </div>
                 </a>
+
+                <?php var_dump($_GET['filter']) ?>
             </div>
         </div>
 

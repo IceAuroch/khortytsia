@@ -1,3 +1,5 @@
+</main>
+
 <footer class="footer_section">
     <div class="container-fluid">
         <div class="row">
@@ -48,12 +50,17 @@
                     ?>
 
                     <div class="col">
+                        <?php
+                        if (pll_current_language('slug') == 'en') $id = '373';
+                        elseif (pll_current_language('slug') == 'ua') $id = '280';
+                        elseif (pll_current_language('slug') == 'ru') $id = '252';
+                        ?>
                         <div class="footer_time_work">
                             <div class="footer_time_work_col">
                                 <span><?= __('Режим роботи'); ?>:</span>
                             </div>
                             <div class="footer_time_work_col">
-                                <p><?= get_post_meta(280, 'operation_modes', true); ?></p>
+                                <p><?= get_post_meta($id, 'operation_modes', true); ?></p>
                             </div>
                         </div>
                         <div class="footer_time_work">

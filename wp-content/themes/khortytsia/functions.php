@@ -166,3 +166,13 @@ function format_posts($posts)
 
     return $computed;
 }
+
+function slugify($text)
+{
+    $text = strtolower(trim($text));
+    $text = transliterator_transliterate('Any-Latin; NFD; [:Nonspacing Mark:] Remove; NFC; [:Punctuation:] Remove; Lower();', $text);
+
+    $text = str_replace([' ', ',', '.'], '-', $text);
+
+    return $text;
+}
