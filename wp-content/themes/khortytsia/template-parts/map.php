@@ -1,16 +1,15 @@
+<?php
+if (pll_current_language('slug') == 'en') $id = '369';
+elseif (pll_current_language('slug') == 'ua') $id = '379';
+elseif (pll_current_language('slug') == 'ru') $id = '278';
+    ?>
 <section class="map_section orenge_line">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-5 col-xl-4 offset-lg-1">
                 <div class="map_side_text from_bottom">
-                    <h2>Схематичне <br> зображення на мапі</h2>
-                    <p>Заповідник «Хортиця» має сталий імідж «колиски» запорозького козацтва.
-                        А об’єднання загальних зусиль дозволить закріпити на загальнодержавному
-                        рівні за островом Хортиця статусу історико-культурного національного символу
-                        та створити найпопулярніший центр міжнародного туризму.</p>
-                    <p> Люди з усіх куточків країни, з ближнього і дальнього зарубіжжя прагнуть
-                        приїхати на Хортицю і наше завдання допомогти їм це зробити,
-                        а головне зберегти острів для нащадків.</p>
+                    <h2><?= get_field('main_map_title', $id); ?></h2>
+                    <p><?= get_field('main_map_description', $id); ?></p>
                 </div>
                 <div class="map_side_icon_wrap">
                     <div class="map_side_icon_title">

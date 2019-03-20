@@ -119,7 +119,7 @@
                         <div class="header_item header_lang none_mobile">
                             <p><?= pll_current_language();?></p>
                             <div class="header_lang_drop">
-                                <a href="#"><?php pll_the_languages(['display_names_as'=>'slug']); ?></a>
+                                <ul><?php pll_the_languages(['display_names_as'=>'slug']); ?></ul>
                             </div>
                         </div>
                         <div class="header_item header_tel">
