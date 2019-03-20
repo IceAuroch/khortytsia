@@ -1,6 +1,5 @@
 require('./bootstrap');
 
-
 import Vue from 'vue';
 import Posts from './components/Posts'
 
@@ -15,6 +14,7 @@ new Vue({
         require('./modules/animation');
         require('./modules/masonry');
         require('./modules/map');
+        require('./modules/lozad');
     }
 });
 

@@ -1,8 +1,8 @@
 <section class="map_section orenge_line">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 offset-lg-1">
-                <div class="map_side_text">
+            <div class="col-lg-5 col-xl-4 offset-lg-1">
+                <div class="map_side_text from_bottom">
                     <h2>Схематичне <br> зображення на мапі</h2>
                     <p>Заповідник «Хортиця» має сталий імідж «колиски» запорозького козацтва.
                         А об’єднання загальних зусиль дозволить закріпити на загальнодержавному
@@ -28,12 +28,13 @@
                         <?php while($turobj->have_posts()): $turobj->the_post(); ?>
 
                         <div class="map_side_icon_item">
-                            <a id="<?= get_field('tur_id', $post_id->ID); ?>"
-                               href="<?= the_permalink(); ?>" class="map_icon"
-                               data-imgtext="<?= the_title(); ?>
-                               data-selection="<?= get_field('tur_selector', $post_id->ID); ?>">
+                            <a id="<?= get_field('tur_id', $post->ID); ?>"
+                               href="<?= the_permalink(); ?>"
+                               class="map_icon from_bottom"
+                               data-imgtext="<?= the_title(); ?>"
+                               data-selection="<?= get_field('tur_selector', $post->ID); ?>">
                                 <svg width="30" height="30">
-                                    <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
+                                    <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
                                 </svg>
                                <?= the_title(); ?>
                             </a>
@@ -63,12 +64,13 @@
 
                     <?php while($turobj->have_posts()): $turobj->the_post(); ?>
 
-                    <a id="<?= get_field('tur_id', $post_id->ID); ?>" class="map_icon"
-                       data-selection="<?= get_field('tur_selector', $post_id->ID); ?>"
+                    <a id="<?= get_field('tur_id', $post->ID); ?>"
+                       class="map_icon from_bottom"
+                       data-selection="<?= get_field('tur_selector', $post->ID); ?>"
                        data-imgtext="<?= the_title(); ?>"
                        href="<?= the_permalink(); ?>">
                         <svg width="30" height="30">
-                            <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
+                            <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
                         </svg>
                     </a>
 

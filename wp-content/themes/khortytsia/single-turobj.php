@@ -35,7 +35,7 @@ if (have_posts()) :
                         </h1>
                         <div class="main_desk_other_text">
                             <p><?php the_field('tur_annotation'); ?></p>
-                            <a href="#" class="btn btn-secondary"><?= __('Замовити екскурсію'); ?></a>
+                            <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#form_modal"><?= __('Замовити екскурсію'); ?></a>
                         </div>
                     </div>
                 </div>

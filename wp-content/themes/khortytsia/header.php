@@ -105,12 +105,14 @@
                                 <button id="open_serch" type="button">
                                 </button>
                                 <div class="serch_line">
-                                    <input type="text" placeholder="<?= __('Пошук'); ?>...">
-                                    <button type="button">
-                                        <svg width="31" height="31">
-                                            <use xlink:href="#search-icon"></use>
-                                        </svg>
-                                    </button>
+                                    <form action="<?php bloginfo( 'url' ); ?>" method="get">
+                                        <input type="text" name="s" placeholder="<?= __('Пошук'); ?>..." value="<?php if(!empty($_GET['s'])){echo $_GET['s'];}?>">
+                                        <button type="button">
+                                            <svg width="31" height="31">
+                                                <use xlink:href="#search-icon"></use>
+                                            </svg>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -146,6 +148,8 @@
 
 <?php $turobj = new WP_Query([
     'post_type' => 'tourist',
+    'orderby' => 'ID',
+    'order' => 'asc'
 ]);
 if ($turobj->have_posts()):
 ?>

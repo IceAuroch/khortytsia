@@ -24,6 +24,7 @@
     "flickity": "^2.2.0",
     "flickity-as-nav-for": "^2.0.1",
     "jquery": "^3.3.1",
+    "lozad": "^1.9.0",
     "mapbox-gl": "^0.53.1",
     "masonry-layout": "^4.2.2",
     "popper.js": "^1.14.7",

@@ -33,6 +33,7 @@ get_header();
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <div class="row">
+
                     <div class="col-6 col-md-3">
                         <div class="main_desk_filter from_bottom_interval">
                             <h5>Туроб’єкти</h5>
@@ -62,93 +63,7 @@ get_header();
                             </ul>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <div class="main_desk_filter from_bottom_interval">
-                            <h5>Туроб’єкти</h5>
-                            <ul class="filter_list">
-                                <li>
-                                    <input id="filter2_1" type="checkbox">
-                                    <label for="filter2_1">
-                                        Запорізька Січ
-                                    </label>
-                                </li>
-                                <li>
-                                    <input id="filter2_2" type="checkbox">
-                                    <label for="filter2_2">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter2_3" type="checkbox">
-                                    <label for="filter2_3">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter2_4" type="checkbox">
-                                    <label for="filter2_4">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter2_5" type="checkbox">
-                                    <label for="filter2_5">Запорізька Січ</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="main_desk_filter from_bottom_interval">
-                            <h5>Туроб’єкти</h5>
-                            <ul class="filter_list">
-                                <li>
-                                    <input id="filter3_1" type="checkbox">
-                                    <label for="filter3_1">
-                                        Запорізька Січ
-                                    </label>
-                                </li>
-                                <li>
-                                    <input id="filter3_2" type="checkbox">
-                                    <label for="filter3_2">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter3_3" type="checkbox">
-                                    <label for="filter3_3">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter3_4" type="checkbox">
-                                    <label for="filter3_4">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter3_5" type="checkbox">
-                                    <label for="filter3_5">Запорізька Січ</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-3">
-                        <div class="main_desk_filter from_bottom_interval">
-                            <h5>Туроб’єкти</h5>
-                            <ul class="filter_list">
-                                <li>
-                                    <input id="filter4_1" type="checkbox">
-                                    <label for="filter4_1">
-                                        Запорізька Січ
-                                    </label>
-                                </li>
-                                <li>
-                                    <input id="filter4_2" type="checkbox">
-                                    <label for="filter4_2">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter4_3" type="checkbox">
-                                    <label for="filter4_3">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter4_4" type="checkbox">
-                                    <label for="filter4_4">Запорізька Січ</label>
-                                </li>
-                                <li>
-                                    <input id="filter4_5" type="checkbox">
-                                    <label for="filter4_5">Запорізька Січ</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -169,6 +84,7 @@ get_header();
 
 <section class="mt_section page_news_section">
     <div class="container-fluid">
+
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
                 <a href="#" data-toggle="modal" data-target="#slider_modal">
@@ -182,11 +98,7 @@ get_header();
                 </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col text-center">
-                <a href="#" class="btn btn-primary">Дивитись більше</a>
-            </div>
-        </div>
+
     </div>
 </section>
 

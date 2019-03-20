@@ -17,23 +17,9 @@
                                 <h2>Замовте екскурсію</h2>
                             </div>
                             <div class="form_modal_wrap">
-<!--                                --><?//= do_shortcode('[contact-form-7 id="417" title="Заказ эксурсии"]'); ?>
-                                <div class="form_modal_item">
-                                    <input type="text" class="order-2" placeholder="Ім’я">
-                                    <label for="#" class="order-1">Ім’я</label>
-                                </div>
-                                <div class="form_modal_item">
-                                    <input type="text" class="order-2" placeholder="Номер телефону">
-                                    <label for="#" class="order-1">Номер телефону</label>
-                                </div>
-                                <div class="form_modal_item">
-                                    <input type="text" class="order-2" placeholder="Еmail">
-                                    <label for="#" class="order-1">Еmail</label>
-                                </div>
 
-                                <div class="form_modal_item_btn">
-                                    <input type="submit" class="btn btn-secondary" value="Замовити екскурсію">
-                                </div>
+                                <?= do_shortcode('[contact-form-7 id="417" title="Заказ эксурсии"]'); ?>
+
                             </div>
 
                         </div>
