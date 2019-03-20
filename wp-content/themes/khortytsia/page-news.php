@@ -37,49 +37,7 @@ get_header();
 
     <!-- news section -->
 
-<section class="mt_section page_news_section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-                <?php
-                $news = new WP_Query([
-                    'post_type' => 'post',
-                    'category_name' => 'новини'
-                ]);
-                if ($news->have_posts()): ?>
-                <div class="row">
-                    <?php while ($news->have_posts()) : $news->the_post(); ?>
-                    <div class="col-lg-4">
-                        <div class="last_news_item from_bottom_interval">
-                            <div class="last_news_item_img"
-                                 style="background-image: url(<?= get_the_post_thumbnail_url(); ?>);"></div>
-                            <div class="last_news_item_content_wrap">
-                                <div class="last_news_item_content">
-                                    <span><?= get_the_date('j.m.Y'); ?></span>
-                                    <h4><?= the_title(); ?></h4>
-                                    <p><?= wp_trim_words(get_the_content(), 30, '...'); ?></p>
-                                    <a href="<?= the_permalink(); ?>"><?= __('Читати повністю'); ?></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <?php endwhile; ?>
-
-                </div>
-
-                <?php endif;
-                wp_reset_postdata(); ?>
-
-            </div>
-        </div>
-        <div class="row ">
-            <div class="col text-center">
-                <a href="#" class="btn btn-primary"><?= __('Більше новин'); ?></a>
-            </div>
-        </div>
-    </div>
-</section>
+    <posts category="novini"></posts>
 
 
 <?php

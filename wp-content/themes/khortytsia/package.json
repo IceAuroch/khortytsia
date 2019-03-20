@@ -16,9 +16,10 @@
     "laravel-mix": "^4.0.14",
     "sass": "^1.17.2",
     "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.7"
+    "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "flickity": "^2.2.0",
     "flickity-as-nav-for": "^2.0.1",
@@ -26,6 +27,7 @@
     "mapbox-gl": "^0.53.1",
     "masonry-layout": "^4.2.2",
     "popper.js": "^1.14.7",
-    "scrollreveal": "^4.0.5"
+    "scrollreveal": "^4.0.5",
+    "vue": "^2.6.8"
   }
 }

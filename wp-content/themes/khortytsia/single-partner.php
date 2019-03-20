@@ -4,6 +4,8 @@ Template Name: Single partners
 Template Post Type: partners
 */
 get_header();
+if (have_posts()) :
+    while(have_posts()) : the_post();
 ?>
 
 <section class="main_desk_section main_desk_other_section"
@@ -118,6 +120,7 @@ get_header();
 </section>
 
 <?php
-
+endwhile; endif;
+wp_reset_postdata();
 get_footer();
 

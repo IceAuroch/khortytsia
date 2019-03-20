@@ -4,6 +4,10 @@ Template Name: Single page
 Template Post Type: page
 */
 get_header();
+
+if (have_posts()) :
+    while (have_posts()) : the_post();
+
 ?>
 
 <section class="main_desk_section main_desk_other_section"
@@ -34,7 +38,7 @@ get_header();
     </div>
 </section>
 
-    <!-- news section -->
+<!-- news section -->
 
 <section class="mt_section page_news_section">
     <div class="container-fluid">
@@ -72,5 +76,7 @@ get_header();
 </section>
 
 <?php
+endwhile; endif;
+wp_reset_postdata();
 require('template-parts/last-news.php');
 get_footer();

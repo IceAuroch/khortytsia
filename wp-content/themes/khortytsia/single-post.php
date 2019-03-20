@@ -4,6 +4,10 @@ Template Name: Single post
 Template Post Type: page
 */
 get_header();
+
+if (have_posts()) :
+    while(have_posts()) : the_post();
+
 $post_type = wp_get_post_categories($post->ID);
 ?>
 
@@ -111,4 +115,6 @@ $post_type = wp_get_post_categories($post->ID);
 
 <?php
 require('template-parts/last-news.php');
+endwhile; endif;
+wp_reset_postdata();
 get_footer();

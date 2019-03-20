@@ -121,3 +121,48 @@ function dd($args)
 
 require_once('post-types/tourist.php');
 require_once('post-types/partners.php');
+
+//Vue
+function get_ajax_posts()
+{
+    $args = [
+        'category_name' => $_POST['category'],
+        'posts_per_page' => 4,
+        'paged' => $_POST['paged'],
+    ];
+
+    // The Query
+    $ajaxposts = new WP_Query($args); // changed to get_posts from wp_query, because `get_posts` returns an array
+
+    echo json_encode([
+        'posts' => format_posts($ajaxposts->posts),
+        'last_page' => $ajaxposts->max_num_pages,
+    ]);
+
+    exit;
+}
+
+// Fire AJAX action for both logged in and non-logged in users
+add_action('wp_ajax_get_ajax_posts', 'get_ajax_posts');
+add_action('wp_ajax_nopriv_get_ajax_posts', 'get_ajax_posts');
+
+function format_posts($posts)
+{
+    if (!is_array($posts)) {
+        return null;
+    }
+
+    $computed = [];
+
+    foreach ($posts as $post) {
+        array_push($computed, [
+            'title' => $post->post_title,
+            'image' => get_the_post_thumbnail_url($post->ID, 'large'),
+            'posted_at' => get_the_date('j.m.Y', $post->ID),
+            'description' => wp_trim_words($post->post_content, 30, '...'),
+            'permalink' => get_the_permalink($post->ID),
+        ]);
+    }
+
+    return $computed;
+}

@@ -5,6 +5,9 @@ Template Post Type: tourist
 */
 get_header();
 
+if (have_posts()) :
+    while(have_posts()) : the_post();
+
 ?>
 <section class="main_desk_section main_desk_turobj_section"
          style="background-image: url(<?= get_the_post_thumbnail_url(); ?>)">
@@ -26,12 +29,12 @@ get_header();
                     <div class="main_desk_other_title">
                         <h1>
                             <svg width="30" height="30">
-                                <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
+                                <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
                             </svg>
                             <?= the_title(); ?>
                         </h1>
                         <div class="main_desk_other_text">
-                            <p><?= get_post_meta($post->ID, 'tur_annotation', true); ?></p>
+                            <p><?php the_field('tur_annotation'); ?></p>
                             <a href="#" class="btn btn-secondary"><?= __('Замовити екскурсію'); ?></a>
                         </div>
                     </div>
@@ -48,7 +51,7 @@ get_header();
         <div class="row">
 
             <?php
-            $images = get_field('tur_obj_gallery', $post_id->ID);
+            $images = get_field('tur_obj_gallery', $post->ID);
             if ($images): ?>
                 <div class="col-lg-6 col-xl-5 offset-xl-1">
                     <div class="slider_title">
@@ -130,9 +133,9 @@ get_header();
                         <?php while ($turobj->have_posts()): $turobj->the_post(); ?>
 
                             <div class="map_side_icon_item from_bottom">
-                                <a href="<?= the_permalink(); ?>" data-selection="<?= get_field('tur_selector', $post_id->ID); ?>">
+                                <a href="<?= the_permalink(); ?>" data-selection="<?= get_field('tur_selector', $post->ID); ?>">
                                     <svg width="30" height="30">
-                                        <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
+                                        <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
                                     </svg>
                                     <?= the_title(); ?>
                                 </a>
@@ -157,6 +160,9 @@ get_header();
 </section>
 
 <?php
+
+    endwhile;
+    endif;
 require('template-parts/order-excursion.php');
 require('template-parts/last-news.php');
 
