@@ -34,8 +34,8 @@ add_action('after_setup_theme', 'theme_setup');
 function theme_scripts()
 {
     wp_deregister_script('wp-embed');
-    wp_deregister_script('jquery');
-    wp_deregister_script('jquery-migrate');
+//    wp_deregister_script('jquery');
+//    wp_deregister_script('jquery-migrate');
     wp_enqueue_script('app', get_theme_file_uri('dist/app.js'), null, '', true);
 }
 
@@ -121,6 +121,7 @@ function dd($args)
 
 require_once('post-types/tourist.php');
 require_once('post-types/partners.php');
+require_once('post-types/galery.php');
 
 //Vue
 function get_ajax_posts()

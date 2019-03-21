@@ -22,16 +22,6 @@ if (pll_current_language('slug') == 'en') {
     $id_galler = '272';
     $id_contact = '373';
 }
-elseif (pll_current_language('slug') == 'ua') {
-    $id_about = '288';
-    $id_histor = '290';
-    $id_natur = '292';
-    $id_partn = '282';
-    $id_news = '284';
-    $id_artic = '286';
-    $id_galler = '270';
-    $id_contact = '280';
-}
 elseif (pll_current_language('slug') == 'ru') {
     $id_about = '357';
     $id_histor = '377';
@@ -41,6 +31,16 @@ elseif (pll_current_language('slug') == 'ru') {
     $id_artic = '276';
     $id_galler = '268';
     $id_contact = '252';
+}
+else {
+    $id_about = '288';
+    $id_histor = '290';
+    $id_natur = '292';
+    $id_partn = '282';
+    $id_news = '284';
+    $id_artic = '286';
+    $id_galler = '270';
+    $id_contact = '280';
 }
     ?>
 

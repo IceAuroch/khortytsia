@@ -48,7 +48,6 @@
                         this.paged = this.paged < data.last_page ? this.paged += 1 : null;
                     })
             },
-
         },
         mounted() {
             this.getPosts();

@@ -11455,6 +11455,18 @@ section.map_section {
 .another_tur_obj_links .map_side_icon_item a:hover svg {
   fill: #FFD676;
 }
+.another_tur_obj_links .map_side_icon_item a.active_link {
+  color: #cccccc;
+}
+.another_tur_obj_links .map_side_icon_item a.active_link svg {
+  fill: #cccccc;
+}
+.another_tur_obj_links .map_side_icon_item a.active_link:hover {
+  color: #cccccc;
+}
+.another_tur_obj_links .map_side_icon_item a.active_link:hover svg {
+  fill: #cccccc;
+}
 
 #map {
   width: 100%;
