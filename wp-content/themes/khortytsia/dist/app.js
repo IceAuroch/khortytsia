@@ -41453,6 +41453,14 @@ $(document).ready(function () {
       scrollTop: top
     }, 500);
   });
+  $(".nav_tabs").on("click", "a", function () {
+    var id = $(".vidviduvannya_section"),
+        top = $(id).offset().top - 100;
+    $('body,html').animate({
+      scrollTop: top
+    }, 500);
+  });
+  $('#text').addClass('text_open');
 });
 
 /***/ }),

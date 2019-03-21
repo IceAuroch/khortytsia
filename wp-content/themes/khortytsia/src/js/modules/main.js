@@ -10,8 +10,6 @@ $(document).ready(function () {
 
     });
 
-
-
     $('.map_icon').hover(
         function () {
             var mapImgIcon = $(this).attr('data-selection');
@@ -35,9 +33,6 @@ $(document).ready(function () {
         $(".map_img a ").on('click', function (event) {
             event.preventDefault();
         });
-    
-
-
 
     $('.map_scrol').click(function () {
         $(this).addClass('map_scrol_close');
@@ -84,8 +79,6 @@ $(document).ready(function () {
         
     });
 
-
-
     $(document).mouseup(function (e) {
         var container = $(".dropdown_turobj_wrap");
         if (!$(e.target).hasClass('turobj_link')) {
@@ -99,7 +92,6 @@ $(document).ready(function () {
         }
     });
 
-
     $(".scroll_down").on("click", function (event) {
 
         event.preventDefault();
@@ -110,8 +102,16 @@ $(document).ready(function () {
         
         $('body,html').animate({scrollTop: top}, 500);
     });
+
+    $(".nav_tabs").on("click","a", function () {
+
+        var id  = $(".vidviduvannya_section"),
+
+            top = $(id).offset().top - 100;
+
+        $('body,html').animate({scrollTop: top}, 500);
+    });
+
+    $('#text').addClass('text_open');
     
-
-
 });
-

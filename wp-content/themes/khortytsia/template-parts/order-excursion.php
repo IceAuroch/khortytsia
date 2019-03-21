@@ -22,7 +22,6 @@
                                     echo  do_shortcode('[contact-form-7 id="509" title="Заказ экскурсии анг"]');
                                 elseif ((pll_current_language('slug') == 'ru'))
                                     echo do_shortcode('[contact-form-7 id="510" title="Заказ экскурсии ру"]');
-
                                 else
                                     echo do_shortcode('[contact-form-7 id="417" title="Заказ эксурсии"]');
                                 ?>

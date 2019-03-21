@@ -1,7 +1,7 @@
 <?php
 if (pll_current_language('slug') == 'en') $id = '369';
-elseif (pll_current_language('slug') == 'ua') $id = '379';
 elseif (pll_current_language('slug') == 'ru') $id = '278';
+else  $id = '379';
 ?>
 <section class="youtube_section">
     <div class="container-fluid">
