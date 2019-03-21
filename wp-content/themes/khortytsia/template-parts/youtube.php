@@ -14,7 +14,7 @@ else  $id = '379';
             <div class="col-lg-5">
                 <div class="map_side_text ">
                     <h2><?= get_field('main_video_title', $id); ?></h2>
-                    <p><?= get_field('main_video_description', $id);?></p>
+                    <p><?= get_field('main_video_description', $id); ?></p>
                 </div>
             </div>
         </div>

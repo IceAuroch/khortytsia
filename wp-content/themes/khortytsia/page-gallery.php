@@ -82,8 +82,7 @@ get_header();
     <section class="mt_section page_news_section">
         <div class="container-fluid">
             <?php $galery = new WP_Query([
-                'post_type' => 'galery',
-
+                'post_type' => 'galery'
             ]);
             if ($galery->have_posts()):
                 $count = 0;

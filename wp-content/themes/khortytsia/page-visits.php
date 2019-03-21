@@ -8,11 +8,8 @@ get_header();
 
 <section class="main_desk_section main_desk_other_section main_desk_vidvid"
          style="background-image: url(<?= get_theme_file_uri('images/vidvi_bg.jpg'); ?>)">
-
     <div class="desktop_gradient"></div>
-
     <div class="desktop_gradient desktop_gradient2"></div>
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-5 offset-lg-1">
@@ -25,17 +22,14 @@ get_header();
                             </ol>
                         </nav>
                     </div>
-
                     <div class="main_desk_other_title">
                         <h1>
                             <?= the_title(); ?>
                         </h1>
-
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="vidvid_navs">
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
@@ -92,12 +86,9 @@ get_header();
                 </div>
             </div>
         </div>
-
     </div>
-
 </section>
 <section class="vidviduvannya_section">
-
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-10 offset-lg-1">
@@ -110,7 +101,7 @@ get_header();
                                 </div>
                                 <div class="vidvid_map">
                                     <div id="map"></div>
-                                    <div class="map_scrol"><h4>Нажмите для увеличения</h4></div>
+                                    <div class="map_scrol"><h4><?= __('Нажмите для увеличения'); ?></h4></div>
                                 </div>
                             </div>
                         </div>
@@ -129,38 +120,15 @@ get_header();
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col">
                                 <div class="tab_content_list d-flex flex-wrap">
+
                                     <a href="#" class="tab_content_list_item">
-                                        <span>Екскурсія</span>
+                                        <span><?= __('Екскурсія'); ?></span>
                                         <h4>Екскурсія №1</h4>
                                     </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Екскурсія</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Екскурсія</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Екскурсія</span>
-                                        <h4>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Екскурсія</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Екскурсія</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Екскурсія</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -168,13 +136,15 @@ get_header();
                     <div class="tab-pane fade" id="three" role="tabpanel" aria-labelledby="contact-tab">
                         <div class="row">
                             <div class="col">
+
                                 <div class="btn_title">
                                     <h2><?= __('Активний відпочинок'); ?></h2>
                                 </div>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum aliquid ullam, voluptatibus omnis alias perferendis distinctio voluptatem! Porro, ut officiis! Ab id facilis quaerat repellendus distinctio, quod nam nobis veritatis voluptatibus, vero laudantium explicabo possimus, nemo atque doloremque molestias eum accusantium dolores commodi natus repellat animi inventore perspiciatis! Dolores eligendi quisquam a maiores. Eos odio deleniti placeat molestiae inventore repellat nobis nihil quam accusamus eligendi fugiat, sit veniam quaerat deserunt nam harum quas eveniet possimus eum expedita. Quaerat quod doloribus reprehenderit consequatur vel quos. Magnam dolor quam repudiandae dolorum fugiat accusantium ad placeat hic sit. Saepe ea nobis commodi itaque!</p>
                                 <div class="tab_content_link">
-                                    <a href="#">Дизнатися бильше...</a>
+                                    <a href="#"><?= __('Дизнатися бильше...'); ?></a>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -186,38 +156,15 @@ get_header();
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col">
                                 <div class="tab_content_list d-flex flex-wrap">
+
                                     <a href="#" class="tab_content_list_item">
-                                        <span>Стаття</span>
+                                        <span><?= __('Стаття'); ?></span>
                                         <h4>Екскурсія №1</h4>
                                     </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Стаття</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Стаття</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Стаття</span>
-                                        <h4>Excepteur sint occaecat cupidatat non p</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Стаття</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Стаття</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
-                                    <a href="#" class="tab_content_list_item">
-                                        <span>Стаття</span>
-                                        <h4>Екскурсія №1</h4>
-                                    </a>
+
                                 </div>
                             </div>
                         </div>
@@ -226,8 +173,6 @@ get_header();
             </div>
         </div>
     </div>
-
-
 </section>
 
 <?php

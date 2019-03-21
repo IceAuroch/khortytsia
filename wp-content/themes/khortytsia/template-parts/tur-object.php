@@ -29,7 +29,7 @@
                              style="background-image: url(<?= get_the_post_thumbnail_url(); ?>);"></div>
                         <div class="tur_item_side">
                             <svg width="30" height="30">
-                                <use xlink:href="<?= get_field('tur_icon', $post_id->ID); ?>"></use>
+                                <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
                             </svg>
                             <h4><?= the_title(); ?></h4>
                             <span><?= __('Більше інформації'); ?></span>
