@@ -59,7 +59,7 @@ get_header();
 
         <div class="row">
             <div class="col text-center" >
-                <a href="#" class="btn btn-outline-info">
+                <a href="<?= the_permalink(); ?>" class="btn btn-outline-info">
                     <svg width="20" height="20">
                         <use xlink:href="#basket-icon"></use>
                     </svg>

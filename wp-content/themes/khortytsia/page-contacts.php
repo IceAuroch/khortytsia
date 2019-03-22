@@ -57,8 +57,15 @@ get_header();
                                 <span><?= __('Музей міста за порогами'); ?> :</span>
                             </div>
                             <div class="contact_row__item">
-                                <a href="#">(061) 236-05-36,</a>
-                                <a href="#">(061) 236-05-57</a>
+                                <?php
+                                if( have_rows('city_museum') ):
+                                    while( have_rows('city_museum') ) : the_row(); ?>
+                                        <a href="tel: <?= get_sub_field('city_museum_phone'); ?> ">
+                                            <?= get_sub_field('city_museum_phone'); ?>
+                                        </a>
+                                    <?php endwhile;
+                                endif;
+                                ?>
                             </div>
                         </div>
                         <div class="contact_row">
@@ -66,7 +73,9 @@ get_header();
                                 <span><?= __('Служба режиму'); ?> :</span>
                             </div>
                             <div class="contact_row__item">
-                                <a href="#"><?= get_post_meta($post->ID, 'museum_watch', true); ?></a>
+                                <a href="tel: <?= get_post_meta($post->ID, 'museum_watch', true); ?> ">
+                                    <?= get_post_meta($post->ID, 'museum_watch', true); ?>
+                                </a>
                             </div>
                         </div>
                         <div class="contact_row">

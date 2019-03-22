@@ -10606,6 +10606,7 @@ header.header_fixed .nav-link {
 .header_lang p {
   font-weight: bold;
   color: #fff;
+  text-transform: uppercase;
 }
 .header_lang .header_lang_drop {
   display: flex;
@@ -10621,13 +10622,18 @@ header.header_fixed .nav-link {
           transform: translateX(-50%);
   transition: all 0.4s ease;
 }
-.header_lang .header_lang_drop a {
+.header_lang .header_lang_drop ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.header_lang .header_lang_drop ul li a {
   padding: 3px 20px;
   color: #333;
   font-family: "Lora", sans-serif;
   font-weight: bold;
 }
-.header_lang .header_lang_drop a:hover {
+.header_lang .header_lang_drop ul li a:hover {
   color: #FFD676;
 }
 .header_lang:hover .header_lang_drop, .header_lang:focus .header_lang_drop, .header_lang:active .header_lang_drop {
@@ -10752,7 +10758,6 @@ header.header_fixed + section.dropdown_turobj_main_wrap {
 
 section.main_desk_section {
   height: 100vh;
-  background-image: url(../images/main_desk_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;

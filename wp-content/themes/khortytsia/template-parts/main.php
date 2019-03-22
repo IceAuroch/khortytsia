@@ -1,4 +1,24 @@
-<section class="main_desk_section">
+<section class="main_desk_section" style="background-image: url(<?= get_the_post_thumbnail_url('379'); ?>)">
+
+    <svg class="decor-symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+        <defs>
+            <mask id="mask" x="0" y="0" width="100%" height="100%" >
+                <rect x="0" y="0" width="100%" height="100%" fill="#fff"/>
+                <text id="text" x="130" y="90">X</text>
+            </mask>
+        </defs>
+        <rect id="overlay" x="0" y="0" width="100%" height="100%" fill="url(#bg-gradient)"/>
+    </svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="position: absolute;top: -999999px;">
+        <defs>
+            <linearGradient id="bg-gradient" gradientUnits="userSpaceOnUse" x1="30.71%" y1="-9.89%" x2="69.29%" y2="109.89%">
+                <stop offset=".26" stop-color="#000" stop-opacity=".5"/>
+                <stop offset="1.11" stop-color="#fffcfc" stop-opacity="0"/>
+            </linearGradient>
+        </defs>
+    </svg>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-md offset-md-2 col-xl-5 offset-xl-2">
@@ -6,9 +26,14 @@
                     <p><?php bloginfo('description'); ?></p>
                 </div>
                 <div class="main_desk_title">
+                    <?php if (pll_current_language('slug') == 'en') $id_text = '361';
+                    elseif (pll_current_language('slug') == 'ru') $id_text = '357';
+                    else $id_text = '288'; ?>
                     <h1><?php bloginfo('name'); ?></h1>
-                    <p><?= wp_trim_words(get_the_content(), 30, '...'); ?></p>
-                    <a class="link_orange" href="#"><?= __('Детальніше'); ?></a>
+                    <p><?php  $text = get_post($id_text);
+                    echo wp_trim_words($text->post_content , 30, '...'); ?>
+                    </p>
+                    <a class="link_orange" href="<?= the_permalink($id_text); ?>"><?= __('Детальніше'); ?></a>
                 </div>
             </div>
         </div>

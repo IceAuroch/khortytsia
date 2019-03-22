@@ -184,6 +184,7 @@ header
     p 
         font-weight: bold
         color: #fff
+        text-transform: uppercase
     .header_lang_drop
         display: flex
         flex-direction: column
@@ -196,13 +197,17 @@ header
         margin-right: -50%
         transform: translateX(-50%)
         transition: all 0.4s ease
-        a 
-            padding: 3px 20px
-            color: #333 
-            font-family: $text 
-            font-weight: bold
-            &:hover 
-                color: $primary
+        ul
+            align-items: center
+            display: flex
+            flex-direction: column
+            li a
+                padding: 3px 20px
+                color: #333
+                font-family: $text
+                font-weight: bold
+                &:hover
+                    color: $primary
     &:hover, &:focus, &:active
         .header_lang_drop
             top: 0
