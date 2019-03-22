@@ -4269,18 +4269,18 @@ input[type=button].btn-block {
 }
 
 .nav-tabs {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #615D5A;
 }
 .nav-tabs .nav-item {
   margin-bottom: -1px;
 }
 .nav-tabs .nav-link {
   border: 1px solid transparent;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus {
-  border-color: #e9ecef #e9ecef #dee2e6;
+  border-color: #615D5A;
 }
 .nav-tabs .nav-link.disabled {
   color: #6c757d;
@@ -4289,9 +4289,9 @@ input[type=button].btn-block {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
+  color: #DABFB5;
+  background-color: rgba(57, 47, 44, 0.5);
+  border-color: #615D5A;
 }
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
@@ -10606,7 +10606,6 @@ header.header_fixed .nav-link {
 .header_lang p {
   font-weight: bold;
   color: #fff;
-  text-transform: uppercase;
 }
 .header_lang .header_lang_drop {
   display: flex;
@@ -10622,19 +10621,13 @@ header.header_fixed .nav-link {
           transform: translateX(-50%);
   transition: all 0.4s ease;
 }
-.header_lang .header_lang_drop ul {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-.header_lang .header_lang_drop ul li a {
+.header_lang .header_lang_drop a {
   padding: 3px 20px;
   color: #333;
   font-family: "Lora", sans-serif;
   font-weight: bold;
-  text-transform: uppercase;
 }
-.header_lang .header_lang_drop ul li a:hover {
+.header_lang .header_lang_drop a:hover {
   color: #FFD676;
 }
 .header_lang:hover .header_lang_drop, .header_lang:focus .header_lang_drop, .header_lang:active .header_lang_drop {
@@ -11024,6 +11017,80 @@ section.main_desk_full_section + footer {
   margin-bottom: 20px;
 }
 
+.decor-symbol {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .decor-symbol {
+    display: block;
+  }
+}
+.decor-symbol #text {
+  position: relative;
+  font-family: "Book Antiqua", sans-serif;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .decor-symbol #text {
+    font-size: 14vw;
+  }
+}
+@media (min-width: 1366px) {
+  .decor-symbol #text {
+    font-size: 11vw;
+  }
+}
+@media (min-width: 1600px) {
+  .decor-symbol #text {
+    font-size: 10vw;
+  }
+}
+@media (min-width: 1900px) {
+  .decor-symbol #text {
+    font-size: 8vw;
+  }
+}
+.decor-symbol #overlay {
+  -webkit-mask: url(#mask);
+          mask: url(#mask);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#text.text_open {
+  -webkit-animation: decorSymbol 1.2s ease-in-out forwards 1;
+          animation: decorSymbol 1.2s ease-in-out forwards 1;
+  display: block;
+}
+
+@-webkit-keyframes decorSymbol {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes decorSymbol {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
 .section_title {
   display: flex;
   position: relative;
@@ -11348,7 +11415,6 @@ section.map_section {
   background-position: center center;
   width: 100%;
   height: 530px;
-  text-align: center;
 }
 .slider_main_item img {
   height: auto;
@@ -11455,16 +11521,16 @@ section.map_section {
 .another_tur_obj_links .map_side_icon_item a:hover svg {
   fill: #FFD676;
 }
-.another_tur_obj_links .map_side_icon_item a.active_link {
+.another_tur_obj_links .map_side_icon_item a a.active_link {
   color: #cccccc;
 }
-.another_tur_obj_links .map_side_icon_item a.active_link svg {
+.another_tur_obj_links .map_side_icon_item a a.active_link svg {
   fill: #cccccc;
 }
-.another_tur_obj_links .map_side_icon_item a.active_link:hover {
+.another_tur_obj_links .map_side_icon_item a a.active_link:hover {
   color: #cccccc;
 }
-.another_tur_obj_links .map_side_icon_item a.active_link:hover svg {
+.another_tur_obj_links .map_side_icon_item a a.active_link:hover svg {
   fill: #cccccc;
 }
 

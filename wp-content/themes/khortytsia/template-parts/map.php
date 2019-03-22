@@ -6,7 +6,7 @@ else $id = '379';
 <section class="map_section orenge_line">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-5 col-xl-4 offset-lg-1">
+            <div class="col-lg-5 col-xl-4 offset-xl-1">
                 <div class="map_side_text from_bottom">
                     <h2><?= get_field('main_map_title', $id); ?></h2>
                     <p><?= get_field('main_map_description', $id); ?></p>
@@ -74,6 +74,11 @@ else $id = '379';
                     </a>
 
                     <?php endwhile; ?>
+                    <div class="descrip_map"></div>
+
+                    <div class="img_for_mob">
+                        <img src="<?= get_theme_file_uri('images/mob_map_main.jpg'); ?>" alt="">
+                    </div>
 
                 </div>
 

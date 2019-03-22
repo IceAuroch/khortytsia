@@ -21,6 +21,7 @@ if (pll_current_language('slug') == 'en') {
     $id_artic = '375';
     $id_galler = '272';
     $id_contact = '373';
+    $id_visits = '530';
 }
 elseif (pll_current_language('slug') == 'ru') {
     $id_about = '357';
@@ -31,6 +32,7 @@ elseif (pll_current_language('slug') == 'ru') {
     $id_artic = '276';
     $id_galler = '268';
     $id_contact = '252';
+    $id_visits = '527';
 }
 else {
     $id_about = '288';
@@ -41,6 +43,7 @@ else {
     $id_artic = '286';
     $id_galler = '270';
     $id_contact = '280';
+    $id_visits = '522';
 }
     ?>
 
@@ -112,7 +115,7 @@ else {
 
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><?= __('Відвідування'); ?></a>
+                                <a class="nav-link" href="<?= the_permalink($id_visits); ?>"><?= __('Відвідування'); ?></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"

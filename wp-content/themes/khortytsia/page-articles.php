@@ -36,33 +36,19 @@ get_header();
             <div class="col-lg-10 offset-lg-1">
                 <div class="row">
                     <div class="col-6 col-lg-3">
+                        <?php $tags = get_tags(); ?>
                         <div class="main_desk_filter from_bottom_interval">
                             <form action="" method="get">
-                                <h5>Туроб’єкти</h5>
-
                                 <ul class="filter_list">
-                                    <li>
-                                        <input id="filter1" type="checkbox">
-                                        <label for="filter1">
-                                            Запорізька Січ
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <input id="filter2" type="checkbox">
-                                        <label for="filter2">Запорізька Січ</label>
-                                    </li>
-                                    <li>
-                                        <input id="filter3" type="checkbox">
-                                        <label for="filter3">Запорізька Січ</label>
-                                    </li>
-                                    <li>
-                                        <input id="filter4" type="checkbox">
-                                        <label for="filter4">Запорізька Січ</label>
-                                    </li>
-                                    <li>
-                                        <input id="filter5" type="checkbox">
-                                        <label for="filter5">Запорізька Січ</label>
-                                    </li>
+                                    <?php foreach ($tags as $tag): ?>
+                                        <li>
+                                            <input id="filter-<?= slugify($tag->name); ?>" type="checkbox"
+                                                   name="filter[]" value="<?= $tag->name ?>">
+                                            <label for="filter-<?= slugify($tag->name); ?>">
+                                                <?= $tag->name; ?>
+                                            </label>
+                                        </li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </form>
                         </div>

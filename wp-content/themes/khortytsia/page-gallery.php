@@ -40,7 +40,7 @@ get_header();
                 <div class="col-lg-10 offset-lg-1">
                     <div class="row">
                         <div class="col-6 col-md-3">
-                            <form class="main_desk_filter from_bottom_interval">
+                            <form class="main_desk_filter from_bottom_interval" method="get">
                                 <?php if ($gal_filter->have_posts()) : ?>
                                     <ul class="filter_list">
                                         <?php while ($gal_filter->have_posts()) : $gal_filter->the_post(); ?>
