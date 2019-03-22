@@ -38,7 +38,7 @@ get_header();
                     <div class="col-6 col-lg-3">
                         <?php $tags = get_tags(); ?>
                         <div class="main_desk_filter from_bottom_interval">
-                            <form action="" method="get">
+                            <form method="get">
                                 <ul class="filter_list">
                                     <?php foreach ($tags as $tag): ?>
                                         <li>
@@ -48,7 +48,7 @@ get_header();
                                                 <?= $tag->name; ?>
                                             </label>
                                         </li>
-                                    <?php endforeach; ?>
+                                    <?php endforeach;   ?>
                                 </ul>
                             </form>
                         </div>
@@ -65,12 +65,11 @@ get_header();
                     </svg>
                     <?= __('Очистити фільтри'); ?>
                 </a>
+                <?php  var_dump($_GET['filter']) ?>
             </div>
         </div>
     </div>
-
 </section>
-
 
     <!-- articles section -->
 

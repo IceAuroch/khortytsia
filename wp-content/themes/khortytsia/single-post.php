@@ -60,12 +60,6 @@ $post_type = wp_get_post_categories($post->ID);
 
                     <?php
                     $images = get_field('post_gallery');
-                    $video = get_field('post_video');
-
-
-                    if ($video) {
-                        $images = array_merge($images, $video);
-                    }
 
                     if ($images): ?>
 
@@ -73,13 +67,7 @@ $post_type = wp_get_post_categories($post->ID);
                             <div class="slider_main">
                                 <?php foreach ($images as $image): ?>
                                     <div class="slider_main_item">
-                                        <?php if (!$image['url']): ?>
-                                            <iframe src="<?= get_sub_field('post_video_link'); ?>" frameborder="0"
-                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                                    allowfullscreen></iframe>
-                                        <?php else: ?>
-                                            <img src="<?= $image['url']; ?>" alt="">
-                                        <?php endif; ?>
+                                        <img src="<?= $image['url']; ?>" alt="">
                                     </div>
                                 <?php endforeach; ?>
                             </div>

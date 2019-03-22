@@ -46,7 +46,7 @@ get_header();
                                         <?php while ($gal_filter->have_posts()) : $gal_filter->the_post(); ?>
                                             <li>
                                                 <input id="filter-<?= slugify(the_title()); ?>"
-                                                       name="filter[]" type="checkbox"
+                                                       name="filter2[]" type="checkbox"
                                                        value="<?php the_title(); ?>">
                                                 <label for="filter-<?= slugify(the_title()); ?>">
                                                     <?php the_title(); ?>
@@ -81,9 +81,16 @@ get_header();
 
     <section class="mt_section page_news_section">
         <div class="container-fluid">
-            <?php $galery = new WP_Query([
-                'post_type' => 'galery'
-            ]);
+            <?php
+            $search_term = $_GET['filter2'];
+            $args = [
+                'post_type' => 'galery',
+                'meta_query' => [
+                        'value' => $search_term
+                ]
+            ];
+
+            $galery = new WP_Query($args);
             if ($galery->have_posts()):
                 $count = 0;
                 ?>
