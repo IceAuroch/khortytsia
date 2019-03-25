@@ -66,7 +66,7 @@ get_header();
                                 <svg width="44" height="44">
                                     <use xlink:href="#tab3-icon"></use>
                                 </svg>
-                                <?= __('Активний відпочинок'); ?>
+                                <?= __('Активний відпочинок, харчування, проживання'); ?>
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -157,20 +157,39 @@ get_header();
                                 <div class="btn_title">
                                     <h2><?= __('Активний відпочинок'); ?></h2>
                                 </div>
-                                <p>
+
+
+                                <div class="row">
+
                                     <?php
-                                    if (pll_current_language('slug') == 'en') {
-                                        $id_page = 367;
-                                    } elseif (pll_current_language('slug') == 'ru') {
-                                        $id_page = 61;
-                                    } else {
-                                        $id_page = 282;
-                                    }
-                                    $text = get_post($id_page); echo $text->post_content; ?>
-                                </p>
-                                <div class="tab_content_link">
-                                    <a href="<?= the_permalink($id_page); ?>"><?= __('Дизнатися бильше...'); ?></a>
+                                    $partners = new WP_Query([
+                                        'post_type' => 'partners',
+                                        'orderby' => 'id',
+                                        'order' => 'asc'
+                                    ]);
+                                    if ($partners->have_posts()):
+                                        while ($partners->have_posts()): $partners->the_post(); ?>
+
+                                            <div class="col-sm-6 col-lg-4 ">
+                                                <div class="page_partners_item">
+                                                    <a href="<?= the_permalink(); ?>">
+                                                        <div class="last_news_item">
+                                                            <div class="partners_img"
+                                                                 style="background-image: url(<?= get_the_post_thumbnail_url(); ?>);">
+                                                            </div>
+                                                        </div>
+                                                        <div class="partner_title">
+                                                            <h4><?= the_title(); ?></h4>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        <?php endwhile; endif;
+                                    wp_reset_postdata(); ?>
+
                                 </div>
+
 
                             </div>
                         </div>

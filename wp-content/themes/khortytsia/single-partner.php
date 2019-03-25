@@ -9,7 +9,7 @@ if (have_posts()) :
 ?>
 
 <section class="main_desk_section main_desk_other_section"
-         style="background-image: url(<?= get_the_post_thumbnail_url(); ?>)">
+         style="background-image: url(<?= get_the_post_thumbnail_url(282); ?>)">
     <div class="desktop_gradient"></div>
     <div class="desktop_gradient desktop_gradient2"></div>
     <div class="container-fluid">

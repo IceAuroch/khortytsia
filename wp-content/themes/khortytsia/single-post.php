@@ -66,8 +66,7 @@ $post_type = wp_get_post_categories($post->ID);
                         <div class="news_slider_wrap">
                             <div class="slider_main">
                                 <?php foreach ($images as $image): ?>
-                                    <div class="slider_main_item">
-                                        <img src="<?= $image['url']; ?>" alt="">
+                                    <div class="slider_main_item" style="background-image: url(<?= $image['url']; ?>)">
                                     </div>
                                 <?php endforeach; ?>
                             </div>
@@ -101,12 +100,12 @@ $post_type = wp_get_post_categories($post->ID);
                                 <use xlink:href="#fb-icon"></use>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="<?= get_post_meta($post->ID, 'share_instagram', true); ?>">
                             <svg width="19" height="20">
                                 <use xlink:href="#insta-icon"></use>
                             </svg>
                         </a>
-                        <a href="#">
+                        <a href="<?= get_post_meta($post->ID, 'share_youtube', true); ?>">
                             <svg width="20" height="20">
                                 <use xlink:href="#yt-icon"></use>
                             </svg>

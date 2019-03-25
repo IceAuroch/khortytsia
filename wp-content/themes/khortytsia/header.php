@@ -58,9 +58,7 @@ else {
                     <div class="header_item header_lang for_mobile_flex">
                         <p><?= pll_current_language('slug');?></p>
                         <div class="header_lang_drop">
-                            <a href="#">UA</a>
-                            <a href="#">RU</a>
-                            <a href="#">ENG</a>
+                            <ul><?php pll_the_languages(['display_names_as'=>'slug']); ?></ul>
                         </div>
                     </div>
                     <button class="navbar-toggler menu_main_btn" type="button" data-toggle="collapse"
