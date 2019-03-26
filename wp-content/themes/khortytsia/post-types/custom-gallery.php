@@ -1,6 +1,6 @@
 <?php
 
-function galery_post_type()
+function custom_gallery_post_type()
 {
     $labels = [
         'name' => _x('Галерея', 'Post Type General Name', 'khortytsia'),
@@ -36,6 +36,6 @@ function galery_post_type()
         'capability_type' => 'page',
         'menu_icon' => 'dashicons-images-alt',
     ];
-    register_post_type('galery', $args);
+    register_post_type('custom_gallery', $args);
 }
-add_action('init', 'galery_post_type', 0);
+add_action('init', 'custom_gallery_post_type', 0);
