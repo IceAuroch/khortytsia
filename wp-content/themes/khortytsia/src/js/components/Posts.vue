@@ -47,7 +47,7 @@
         data.set('category', this.category);
         data.set('action', 'get_ajax_posts');
         data.set('paged', this.paged);
-        data.set('filters', this.filters);
+        if (this.filters) data.set('filters', this.filters);
 
         await axios.post('/wp-admin/admin-ajax.php', data)
           .then(({data}) => {
