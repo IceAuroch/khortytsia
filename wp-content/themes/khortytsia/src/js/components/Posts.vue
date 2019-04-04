@@ -13,8 +13,10 @@
                     новин</a>
                 <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'statti'">Більше
                     статей</a>
-                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'news'">More news</a>
-                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'articles'">More articles</a>
+                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'news'">More
+                    news</a>
+                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'articles'">More
+                    articles</a>
 
             </div>
         </div>
@@ -22,38 +24,40 @@
 </template>
 
 <script>
-    import axios from 'axios';
-    import Post from './Post';
+  import axios from 'axios';
+  import Post from './Post';
 
-    export default {
-        props: {
-            category: String
-        },
-        components: {
-            Post
-        },
-        data() {
-            return {
-                paged: 1,
-                posts: []
-            }
-        },
-        methods: {
-            async getPosts() {
-                const data = new FormData();
-                data.set('category', this.category);
-                data.set('action', 'get_ajax_posts');
-                data.set('paged', this.paged);
+  export default {
+    props: {
+      category: String,
+      filters: String
+    },
+    components: {
+      Post
+    },
+    data() {
+      return {
+        paged: 1,
+        posts: []
+      }
+    },
+    methods: {
+      async getPosts() {
+        const data = new FormData();
+        data.set('category', this.category);
+        data.set('action', 'get_ajax_posts');
+        data.set('paged', this.paged);
+        data.set('filters', this.filters);
 
-                await axios.post('/wp-admin/admin-ajax.php', data)
-                    .then(({data}) => {
-                        this.posts.push(...data.posts);
-                        this.paged = this.paged < data.last_page ? this.paged += 1 : null;
-                    })
-            },
-        },
-        mounted() {
-            this.getPosts();
-        }
+        await axios.post('/wp-admin/admin-ajax.php', data)
+          .then(({data}) => {
+            this.posts.push(...data.posts);
+            this.paged = this.paged < data.last_page ? this.paged += 1 : null;
+          })
+      },
+    },
+    mounted() {
+      this.getPosts();
     }
+  }
 </script>

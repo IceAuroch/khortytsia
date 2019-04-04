@@ -34,9 +34,7 @@ add_action('after_setup_theme', 'theme_setup');
 function theme_scripts()
 {
 	wp_deregister_script('wp-embed');
-	//    wp_deregister_script('jquery');
-	//    wp_deregister_script('jquery-migrate');
-	wp_enqueue_script('app', get_theme_file_uri('dist/app.js'), null, '', true);
+	wp_enqueue_script('app', get_theme_file_uri('dist/app.js'), ['jquery'], '1.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'theme_scripts');
@@ -124,29 +122,28 @@ require_once('post-types/partners.php');
 require_once('post-types/custom-gallery.php');
 
 //Vue
-function get_ajax_posts($search_tag = null)
+function get_ajax_posts()
 {
+	$args = [
+		'posts_per_page' => 6,
+		'paged' => $_POST['paged'],
+	];
 
-    $args = [
-        'posts_per_page' => 7,
-        'paged' => $_POST['paged'],
-    ];
+	if (isset($_POST)) {
+		if ($category = $_POST['category']) {
+			$args['category_name'] = $category;
+		}
 
-    if ($search_tag) {
-        $args['tag'] = $search_tag;
-    }
+		if ($filters = $_POST['filters']) {
+			$args['tag_slug__in'] = explode(',', $filters);
+		}
+	}
 
-    if (isset($_POST) && $_POST['category']) {
-        $args['category_name'] = $_POST['category'];
-    }
+	$ajaxposts = new WP_Query($args);
 
-	// The Query
-	$ajaxposts = new WP_Query($args); // changed to get_posts from wp_query, because `get_posts` returns an array
-
-   	echo json_encode([
+	echo json_encode([
 		'posts' => format_posts($ajaxposts->posts),
 		'last_page' => $ajaxposts->max_num_pages,
-        'artgs' => json_encode($args)
 	]);
 
 	exit;
@@ -172,7 +169,7 @@ function format_posts($posts)
 			'posted_at' => get_the_date('j.m.Y', $post->ID),
 			'description' => wp_trim_words($post->post_content, 30, '...'),
 			'permalink' => get_the_permalink($post->ID),
-            'lang' => pll_get_post_language($post->ID, 'slug'),
+			'lang' => pll_get_post_language($post->ID, 'slug'),
 		]);
 	}
 
