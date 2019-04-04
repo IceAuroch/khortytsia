@@ -20,9 +20,14 @@ if (have_posts()) :
                     <div class="main_desk_breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="<?= pll_home_url(); ?>"><?= __('Головна'); ?></a></li>
-                                <li class="breadcrumb-item active"
-                                    aria-current="page"><?= the_title(); ?></li>
+                                <li class="breadcrumb-item">
+                                    <a href="<?= pll_home_url(); ?>">
+                                        <?= __('Головна'); ?>
+                                    </a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <?= the_title(); ?>
+                                </li>
                             </ol>
                         </nav>
                     </div>
@@ -35,7 +40,9 @@ if (have_posts()) :
                         </h1>
                         <div class="main_desk_other_text">
                             <p><?php the_field('tur_annotation'); ?></p>
-                            <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#form_modal"><?= __('Замовити екскурсію'); ?></a>
+                            <a href="#" class="btn btn-secondary" data-toggle="modal" data-target="#form_modal">
+                                <?= __('Замовити екскурсію'); ?>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -161,8 +168,8 @@ if (have_posts()) :
 
 <?php
 
-    endwhile;
-    endif;
+endwhile;
+endif;
 require('template-parts/order-excursion.php');
 require('template-parts/last-news.php');
 

@@ -13,6 +13,9 @@
                     новин</a>
                 <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'statti'">Більше
                     статей</a>
+                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'news'">More news</a>
+                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'articles'">More articles</a>
+
             </div>
         </div>
     </section>

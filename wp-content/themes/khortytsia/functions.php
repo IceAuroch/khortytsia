@@ -124,20 +124,29 @@ require_once('post-types/partners.php');
 require_once('post-types/custom-gallery.php');
 
 //Vue
-function get_ajax_posts()
+function get_ajax_posts($search_tag = null)
 {
-	$args = [
-		'category_name' => $_POST['category'],
-		'posts_per_page' => 4,
-		'paged' => $_POST['paged'],
-	];
+
+    $args = [
+        'posts_per_page' => 7,
+        'paged' => $_POST['paged'],
+    ];
+
+    if ($search_tag) {
+        $args['tag'] = $search_tag;
+    }
+
+    if (isset($_POST) && $_POST['category']) {
+        $args['category_name'] = $_POST['category'];
+    }
 
 	// The Query
 	$ajaxposts = new WP_Query($args); // changed to get_posts from wp_query, because `get_posts` returns an array
 
-	echo json_encode([
+   	echo json_encode([
 		'posts' => format_posts($ajaxposts->posts),
 		'last_page' => $ajaxposts->max_num_pages,
+        'artgs' => json_encode($args)
 	]);
 
 	exit;
@@ -155,6 +164,7 @@ function format_posts($posts)
 
 	$computed = [];
 
+
 	foreach ($posts as $post) {
 		array_push($computed, [
 			'title' => $post->post_title,
@@ -162,6 +172,7 @@ function format_posts($posts)
 			'posted_at' => get_the_date('j.m.Y', $post->ID),
 			'description' => wp_trim_words($post->post_content, 30, '...'),
 			'permalink' => get_the_permalink($post->ID),
+            'lang' => pll_get_post_language($post->ID, 'slug'),
 		]);
 	}
 
@@ -238,3 +249,5 @@ function getImageTags($image)
 
 	return $tags;
 }
+
+

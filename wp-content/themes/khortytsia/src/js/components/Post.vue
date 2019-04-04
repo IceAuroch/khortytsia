@@ -8,7 +8,9 @@
                     <span>{{ post.posted_at }}</span>
                     <h4>{{ post.title }}</h4>
                     <p v-if="post.description !== ''">{{ post.description }}</p>
-                    <a :href="post.permalink">Читати повністю</a>
+                    <a :href="post.permalink" v-if="post.lang == 'en' ">Read completely</a>
+                    <a :href="post.permalink" v-if="post.lang == 'ru' ">Читать полностью</a>
+                    <a :href="post.permalink" v-else="post.lang == 'uk' ">Читати повністю</a>
                 </div>
             </div>
         </div>
