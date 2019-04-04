@@ -8,16 +8,11 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center" v-if="paged">
-                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'novini'">Більше
-                    новин</a>
-                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'statti'">Більше
-                    статей</a>
-                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'news'">More
-                    news</a>
-                <a href="#" class="btn btn-primary" @click.prevent="getPosts" v-if="this.category === 'articles'">More
-                    articles</a>
 
+            <div class="text-center" v-if="paged">
+                <a href="#" class="btn btn-primary" @click.prevent="getPosts">
+                    {{buttonText}}
+                </a>
             </div>
         </div>
     </section>
@@ -30,7 +25,8 @@
   export default {
     props: {
       category: String,
-      filters: String
+      filters: String,
+      buttonText: String
     },
     components: {
       Post

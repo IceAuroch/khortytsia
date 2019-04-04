@@ -49,6 +49,7 @@ switch (pll_current_language()) {
 }
 ?>
 
-    <posts category="<?= $cat ?>"></posts>
+    <posts category="<?= $cat ?>"
+           button-text="<?= __('Більше новин'); ?>"></posts>
 
 <?php get_footer();

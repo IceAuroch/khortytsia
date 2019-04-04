@@ -138,6 +138,8 @@ switch (pll_current_language()) {
 }
 ?>
 
-    <posts category="<?= $cat ?>" filters="<?= implode(',', $currentFilters) ?>"></posts>
+    <posts category="<?= $cat ?>"
+           filters="<?= implode(',', $currentFilters) ?>"
+           button-text="<?= __('Більше статей'); ?>"></posts>
 
 <?php get_footer();

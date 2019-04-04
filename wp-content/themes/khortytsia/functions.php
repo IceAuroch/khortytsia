@@ -144,7 +144,6 @@ function get_ajax_posts()
 	echo json_encode([
 		'posts' => format_posts($ajaxposts->posts),
 		'last_page' => $ajaxposts->max_num_pages,
-		'r' => json_encode($args)
 	]);
 
 	exit;
