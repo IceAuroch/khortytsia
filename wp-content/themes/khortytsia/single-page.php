@@ -21,15 +21,15 @@ if (have_posts()) :
                     <div class="main_desk_breadcrumb">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="<?= pll_home_url(); ?>">Головна</a></li>
+                                <li class="breadcrumb-item"><a href="<?= pll_home_url(); ?>"><?= __('Головна') ?></a></li>
                                 <li class="breadcrumb-item active"
-                                    aria-current="page"><?= the_title(); ?></li>
+                                    aria-current="page"><?php the_title(); ?></li>
                             </ol>
                         </nav>
                     </div>
                     <div class="main_desk_other_title">
                         <h1>
-                            <?= the_title(); ?>
+                            <?php the_title(); ?>
                         </h1>
                     </div>
                 </div>
@@ -47,8 +47,8 @@ if (have_posts()) :
                 <div class="last_news_item">
                     <div class="last_news_item_content_wrap ">
                         <div class="last_news_item_content">
-                            <h4><?= the_title(); ?></h4>
-                            <p><?= the_content(); ?></p>
+                            <h4><?php the_title(); ?></h4>
+                            <p><?php the_content(); ?></p>
                         </div>
                     </div>
                     <div class="last_news_item_ander_content">

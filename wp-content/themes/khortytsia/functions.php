@@ -247,4 +247,20 @@ function getImageTags($image)
 	return $tags;
 }
 
+if (!function_exists('get_video_embed')) {
+	function get_video_embed($url)
+	{
+		if (!$url) {
+			return null;
+		}
+
+		preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/",
+			$url, $matches);
+
+		return "https://www.youtube.com/embed/"
+			   . $matches[1]
+			   . "?rel=0&showinfo=0&mute=1&loop=1&modestbranding=1";
+	}
+}
+
 
