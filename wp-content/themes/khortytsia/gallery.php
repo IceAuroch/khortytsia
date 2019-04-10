@@ -146,7 +146,7 @@ get_header();
                     </div>
                 </div>
             <?php endif;
-            wp_reset_postdata(); ?>
+            //wp_reset_postdata(); ?>
     </section>
 
     <div class="modal fade" id="slider_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -231,6 +231,6 @@ get_header();
     </div>
 
 <?php
-
+wp_reset_postdata();
 get_template_part('template-parts/last-news');
 get_footer();
