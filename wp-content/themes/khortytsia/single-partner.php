@@ -49,13 +49,13 @@ if (have_posts()) :
 
                                     <?php
                                     $images = get_field('partner_gallery');
-                                    if (count($images) || have_rows('partner_video')): ?>
+                                    if ($images || have_rows('partner_video')): ?>
 
                                         <div class="main_slider_wrap">
                                             <div class="slider_main">
 
                                                 <?php
-                                                if (count($images)) :
+                                                if ($images) :
                                                     foreach ($images as $image): ?>
                                                         <div class="slider_main_item"
                                                              style="background-image: url(<?= $image['url']; ?>);">
@@ -95,7 +95,7 @@ if (have_posts()) :
                                         <div class="slider_main_for">
 
                                             <?php
-                                            if (count($images)):
+                                            if ($images):
                                                 foreach ($images as $image): ?>
                                                     <div class="slider_main_item_for">
                                                         <img src="<?= $image['url']; ?>" alt="">

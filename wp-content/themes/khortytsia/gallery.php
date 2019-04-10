@@ -44,7 +44,7 @@ global $wp;
 				while ($gallery->have_posts()) : $gallery->the_post();
 					$images = get_field('galery_gallery');
 
-					if (count($images)) {
+					if ($images) {
 						foreach ($images as $image) {
 							$tags = explode(',', $image['caption']);
 							if (count($tags)) {
@@ -106,7 +106,7 @@ global $wp;
 
 								<?php while ($gallery->have_posts()) : $gallery->the_post();
 									$images = get_field('galery_gallery');
-									if (count($images) || have_rows('gallery_video')) :
+									if ($images || have_rows('gallery_video')) :
 										foreach ($images as $image): $count++;
 											if (count($currentFilters) == 0
 												|| array_intersect(getImageTags($image), $currentFilters)) :

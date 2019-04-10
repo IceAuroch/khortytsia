@@ -115,7 +115,7 @@ if (have_posts()) :
                             <div class="slider_main_for">
 
 								<?php
-								if (count($images)) :
+								if ($images) :
 									foreach ($images as $image): ?>
 
                                         <div class="slider_main_item_for">
