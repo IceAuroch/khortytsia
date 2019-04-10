@@ -20,7 +20,7 @@ function custom_gallery_post_type()
     $args = [
         'label' => __('Галерея', 'khortytsia'),
         'labels' => $labels,
-        'supports' => ['title', 'editor', 'thumbnail'],
+        'supports' => ['title'],
         'taxonomies' => [],
         'hierarchical' => false,
         'public' => true,
