@@ -116,7 +116,7 @@ if (pll_current_language('slug') == 'en') {
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
-                                   href="<?php the_permalink($id_visits); ?>"><?= __('Відвідування'); ?></a>
+                                   href="<?php the_permalink($id_visits); ?>"><?= __('Відвідувачам'); ?></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
