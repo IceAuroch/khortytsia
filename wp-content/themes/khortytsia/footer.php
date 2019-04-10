@@ -39,7 +39,7 @@
                         <ul class="footer_list">
 
                             <?php while($turobj->have_posts()): $turobj->the_post(); ?>
-                                <li><a href="<?= the_permalink(); ?>"><?= the_title(); ?></a></li>
+                                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
                             <?php endwhile; ?>
 
                         </ul>
@@ -52,7 +52,7 @@
                     <div class="col">
                         <?php
                         if (pll_current_language('slug') == 'en') $id = '373';
-                        elseif (pll_current_language('slug') == 'ua') $id = '280';
+                        elseif (pll_current_language('slug') == 'uk') $id = '280';
                         elseif (pll_current_language('slug') == 'ru') $id = '252';
                         ?>
                         <div class="footer_time_work">
