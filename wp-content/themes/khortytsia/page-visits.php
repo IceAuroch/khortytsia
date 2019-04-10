@@ -138,7 +138,7 @@ get_header();
 											<?php while ($excursion->have_posts()): $excursion->the_post(); ?>
                                                 <a href="<?php the_permalink(); ?>" class="tab_content_list_item">
                                                     <span><?= __('Екскурсія'); ?></span>
-                                                    <h2><?= the_title(); ?></h2>
+                                                    <h3><?= the_title(); ?></h3>
                                                 </a>
 											<?php endwhile; ?>
                                         </div>
