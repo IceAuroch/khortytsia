@@ -221,8 +221,8 @@ get_header();
                                         <div class="tab_content_list d-flex flex-wrap">
 											<?php while ($articles->have_posts()): $articles->the_post(); ?>
                                                 <a href="<?php the_permalink(); ?>" class="tab_content_list_item">
-                                                    <span><?= __('Стаття'); ?></span>
-                                                    <h4><?= the_title(); ?></h4>
+                                                    <div><?= __('Стаття'); ?></div>
+                                                    <h3><?= the_title(); ?></h3>
                                                 </a>
 											<?php endwhile; ?>
                                         </div>
