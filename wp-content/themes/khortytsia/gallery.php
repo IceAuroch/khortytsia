@@ -80,7 +80,7 @@ get_header();
                     </div>
                 <?php
                 endif;
-                wp_reset_postdata(); ?>
+                //wp_reset_postdata(); ?>
             </div>
 
             <?php if (isset($_GET['filter'])) : ?>
