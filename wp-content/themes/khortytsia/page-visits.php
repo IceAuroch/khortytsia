@@ -137,7 +137,7 @@ get_header();
                                         <div class="tab_content_list d-flex flex-wrap">
 											<?php while ($excursion->have_posts()): $excursion->the_post(); ?>
                                                 <a href="<?php the_permalink(); ?>" class="tab_content_list_item">
-                                                    <span><?= __('Екскурсія'); ?></span>
+                                                    <div><?= __('Екскурсія'); ?></div>
                                                     <h3><?= the_title(); ?></h3>
                                                 </a>
 											<?php endwhile; ?>
