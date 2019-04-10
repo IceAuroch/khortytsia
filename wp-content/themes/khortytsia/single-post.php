@@ -61,7 +61,7 @@ if (have_posts()) :
 							<?php
 							$images = get_field('post_gallery');
 
-							if (count($images) || have_rows('post_video')) :
+							if ($images || have_rows('post_video')) :
 								?>
 
                                 <div class="news_slider_wrap">
@@ -81,7 +81,7 @@ if (have_posts()) :
 										?>
 
 										<?php
-										if (count($images)) :
+										if ($images) :
 											foreach ($images as $image) : ?>
                                                 <div class="slider_main_item"
                                                      style="background-image: url(<?= $image['url']; ?>)">
