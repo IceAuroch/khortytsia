@@ -40,7 +40,7 @@ get_header();
                                 <svg width="44" height="44">
                                     <use xlink:href="#tab1-icon"></use>
                                 </svg>
-                                <?= __('Як добратися?'); ?>
+                                <?= __('Як дістатися?'); ?>
                                 <span></span>
                                 <span></span>
                                 <span></span>
