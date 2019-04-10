@@ -95,8 +95,6 @@ get_header();
         </div>
     </section>
 
-<?php dd($gallery); ?>
-
     <section class="mt_section page_news_section">
         <div class="container-fluid">
             <?php if ($gallery->have_posts()) : $count = 0; ?>
