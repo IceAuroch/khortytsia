@@ -69,8 +69,7 @@ get_header();
                                 <?php foreach ($filters as $filter) : ?>
                                     <li class="col-auto">
                                         <a href="<?= makeFilterLink($_GET, $filter) ?>"
-                                           class="<?= checkIfFilterExists($_GET,
-                                               $filter) ? 'is-checked' : '' ?>">
+                                           class="<?= checkIfFilterExists($_GET, $filter) ? 'is-checked' : '' ?>">
                                             <?= $filter ?>
                                         </a>
                                     </li>
@@ -96,7 +95,7 @@ get_header();
         </div>
     </section>
 
-    <!-- galery section -->
+<?php dd($gallery); ?>
 
     <section class="mt_section page_news_section">
         <div class="container-fluid">
