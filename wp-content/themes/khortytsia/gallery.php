@@ -4,6 +4,7 @@ Template Name: Gallery
 Template Post Type: page
 */
 get_header();
+global $wp;
 ?>
 
     <section class="main_desk_section main_desk_other_section main_desk_other_filter_section"
@@ -84,7 +85,7 @@ get_header();
 
 			<?php if (isset($_GET['filter'])) : ?>
                 <div class="text-center position-relative" style="z-index: 100">
-                    <a href="<?= global $wp; home_url($wp->request); ?>" class="btn btn-outline-info">
+                    <a href="<?= home_url($wp->request); ?>" class="btn btn-outline-info">
                         <svg width="20" height="20">
                             <use xlink:href="#basket-icon"></use>
                         </svg>
