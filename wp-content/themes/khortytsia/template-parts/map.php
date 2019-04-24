@@ -31,7 +31,7 @@ else $id = '379';
                                href="<?= the_permalink(); ?>"
                                class="map_icon from_bottom"
                                data-imgtext="<?= the_title(); ?>"
-                               data-selection="<?= get_field('tur_selector', $post->ID); ?>">
+                                   data-selection="<?= get_field('tur_selector', $post->ID); ?>-map">
                                 <svg width="30" height="30">
                                     <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
                                 </svg>
@@ -63,9 +63,9 @@ else $id = '379';
 
                     <?php while($turobj->have_posts()): $turobj->the_post(); ?>
 
-                    <a id="<?= get_field('tur_id', $post->ID); ?>"
+                    <a id="<?= get_field('tur_id', $post->ID); ?>-map"
                        class="map_icon from_bottom"
-                       data-selection="<?= get_field('tur_selector', $post->ID); ?>"
+                       data-selection="<?= get_field('tur_id', $post->ID); ?>"
                        data-imgtext="<?= the_title(); ?>"
                        href="<?= the_permalink(); ?>">
                         <svg width="30" height="30">
@@ -74,6 +74,7 @@ else $id = '379';
                     </a>
 
                     <?php endwhile; ?>
+
                     <div class="descrip_map"></div>
 
                     <div class="img_for_mob">

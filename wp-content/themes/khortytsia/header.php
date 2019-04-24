@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
 	<?php wp_head(); ?>
 
 </head>
@@ -177,7 +177,7 @@ if (pll_current_language('slug') == 'en') {
                             </a>
                         </div>
                         <div class="header_item">
-                            <a class="btn btn-secondary" href="#"><?= __('Вибрати екскурсію'); ?></a>
+                            <a class="btn btn-secondary" href="<?= the_permalink(522)?>"><?= __('Вибрати екскурсію'); ?></a>
                         </div>
                     </div>
                 </nav>

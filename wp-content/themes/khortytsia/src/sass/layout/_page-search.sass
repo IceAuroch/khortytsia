@@ -1,0 +1,89 @@
+#page-search
+
+  .secondary-intro
+    position: relative
+    min-height: 280px
+    z-index: 5
+    background-position: 50% 50%
+    background-size: cover
+    background-repeat: no-repeat
+
+  .section-description
+    position: relative
+    margin-bottom: 25px
+    padding-bottom: 20px
+    z-index: 5
+
+    span
+      color: #555
+      font-size: 1.7rem
+
+
+    &::after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      height: 1px
+      background: #cecece
+      z-index: 2
+
+  .search-row
+    margin: 30px 0 45px
+
+  .search-item-img
+    height: 100%
+    min-height: 250px
+    max-height: 350px
+    background-size: cover
+    background-position: 50% 50%
+    background-repeat: no-repeat
+
+
+  .search-item
+    display: block
+    margin-top: 20px
+
+    &__title
+      margin-bottom: 30px
+      transition: .5s
+
+    &__description
+      margin-bottom: 25px
+
+    &:hover
+      text-decoration: none
+
+      .search-item__title
+        color: $primary
+
+      .link-more
+
+        &:before
+          width: 100%
+
+  .secondary-content
+    margin: 70px 0 100px
+
+  .link-more
+    position: relative
+    color: $body-color
+    text-decoration: none
+    display: inline
+
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      width: 0
+      bottom: 0
+      height: 1px
+      background: $body-color
+      transition: .5s
+
+
+
+
+
+

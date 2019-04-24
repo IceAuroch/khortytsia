@@ -2,50 +2,51 @@
 get_header();
 ?>
 
-<section class="main_desk_section">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md offset-md-2 col-xl-5 offset-xl-2">
-                <div class="main_desk_subtitle">
-                    <p><?php bloginfo('description'); ?></p>
-                </div>
-                <div class="main_desk_title">
-                    <h1><?php bloginfo('name'); ?></h1>
-                    <p><?= wp_trim_words(get_the_content(), 30, '...'); ?></p>
-                    <a class="link_orange" href="#"><?= __('Детальніше'); ?></a>
+    <section id="page-search">
+        <div class="secondary-intro"
+             style="background-image:url(<?php echo get_theme_file_uri('images/default-banner.jpg');?>"></div>
+        <div class="secondary-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="section-description text-center">
+                        <h2 class="title"><?= __('Поиск по'); ?>: “<span><?php echo $_GET['s']; ?></span>”</h2>
+                    </div>
+                    <div class="text-center">
+                        <?php if (!have_posts()): ?>
+                            <p class="mt-4 mb-3"><?= __('Поиск не дал результатов.'); ?></p>
+                            <a href="<?= site_url()?>" class="btn btn-primary"><?= __('На Головну');?></a>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); $content = get_the_content()?>
+                <div class="row search-row">
+                    <div class="col-lg-6">
+                        <?php if(get_the_post_thumbnail_url($post->ID)):?>
+                            <div class="search-item-img"
+                                 style="background-image: url('<?= get_the_post_thumbnail_url(); ?>');"></div>
+                        <?php else: ?>
+                            <div class="search-item-img"
+                                 style="background-image: url(<?php echo get_theme_file_uri('images/default-images.jpg');?>"></div>
+                        <?php endif; ?>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <a href="<?= the_permalink()?>" class="search-item">
+                            <h4 class="search-item__title">
+                                <?= the_title(); ?>
+                            </h4>
+                            <p class="search-item__description">
+                                <?= wp_trim_words($content, 30, '...');?>
+                            </p>
+                            <div class="link-more"><?= __('Більше інформації'); ?></div>
+                        </a>
+                    </div>
+                </div>
+            <?php endwhile; endif; ?>
         </div>
-    </div>
-    <div class="main_desk_social">
-        <a href="<?= get_theme_mod('facebook'); ?>">
-            <svg width="20" height="20">
-                <use xlink:href="#fb-icon"></use>
-            </svg>
-        </a>
-        <a href="<?= get_theme_mod('instagram'); ?>">
-            <svg width="19" height="20">
-                <use xlink:href="#insta-icon"></use>
-            </svg>
-        </a>
-        <a href="<?= get_theme_mod('youtube'); ?>">
-            <svg width="20" height="20">
-                <use xlink:href="#yt-icon"></use>
-            </svg>
-        </a>
-    </div>
-</section>
+    </section>
 
-
-    <h2><?= __('Поиск по'); ?>: "<?php echo $_GET['s'];?>"</h2>
-
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-    <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
-
-<?php endwhile; else: ?>
-
-    <p><?= __('Поиск не дал результатов.'); ?></p>
-
-<?php endif;
+<?php
 get_footer(); ?>

@@ -31,9 +31,6 @@ ScrollReveal().reveal('.main_desk_other_wrap', {
 });
 
 
-
-
-
 ScrollReveal().reveal('.from_bottom', {
     origin: 'bottom',
     delay: 400,

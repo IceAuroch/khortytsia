@@ -57,10 +57,15 @@ label, button
 .map_side_text_btn
     margin-top: 30px
 
+.from_right, .from_left, .main_desk_other_wrap
 
-
+    @media (min-width: map_get($grid-breakpoints, xl))
+        visibility: hidden
 
 
 
 section.mt_section
     margin-top: -400px
+
+.modal-content
+    border: none

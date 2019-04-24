@@ -35,7 +35,7 @@ get_header();
                     <div class="col-lg-10 offset-lg-1">
                         <ul class="nav nav-tabs nav_tabs" id="myTab" role="tablist">
                             <li class="nav-item nav_tabs_item">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#one" role="tab"
+                                <a class="nav-link" id="home-tab" data-toggle="tab" href="#one" role="tab"
                                    aria-controls="home" aria-selected="true">
                                     <svg width="44" height="44">
                                         <use xlink:href="#tab1-icon"></use>
@@ -48,7 +48,7 @@ get_header();
                                 </a>
                             </li>
                             <li class="nav-item nav_tabs_item">
-                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#two" role="tab"
+                                <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#two" role="tab"
                                    aria-controls="profile" aria-selected="false">
                                     <svg width="44" height="44">
                                         <use xlink:href="#tab2-icon"></use>
@@ -97,7 +97,7 @@ get_header();
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="one" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="tab-pane fade " id="one" role="tabpanel" aria-labelledby="home-tab">
                             <div class="row">
                                 <div class="col">
                                     <div class="btn_title">
@@ -116,7 +116,7 @@ get_header();
                             </div>
 
                         </div>
-                        <div class="tab-pane fade" id="two" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="tab-pane fade show active" id="two" role="tabpanel" aria-labelledby="profile-tab">
                             <div class="row">
                                 <div class="col">
                                     <div class="btn_title">

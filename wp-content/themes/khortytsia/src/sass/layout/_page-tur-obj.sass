@@ -14,12 +14,20 @@
     .map_side_icon_item
         width: 25%
         margin-bottom: 30px
+        &--main
+            .item-link
+                color: #ccc
+                svg
+                    fill: #ccc
+                &:hover
+                    svg
+                        fill: #ccc
         a
             display: flex
             align-items: center
             svg 
                 margin-right: 10px
-            &:hover 
+            &:hover
                 text-decoration: underline
                 svg 
                     fill: $primary

@@ -145,14 +145,14 @@ if (have_posts()) :
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="one_partner_map">
-                                        <div id="map"></div>
-                                        <div class="map_scrol"><h4><?= __('Нажмите для увеличения'); ?></h4></div>
-                                    </div>
-                                </div>
-                            </div>
+<!--                            <div class="row">-->
+<!--                                <div class="col">-->
+<!--                                    <div class="one_partner_map">-->
+<!--                                        <div id="map"></div>-->
+<!--                                        <div class="map_scrol"><h4>--><?//= __('Нажмите для увеличения'); ?><!--</h4></div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
                         </div>
                     </div>
                 </div>
