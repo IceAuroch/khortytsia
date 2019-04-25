@@ -162,6 +162,16 @@ if (have_posts()) :
             </div>
         </section>
 
+        <section class="map_section_page">
+            <div>
+                <input type="hidden" name="coorLat" value="<?= get_field('icon_lat', $post->ID); ?>">
+                <input type="hidden" name="coorLon" value="<?= get_field('icon_lon', $post->ID); ?>">
+                <input type="hidden" name="iconName" value="<?= get_field('tur_id', $post->ID); ?>">
+            </div>
+            <div id="map"></div>
+            <div class="map_scrol"><h4><?= __('Нажмите для увеличения'); ?></h4></div>
+        </section>
+
         <section class="another_tur_objects">
             <div class="container-fluid">
                 <div class="row">
@@ -172,7 +182,7 @@ if (have_posts()) :
 
                         <?php $turobj = new WP_Query([
                             'post_type' => 'tourist',
-                            'orderby' => 'id',
+                            'orderby' => 'title',
                             'order' => 'asc',
                         ]);
                         if ($turobj->have_posts()):
@@ -186,7 +196,7 @@ if (have_posts()) :
                                     <?php if ($main_id == $post->ID): ?>
                                         <div class="map_side_icon_item map_side_icon_item--main from_bottom">
                                             <div class="item-link" href="<?= the_permalink(); ?>"
-                                               data-selection="<?= get_field('tur_selector', $post->ID); ?>">
+                                                 data-selection="<?= get_field('tur_selector', $post->ID); ?>">
                                                 <svg width="30" height="30">
                                                     <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
                                                 </svg>
@@ -217,16 +227,6 @@ if (have_posts()) :
                     </div>
                 </div>
             </div>
-        </section>
-
-        <div>
-            <input type="hidden" name="coorLat" value="<?= get_field('icon_lat', $post->ID); ?>">
-            <input type="hidden" name="coorLon" value="<?= get_field('icon_lon', $post->ID); ?>">
-            <input type="hidden" name="iconName" value="<?= get_field('tur_id', $post->ID); ?>">
-        </div>
-        <section class="map_section_page">
-            <div id="map"></div>
-            <div class="map_scrol"><h4><?= __('Нажмите для увеличения'); ?></h4></div>
         </section>
 
     <?php

@@ -17,7 +17,7 @@ else $id = '379';
                     </div>
                     <?php $turobj = new WP_Query([
                         'post_type' => 'tourist',
-                        'orderby' => 'id',
+                        'orderby' => 'date',
                         'order' => 'asc'
                     ]);
                     if($turobj->have_posts()):
@@ -52,7 +52,7 @@ else $id = '379';
             <div class="col-lg-6">
                 <?php $turobj = new WP_Query([
                     'post_type' => 'tourist',
-                    'orderby' => 'id',
+                    'orderby' => 'date',
                     'order' => 'asc'
                 ]);
                 if($turobj->have_posts()):
@@ -82,6 +82,46 @@ else $id = '379';
                     </div>
 
                 </div>
+
+                <?php endif;
+                wp_reset_postdata();
+                ?>
+
+            </div>
+
+            <div class="col-lg-6">
+                <?php $turobj = new WP_Query([
+                    'post_type' => 'tourist',
+                    'orderby' => 'date',
+                    'order' => 'asc'
+                ]);
+                if($turobj->have_posts()):
+                    ?>
+                    <div class="map_img">
+
+                        <img src="<?= get_theme_file_uri('images/map.jpg'); ?>" alt="">
+
+                        <?php while($turobj->have_posts()): $turobj->the_post(); ?>
+
+                            <a id="<?= get_field('tur_id', $post->ID); ?>-map"
+                               class="map_icon from_bottom"
+                               data-selection="<?= get_field('tur_id', $post->ID); ?>"
+                               data-imgtext="<?= the_title(); ?>"
+                               href="<?= the_permalink(); ?>">
+                                <svg width="30" height="30">
+                                    <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
+                                </svg>
+                            </a>
+
+                        <?php endwhile; ?>
+
+                        <div class="descrip_map"></div>
+
+                        <div class="img_for_mob">
+                            <img src="<?= get_theme_file_uri('images/mob_map_main.jpg'); ?>" alt="">
+                        </div>
+
+                    </div>
 
                 <?php endif;
                 wp_reset_postdata();

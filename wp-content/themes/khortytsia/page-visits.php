@@ -86,6 +86,19 @@ get_header();
                                     <span></span>
                                 </a>
                             </li>
+                            <li class="nav-item nav_tabs_item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#five" role="tab"
+                                   aria-controls="contact" aria-selected="false">
+                                    <svg width="44" height="44">
+                                        <use xlink:href="#tab5-icon"></use>
+                                    </svg>
+                                    <?= __('Сувениры и полиграфия'); ?>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -228,6 +241,44 @@ get_header();
                                         </div>
 									<?php endif;
 									wp_reset_postdata(); ?>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="five" role="tabpanel" aria-labelledby="contact-tab">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="btn_title">
+                                        <h2><?= __('Сувениры и полиграфия'); ?></h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <?php
+                                    if (pll_current_language('slug') == 'en') {
+                                        $post_categ_id = '70';
+                                    } elseif (pll_current_language('slug') == 'ru') {
+                                        $post_categ_id = '72';
+                                    } else {
+                                        $post_categ_id = '68';
+                                    }
+
+                                    $articles = new WP_Query([
+                                        'post_type' => 'post',
+                                        'cat' => $post_categ_id,
+                                    ]);
+                                    if ($articles->have_posts()): ?>
+                                        <div class="tab_content_list d-flex flex-wrap">
+                                            <?php while ($articles->have_posts()): $articles->the_post(); ?>
+                                                <a href="<?php the_permalink(); ?>" class="tab_content_list_item">
+                                                    <div><?= __('Стаття'); ?></div>
+                                                    <h3><?= the_title(); ?></h3>
+                                                </a>
+                                            <?php endwhile; ?>
+                                        </div>
+                                    <?php endif;
+                                    wp_reset_postdata(); ?>
                                 </div>
                             </div>
                         </div>
