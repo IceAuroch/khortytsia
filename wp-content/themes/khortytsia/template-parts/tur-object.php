@@ -10,7 +10,7 @@
 
         <?php $turobj = new WP_Query([
             'post_type' => 'tourist',
-            'orderby' => 'id',
+            'orderby' => 'date',
             'order' => 'asc'
         ]);
         $count = 0;

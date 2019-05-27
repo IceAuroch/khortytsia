@@ -2,7 +2,7 @@
 if (pll_current_language('slug') == 'en') $id = '369';
 elseif (pll_current_language('slug') == 'ru') $id = '278';
 else $id = '379';
-    ?>
+?>
 <section class="map_section orenge_line">
     <div class="container-fluid">
         <div class="row">
@@ -20,28 +20,28 @@ else $id = '379';
                         'orderby' => 'date',
                         'order' => 'asc'
                     ]);
-                    if($turobj->have_posts()):
-                    ?>
-                    <div class="map_side_icon_item_wrap">
+                    if ($turobj->have_posts()):
+                        ?>
+                        <div class="map_side_icon_item_wrap">
 
-                        <?php while($turobj->have_posts()): $turobj->the_post(); ?>
+                            <?php while ($turobj->have_posts()): $turobj->the_post(); ?>
 
-                        <div class="map_side_icon_item">
-                            <a id="<?= get_field('tur_id', $post->ID); ?>"
-                               href="<?= the_permalink(); ?>"
-                               class="map_icon from_bottom"
-                               data-imgtext="<?= the_title(); ?>"
-                                   data-selection="<?= get_field('tur_selector', $post->ID); ?>-map">
-                                <svg width="30" height="30">
-                                    <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
-                                </svg>
-                               <?= the_title(); ?>
-                            </a>
+                                <div class="map_side_icon_item">
+                                    <a id="<?= get_field('tur_id', $post->ID); ?>"
+                                       href="<?= the_permalink(); ?>"
+                                       class="map_icon from_bottom"
+                                       data-imgtext="<?= the_title(); ?>"
+                                       data-selection="<?= get_field('tur_selector', $post->ID); ?>-map">
+                                        <svg width="30" height="30">
+                                            <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
+                                        </svg>
+                                        <?= the_title(); ?>
+                                    </a>
+                                </div>
+
+                            <?php endwhile; ?>
+
                         </div>
-
-                        <?php endwhile; ?>
-
-                    </div>
 
                     <?php endif;
                     wp_reset_postdata();
@@ -55,53 +55,13 @@ else $id = '379';
                     'orderby' => 'date',
                     'order' => 'asc'
                 ]);
-                if($turobj->have_posts()):
-                ?>
-                <div class="map_img">
-
-                    <img src="<?= get_theme_file_uri('images/map.jpg'); ?>" alt="">
-
-                    <?php while($turobj->have_posts()): $turobj->the_post(); ?>
-
-                    <a id="<?= get_field('tur_id', $post->ID); ?>-map"
-                       class="map_icon from_bottom"
-                       data-selection="<?= get_field('tur_id', $post->ID); ?>"
-                       data-imgtext="<?= the_title(); ?>"
-                       href="<?= the_permalink(); ?>">
-                        <svg width="30" height="30">
-                            <use xlink:href="<?= get_field('tur_icon', $post->ID); ?>"></use>
-                        </svg>
-                    </a>
-
-                    <?php endwhile; ?>
-
-                    <div class="descrip_map"></div>
-
-                    <div class="img_for_mob">
-                        <img src="<?= get_theme_file_uri('images/mob_map_main.jpg'); ?>" alt="">
-                    </div>
-
-                </div>
-
-                <?php endif;
-                wp_reset_postdata();
-                ?>
-
-            </div>
-
-            <div class="col-lg-6">
-                <?php $turobj = new WP_Query([
-                    'post_type' => 'tourist',
-                    'orderby' => 'date',
-                    'order' => 'asc'
-                ]);
-                if($turobj->have_posts()):
+                if ($turobj->have_posts()):
                     ?>
                     <div class="map_img">
 
                         <img src="<?= get_theme_file_uri('images/map.jpg'); ?>" alt="">
 
-                        <?php while($turobj->have_posts()): $turobj->the_post(); ?>
+                        <?php while ($turobj->have_posts()): $turobj->the_post(); ?>
 
                             <a id="<?= get_field('tur_id', $post->ID); ?>-map"
                                class="map_icon from_bottom"
@@ -114,6 +74,30 @@ else $id = '379';
                             </a>
 
                         <?php endwhile; ?>
+
+                        <a id="stones-map" data-selection="stones" data-imgtext="Святилище"
+                           href="http://khortytsia.loc/tourist/svjatilishhe/"
+                           class="map_icon from_bottom stones-map-second"
+                           data-sr-id="19">
+                            <svg width="30" height="30">
+                                <use xlink:href="#stone-icon"></use>
+                            </svg>
+                        </a>
+
+                        <a id="threes-map" data-selection="threes" data-imgtext="Дендропарк"
+                           href="http://khortytsia.loc/tourist/dendropark/"
+                           class="map_icon from_bottom threes-map-second">
+                            <svg width="30" height="30">
+                                <use xlink:href="#tree-icon"></use>
+                            </svg>
+                        </a>
+
+                        <a id="giralda-map" data-selection="giralda" data-imgtext="Каменская Сечь"
+                           href="http://khortytsia.loc/tourist/kamenskaja-sech/" class="map_icon from_bottom giralda-map-second">
+                            <svg width="30" height="30">
+                                <use xlink:href="#mayak-icon"></use>
+                            </svg>
+                        </a>
 
                         <div class="descrip_map"></div>
 

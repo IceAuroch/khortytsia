@@ -33,7 +33,7 @@ get_header();
             <div class="vidvid_navs">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
-                        <ul class="nav nav-tabs nav_tabs" id="myTab" role="tablist">
+                        <ul class="nav nav-tabs nav_tabs justify-content-center" id="myTab" role="tablist">
                             <li class="nav-item nav_tabs_item">
                                 <a class="nav-link" id="home-tab" data-toggle="tab" href="#one" role="tab"
                                    aria-controls="home" aria-selected="true">
