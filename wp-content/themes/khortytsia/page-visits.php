@@ -116,10 +116,7 @@ get_header();
                                     <div class="btn_title">
                                         <h2><?= __('Як дістатися?'); ?></h2>
                                     </div>
-                                    <div class="vidvid_map">
-                                        <div id="map"></div>
-                                        <div class="map_scrol"><h4><?= __('Нажмите для увеличения'); ?></h4></div>
-                                    </div>
+                                    <div class="vidvid_map" style="background-image: url('<?= get_theme_file_uri('images/vidvid_marsh.jpg')?>');"></div>
                                 </div>
                             </div>
                             <div class="row mt-5">
