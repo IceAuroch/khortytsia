@@ -75,7 +75,7 @@ else $id = '379';
 
                         <?php endwhile; ?>
 
-                        <a id="stones-map" data-selection="stones" data-imgtext="Святилище"
+                        <a id="stones-map" data-selection="stones-map" data-imgtext="<?= __('Святилища'); ?>"
                            href="http://khortytsia.loc/tourist/svjatilishhe/"
                            class="map_icon from_bottom stones-map-second"
                            data-sr-id="19">
@@ -84,7 +84,7 @@ else $id = '379';
                             </svg>
                         </a>
 
-                        <a id="threes-map" data-selection="threes" data-imgtext="Дендропарк"
+                        <a id="threes-map" data-selection="threes" data-imgtext="<?= __('Паркові зони'); ?>"
                            href="http://khortytsia.loc/tourist/dendropark/"
                            class="map_icon from_bottom threes-map-second">
                             <svg width="30" height="30">
@@ -92,7 +92,7 @@ else $id = '379';
                             </svg>
                         </a>
 
-                        <a id="giralda-map" data-selection="giralda" data-imgtext="Каменская Сечь"
+                        <a id="giralda-map" data-selection="giralda" data-imgtext="<?= __('Козацькі виступи'); ?>"
                            href="http://khortytsia.loc/tourist/kamenskaja-sech/" class="map_icon from_bottom giralda-map-second">
                             <svg width="30" height="30">
                                 <use xlink:href="#mayak-icon"></use>

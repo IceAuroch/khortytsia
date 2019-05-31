@@ -51,7 +51,7 @@ if (pll_current_language('slug') == 'en') {
             <div class="col">
                 <nav class="navbar navbar-expand-xl">
                     <a class="navbar-brand header_logo" href="<?= pll_home_url(); ?>">
-                        <img src="<?= get_theme_file_uri('images/logo-new.png'); ?>" alt="">
+                        <img src="<?= get_theme_file_uri('images/logo.png'); ?>" alt="">
                     </a>
                     <div class="header_item header_lang for_mobile_flex">
                         <p><?= pll_current_language('slug'); ?></p>
