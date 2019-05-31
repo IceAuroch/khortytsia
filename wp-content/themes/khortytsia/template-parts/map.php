@@ -77,7 +77,7 @@ else $id = '379';
 
                         <?php endwhile; ?>
 
-                        <a id="stones-map" data-selection="stones-map" data-imgtext="<?= __('Святилища'); ?>"
+                        <a id="stones-map" data-selection="stones" data-imgtext="<?= __('Святилища'); ?>"
                            href="http://khortytsia.loc/tourist/svjatilishhe/"
                            class="map_icon from_bottom stones-map-second"
                            data-selection-id="stones-map"
@@ -87,7 +87,7 @@ else $id = '379';
                             </svg>
                         </a>
 
-                        <a id="threes-map" data-selection="threes-map" data-imgtext="<?= __('Паркові зони'); ?>"
+                        <a id="threes-map" data-selection="threes" data-imgtext="<?= __('Паркові зони'); ?>"
                            href="http://khortytsia.loc/tourist/dendropark/"
                            data-selection-id="threes-map"
                            class="map_icon from_bottom threes-map-second">
@@ -96,7 +96,7 @@ else $id = '379';
                             </svg>
                         </a>
 
-                        <a id="giralda-map" data-selection="giralda-map" data-imgtext="<?= __('Козацькі виступи'); ?>"
+                        <a id="giralda-map" data-selection="giralda data-imgtext="<?= __('Козацькі виступи'); ?>"
                            href="http://khortytsia.loc/tourist/kamenskaja-sech/"
                            data-selection-id="giralda-map"
                            class="map_icon from_bottom giralda-map-second">
