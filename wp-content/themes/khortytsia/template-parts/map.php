@@ -96,7 +96,7 @@ else $id = '379';
                             </svg>
                         </a>
 
-                        <a id="giralda-map" data-selection="giralda data-imgtext="<?= __('Козацькі виступи'); ?>"
+                        <a id="giralda-map" data-selection="giralda" data-imgtext="<?= __('Козацькі виступи'); ?>"
                            href="http://khortytsia.loc/tourist/kamenskaja-sech/"
                            data-selection-id="giralda-map"
                            class="map_icon from_bottom giralda-map-second">
