@@ -16,7 +16,7 @@ $(document).ready(function () {
         function () {
             var mapImgIcon = $(this).attr('data-selection');
             $(this).addClass('map_icon_hover');
-            $(`#${mapImgIcon}`).addClass('map_icon_hover');
+            $(`[data-selection-id="${mapImgIcon}"]`).addClass('map_icon_hover');
 
             var imgText = $(this).data('imgtext');
 
@@ -27,7 +27,7 @@ $(document).ready(function () {
         function () {
             var mapImgIcon = $(this).attr('data-selection');
             $(this).removeClass('map_icon_hover');
-            $(`#${mapImgIcon}`).removeClass('map_icon_hover');
+            $(`[data-selection-id="${mapImgIcon}"]`).removeClass('map_icon_hover');
 
             $('.descrip_map').removeClass('descrip_map_visible');
         });

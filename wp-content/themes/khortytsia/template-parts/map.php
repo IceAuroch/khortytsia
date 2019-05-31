@@ -28,6 +28,7 @@ else $id = '379';
 
                                 <div class="map_side_icon_item">
                                     <a id="<?= get_field('tur_id', $post->ID); ?>"
+                                       data-selection-id="<?= get_field('tur_id', $post->ID); ?>"
                                        href="<?= the_permalink(); ?>"
                                        class="map_icon from_bottom"
                                        data-imgtext="<?= the_title(); ?>"
@@ -66,6 +67,7 @@ else $id = '379';
                             <a id="<?= get_field('tur_id', $post->ID); ?>-map"
                                class="map_icon from_bottom"
                                data-selection="<?= get_field('tur_id', $post->ID); ?>"
+                               data-selection-id="<?= get_field('tur_id', $post->ID); ?>-map"
                                data-imgtext="<?= the_title(); ?>"
                                href="<?= the_permalink(); ?>">
                                 <svg width="30" height="30">
@@ -78,22 +80,26 @@ else $id = '379';
                         <a id="stones-map" data-selection="stones-map" data-imgtext="<?= __('Святилища'); ?>"
                            href="http://khortytsia.loc/tourist/svjatilishhe/"
                            class="map_icon from_bottom stones-map-second"
+                           data-selection-id="stones-map"
                            data-sr-id="19">
                             <svg width="30" height="30">
                                 <use xlink:href="#stone-icon"></use>
                             </svg>
                         </a>
 
-                        <a id="threes-map" data-selection="threes" data-imgtext="<?= __('Паркові зони'); ?>"
+                        <a id="threes-map" data-selection="threes-map" data-imgtext="<?= __('Паркові зони'); ?>"
                            href="http://khortytsia.loc/tourist/dendropark/"
+                           data-selection-id="threes-map"
                            class="map_icon from_bottom threes-map-second">
                             <svg width="30" height="30">
                                 <use xlink:href="#tree-icon"></use>
                             </svg>
                         </a>
 
-                        <a id="giralda-map" data-selection="giralda" data-imgtext="<?= __('Козацькі виступи'); ?>"
-                           href="http://khortytsia.loc/tourist/kamenskaja-sech/" class="map_icon from_bottom giralda-map-second">
+                        <a id="giralda-map" data-selection="giralda-map" data-imgtext="<?= __('Козацькі виступи'); ?>"
+                           href="http://khortytsia.loc/tourist/kamenskaja-sech/"
+                           data-selection-id="giralda-map"
+                           class="map_icon from_bottom giralda-map-second">
                             <svg width="30" height="30">
                                 <use xlink:href="#mayak-icon"></use>
                             </svg>

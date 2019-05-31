@@ -117,5 +117,21 @@ if (document.querySelector('.modal_slider_main')) {
 }
 
 
+if (document.querySelector('.intro-slider')) {
+
+    var flktyD = new Flickity('.intro-slider', {
+        wrapAround: true,
+        prevNextButtons: false,
+        cellAlign: 'center',
+        draggable: false,
+        pageDots: false,
+        contain: true,
+        autoPlay: 3000,
+        pauseAutoPlayOnHover: false
+    });
+
+}
+
+
 
 

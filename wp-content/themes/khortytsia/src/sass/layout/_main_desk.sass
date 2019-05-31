@@ -250,10 +250,6 @@ section.main_desk_full_section + footer
   top: 0
   width: 100%
   height: 100%
-  display: none
-
-  @media (min-width: map_get($grid-breakpoints, xl))
-    display: block
 
   #text
     position: relative
@@ -285,7 +281,10 @@ section.main_desk_full_section + footer
 
 #text.text_open
   animation: decorSymbol 1.2s ease-in-out forwards 1
-  display: block
+  display: none
+
+  @media (min-width: map_get($grid-breakpoints, xl))
+    display: block
 
 @keyframes decorSymbol
   0%
