@@ -52,40 +52,40 @@ get_header();
                                 <a href="#"><?= get_post_meta($post->ID, 'reception_phone', true); ?> (<?= __('тел./факс'); ?>)</a>
                             </div>
                         </div>
-                        <div class="contact_row">
-                            <div class="contact_row__item">
-                                <span><?= __('Музей міста за порогами'); ?> :</span>
-                            </div>
-                            <div class="contact_row__item">
-                                <?php
-                                if( have_rows('city_museum') ):
-                                    while( have_rows('city_museum') ) : the_row(); ?>
-                                        <a href="tel: <?= get_sub_field('city_museum_phone'); ?> ">
-                                            <?= get_sub_field('city_museum_phone'); ?>
-                                        </a>
-                                    <?php endwhile;
-                                endif;
-                                ?>
-                            </div>
-                        </div>
-                        <div class="contact_row">
-                            <div class="contact_row__item">
-                                <span><?= __('Служба режиму'); ?> :</span>
-                            </div>
-                            <div class="contact_row__item">
-                                <a href="tel: <?= get_post_meta($post->ID, 'museum_watch', true); ?> ">
-                                    <?= get_post_meta($post->ID, 'museum_watch', true); ?>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="contact_row">
-                            <div class="contact_row__item">
-                                <span><?= __('Вахта музею'); ?> :</span>
-                            </div>
-                            <div class="contact_row__item">
-                                <a href="#"><?= get_post_meta($post->ID, 'museum_watch', true); ?></a>
-                            </div>
-                        </div>
+<!--                        <div class="contact_row">-->
+<!--                            <div class="contact_row__item">-->
+<!--                                <span>--><?//= __('Музей міста за порогами'); ?><!-- :</span>-->
+<!--                            </div>-->
+<!--                            <div class="contact_row__item">-->
+<!--                                --><?php
+//                                if( have_rows('city_museum') ):
+//                                    while( have_rows('city_museum') ) : the_row(); ?>
+<!--                                        <a href="tel: --><?//= get_sub_field('city_museum_phone'); ?><!-- ">-->
+<!--                                            --><?//= get_sub_field('city_museum_phone'); ?>
+<!--                                        </a>-->
+<!--                                    --><?php //endwhile;
+//                                endif;
+//                                ?>
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="contact_row">-->
+<!--                            <div class="contact_row__item">-->
+<!--                                <span>--><?//= __('Служба режиму'); ?><!-- :</span>-->
+<!--                            </div>-->
+<!--                            <div class="contact_row__item">-->
+<!--                                <a href="tel: --><?//= get_post_meta($post->ID, 'museum_watch', true); ?><!-- ">-->
+<!--                                    --><?//= get_post_meta($post->ID, 'museum_watch', true); ?>
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="contact_row">-->
+<!--                            <div class="contact_row__item">-->
+<!--                                <span>--><?//= __('Вахта музею'); ?><!-- :</span>-->
+<!--                            </div>-->
+<!--                            <div class="contact_row__item">-->
+<!--                                <a href="#">--><?//= get_post_meta($post->ID, 'museum_watch', true); ?><!--</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
                         <div class="contact_row">
                             <div class="contact_row__item">
                                 <span>E-mail :</span>

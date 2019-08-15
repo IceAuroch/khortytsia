@@ -136,12 +136,19 @@ get_header();
                             </div>
                             <div class="row">
                                 <div class="col">
-									<?php
-									$excursion = new WP_Query([
-										'post_type' => 'tourist',
-										'orderby' => 'ID',
-										'order' => 'asc',
-									]);
+                                    <?php
+                                    if (pll_current_language('slug') == 'en') {
+                                        $excursion_categ_id = '11';
+                                    } elseif (pll_current_language('slug') == 'ru') {
+                                        $excursion_categ_id = '17';
+                                    } else {
+                                        $excursion_categ_id = '7';
+                                    }
+
+                                    $excursion = new WP_Query([
+                                        'post_type' => 'post',
+                                        'cat' => $excursion_categ_id,
+                                    ]);
 									if ($excursion->have_posts()): ?>
 
                                         <div class="tab_content_list d-flex flex-wrap">
@@ -269,7 +276,7 @@ get_header();
                                         <div class="tab_content_list d-flex flex-wrap">
                                             <?php while ($articles->have_posts()): $articles->the_post(); ?>
                                                 <a href="<?php the_permalink(); ?>" class="tab_content_list_item">
-                                                    <div><?= __('Стаття'); ?></div>
+                                                    <div><?= __('[:ru]Стаття[:en]'); ?></div>
                                                     <h3><?= the_title(); ?></h3>
                                                 </a>
                                             <?php endwhile; ?>
