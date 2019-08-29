@@ -113,7 +113,7 @@ global $wp;
 												?>
 
                                                 <div class="galery_masonry_item" data-indexImg="<?= $count ?>">
-                                                    <img class="lozad" src="<?= $image['sizes']['medium']; ?>" alt="">
+                                                    <img class="lozad" src="<?= $image['sizes']['large']; ?>" alt="">
                                                 </div>
 
 											<?php

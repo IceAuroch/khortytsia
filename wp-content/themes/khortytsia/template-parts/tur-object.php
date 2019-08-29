@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title">
-                    <h2><?= __('Туристичні об’єкти'); ?></h2>
+                    <h2><?= __('Що подивитися'); ?></h2>
                 </div>
             </div>
         </div>

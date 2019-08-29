@@ -37,7 +37,7 @@ get_header();
                     <div class="col-lg-6">
                         <div class="contact_row">
                             <div class="contact_row__item">
-                                <span><?= __('Замовлення екскурсій'); ?> :</span>
+                                <span><?= __('Контактні телефони'); ?>:</span>
                             </div>
                             <div class="contact_row__item">
                                 <a href="tel: <?= get_theme_mod('phone1'); ?>"><?= get_theme_mod('phone1'); ?>,</a>
@@ -49,7 +49,7 @@ get_header();
                                 <span><?= __('Приймальня'); ?> :</span>
                             </div>
                             <div class="contact_row__item">
-                                <a href="#"><?= get_post_meta($post->ID, 'reception_phone', true); ?> (<?= __('тел./факс'); ?>)</a>
+                                <a href="#"><?= get_post_meta($post->ID, 'reception_phone', true); ?></a>
                             </div>
                         </div>
 <!--                        <div class="contact_row">-->

@@ -148,6 +148,7 @@ get_header();
                                     $excursion = new WP_Query([
                                         'post_type' => 'post',
                                         'cat' => $excursion_categ_id,
+                                        'posts_per_page' => -1,
                                     ]);
 									if ($excursion->have_posts()): ?>
 
@@ -183,6 +184,7 @@ get_header();
 											'post_type' => 'partners',
 											'orderby' => 'id',
 											'order' => 'asc',
+                                            'posts_per_page' => -1,
 										]);
 										if ($partners->have_posts()):
 											while ($partners->have_posts()): $partners->the_post(); ?>
@@ -233,6 +235,7 @@ get_header();
 									$articles = new WP_Query([
 										'post_type' => 'post',
 										'category_name' => $post_categ_name,
+                                        'posts_per_page' => -1,
 									]);
 									if ($articles->have_posts()): ?>
                                         <div class="tab_content_list d-flex flex-wrap">
@@ -271,12 +274,13 @@ get_header();
                                     $articles = new WP_Query([
                                         'post_type' => 'post',
                                         'cat' => $post_categ_id,
+                                        'posts_per_page' => -1,
                                     ]);
                                     if ($articles->have_posts()): ?>
                                         <div class="tab_content_list d-flex flex-wrap">
                                             <?php while ($articles->have_posts()): $articles->the_post(); ?>
                                                 <a href="<?php the_permalink(); ?>" class="tab_content_list_item">
-                                                    <div><?= __('[:ru]Стаття[:en]'); ?></div>
+                                                    <div><?= __('Статті'); ?></div>
                                                     <h3><?= the_title(); ?></h3>
                                                 </a>
                                             <?php endwhile; ?>
