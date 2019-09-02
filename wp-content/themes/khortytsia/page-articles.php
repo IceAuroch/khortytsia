@@ -54,7 +54,7 @@ get_header();
 
 			$filters = [];
 			$search_tag = [];
-			$currentFilters = isset($_GET['filter']) ? array_map('strtolower', explode(',', $_GET['filter'])) : [];
+			$currentFilters = isset($_GET['filter']) ? array_map('strtolower', explode(',', slugify($_GET['filter']))) : [];
 			$articles = new WP_Query([
 				'cat' => $cat,
 			]);
@@ -93,9 +93,9 @@ get_header();
 
 								<?php foreach ($filters as $filter) : ?>
                                     <li class="col-auto">
-                                        <a href="<?= makeFilterLink($_GET, $filter) ?>"
+                                        <a href="<?= makeFilterLink($_GET, slugify($filter)) ?>"
                                            class="<?= checkIfFilterExists($_GET,
-											   $filter) ? 'is-checked' : '' ?>">
+											   slugify($filter)) ? 'is-checked' : '' ?>">
 											<?= $filter ?>
                                         </a>
                                     </li>
@@ -141,5 +141,6 @@ switch (pll_current_language()) {
     <posts category="<?= $cat ?>"
            filters="<?= implode(',', $currentFilters) ?>"
            button-text="<?= __('Більше статей'); ?>"></posts>
+
 
 <?php get_footer();

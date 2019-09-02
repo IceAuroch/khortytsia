@@ -69,8 +69,8 @@ global $wp;
                             <ul class="filter_list row">
 								<?php foreach ($filters as $filter) : ?>
                                     <li class="col-auto">
-                                        <a href="<?= makeFilterLink($_GET, $filter) ?>"
-                                           class="<?= checkIfFilterExists($_GET, $filter) ? 'is-checked' : '' ?>">
+                                        <a href="<?= makeFilterLink($_GET, slugify($filter)) ?>"
+                                           class="<?= checkIfFilterExists($_GET, slugify($filter)) ? 'is-checked' : '' ?>">
 											<?= $filter ?>
                                         </a>
                                     </li>
