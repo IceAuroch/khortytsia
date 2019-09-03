@@ -135,7 +135,7 @@ function get_ajax_posts()
 		}
 
 		if ($filters = $_POST['filters']) {
-			$args['tag_slug__in'] = explode(',', $filters);
+			$args['tag__in'] = explode(',', $filters);
 		}
 	}
 
@@ -262,6 +262,3 @@ if (!function_exists('get_video_embed')) {
 			   . "?rel=0&showinfo=0&mute=1&loop=1&modestbranding=1";
 	}
 }
-
-
-

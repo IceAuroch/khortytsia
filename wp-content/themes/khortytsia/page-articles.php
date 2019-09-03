@@ -54,7 +54,8 @@ get_header();
 
 			$filters = [];
 			$search_tag = [];
-			$currentFilters = isset($_GET['filter']) ? array_map('strtolower', explode(',', slugify($_GET['filter']))) : [];
+			$tag_ids = [];
+			$currentFilters = isset($_GET['filter']) ? array_map('strtolower', explode(',', $_GET['filter'])) : [];
 			$articles = new WP_Query([
 				'cat' => $cat,
 			]);
@@ -66,7 +67,9 @@ get_header();
 					if (count($tags)) {
 						foreach ($tags as $tag) {
 							$articletags = $tag->to_array();
+							$articletag_ids = explode(',', $articletags['term_id']);
 							$articletags = explode(',', $articletags['name']);
+
 							if (count($articletags)) {
 								foreach ($articletags as $articletag) {
 									if ($articletag !== '') {
@@ -75,28 +78,36 @@ get_header();
 									}
 								}
 							}
+							if(count($articletag_ids)){
+							    foreach ($articletag_ids as $articletag_id){
+							        if ($articletag_id !== 0){
+							            array_push($tag_ids, trim($articletag_id));
+                                    }
+                                }
+                            }
 						}
 					}
 				endwhile;
 			}
+			$tag_ids  = array_unique($tag_ids);
+            $filters = array_unique($filters);
+            $articlefilters = array_map(null, $tag_ids, $filters);
 			$search_tag = array_unique($search_tag);
 			$search_tag = implode(',', $search_tag);
-			$filters = array_unique($filters);
 			$page = get_the_ID();
 			?>
 
             <div class="row">
-				<?php if (count($filters)) : ?>
+				<?php if (count($articlefilters)) : ?>
                     <div class="col-lg-10 offset-lg-1">
                         <div class="main_desk_filter from_bottom_interval">
                             <ul class="filter_list row">
-
-								<?php foreach ($filters as $filter) : ?>
+								<?php foreach ($articlefilters as $articlefilter) : ?>
                                     <li class="col-auto">
-                                        <a href="<?= makeFilterLink($_GET, slugify($filter)) ?>"
+                                        <a href="<?= makeFilterLink($_GET, $articlefilter[0]) ?>"
                                            class="<?= checkIfFilterExists($_GET,
-											   slugify($filter)) ? 'is-checked' : '' ?>">
-											<?= $filter ?>
+											   $articlefilter[0]) ? 'is-checked' : '' ?>">
+											<?= $articlefilter[1] ?>
                                         </a>
                                     </li>
 								<?php endforeach; ?>
